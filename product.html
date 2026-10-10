@@ -54,9 +54,6 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-    @media (max-width: 768px) {
-      .product-page-card { grid-template-columns: 1fr; gap: 2rem; }
-    }
     .product-page-image {
       position: sticky;
       top: 100px;
@@ -121,6 +118,12 @@
       margin: 0 auto 1rem;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    @media (max-width: 768px) {
+      .product-page-card { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+      .product-page-image { position: static; }
+      .product-page-body { min-width: 0; }
+      .product-page-body .features-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -215,13 +218,13 @@
         <div class="footer-col">
           <h4>Products</h4>
           <ul>
-            <li><a href="products.html#automatic">Automatic Machines</a></li>
-            <li><a href="products.html#semi-automatic">Semi-Automatic Machines</a></li>
-            <li><a href="products.html#grinders">Grinders</a></li>
-            <li><a href="products.html#barista-accessories">Barista Accessories</a></li>
-            <li><a href="products.html#blenders">Blenders</a></li>
-            <li><a href="products.html#roasters">Roasters</a></li>
-            <li><a href="products.html#kitchen-equipment">Kitchen Equipment</a></li>
+            <li><a href="category.html?id=coffee-machines&amp;sub=automatic">Automatic Machines</a></li>
+            <li><a href="category.html?id=coffee-machines&amp;sub=semi-automatic">Semi-Automatic Machines</a></li>
+            <li><a href="category.html?id=grinders">Grinders</a></li>
+            <li><a href="category.html?id=barista-accessories">Barista Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a></li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -238,13 +241,13 @@
         <div class="footer-col">
           <h4>Brands We Carry</h4>
           <ul>
-            <li><a href="products.html#budan-infinity">Budan</a></li>
-            <li><a href="products.html#wmf-1100s">WMF</a></li>
-            <li><a href="products.html#carimali-mya-ultra">Carimali</a></li>
-            <li><a href="products.html#rancilio-classe5">Rancilio</a></li>
-            <li><a href="products.html#lm-linea-pb">La Marzocco</a></li>
-            <li><a href="products.html#heycafe-buddy-doser">Hey Cafe</a></li>
-            <li><a href="products.html#mahlkonig-x54">Mahlkönig</a></li>
+            <li><a href="product.html?id=budan-infinity">Budan</a></li>
+            <li><a href="product.html?id=wmf-1100s">WMF</a></li>
+            <li><a href="product.html?id=carimali-mya-ultra">Carimali</a></li>
+            <li><a href="product.html?id=rancilio-classe5">Rancilio</a></li>
+            <li><a href="product.html?id=lm-linea-pb">La Marzocco</a></li>
+            <li><a href="product.html?id=heycafe-buddy-doser">Hey Cafe</a></li>
+            <li><a href="product.html?id=mahlkonig-x54">Mahlkönig</a></li>
           </ul>
         </div>
       </div>

@@ -30,6 +30,15 @@
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
 
+  /* Compatibility tokens used by the catalogue detail pages. */
+  --font-serif:    var(--font-heading);
+  --dark-espresso: var(--espresso);
+  --mid-gray:      var(--text-gray);
+  --warm-brown:    var(--bronze);
+  --off-white:     var(--ivory);
+  --light-cream:   var(--frost);
+  --border-color:  var(--border);
+
   --radius-sm:   4px;
   --radius-md:   8px;
   --radius-lg:   12px;
