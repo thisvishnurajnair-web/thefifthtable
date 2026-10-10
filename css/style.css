@@ -1,6 +1,6 @@
 /* =============================================
    The Fifth Table — Coffee & Hospitality
-   Warm ivory, deep forest, espresso and bronze.
+   Warm cream, espresso brown, latte and caramel.
    Legacy color-token names remain for the page-specific styles.
 ============================================= */
 
@@ -12,20 +12,19 @@
 }
 
 :root {
-  --forest:      #102C24;
   --espresso:    #402713;
-  --bronze:      #8A6747;
+  --bronze:      #8D6038;
   --ivory:       #FAF7F0;
-  --blue:        var(--forest);
-  --blue-dark:   #17251E;
-  --blue-mid:    #294C3D;
+  --blue:        var(--espresso);
+  --blue-dark:   #241B13;
+  --blue-mid:    #5B391F;
   --blue-light:  var(--bronze);
-  --ice:         #F0E9DE;
-  --frost:       #F6F1E8;
+  --ice:         #F0E5D6;
+  --frost:       #F8F1E7;
   --white:       #FFFDF8;
-  --text-dark:   #24251E;
-  --text-gray:   #635E54;
-  --border:      #DED5C7;
+  --text-dark:   #2B2118;
+  --text-gray:   #695C50;
+  --border:      #DDCEBB;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -267,12 +266,12 @@ ul {
 
 .nav-item > a:hover,
 .nav-item > a.active {
-  color: var(--forest);
+  color: var(--espresso);
   background: var(--ice);
 }
 
 .nav-cta {
-  background: var(--forest) !important;
+  background: var(--espresso) !important;
   color: var(--white) !important;
   font-weight: 700 !important;
   margin-left: 6px;
@@ -366,7 +365,7 @@ ul {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--forest);
+  background: var(--espresso);
   border-radius: 2px;
   transition: all var(--transition);
 }
@@ -398,7 +397,7 @@ ul {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(138,103,71,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(141,96,56,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -410,14 +409,14 @@ ul {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(138,103,71,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(141,96,56,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect fill='none' stroke='rgba(138,103,71,0.035)' stroke-width='1' x='0' y='0' width='60' height='60'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect fill='none' stroke='rgba(141,96,56,0.035)' stroke-width='1' x='0' y='0' width='60' height='60'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -449,7 +448,7 @@ ul {
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
-  color: var(--forest);
+  color: var(--blue-dark);
   line-height: 1.1;
   margin-bottom: 24px;
   letter-spacing: -0.035em;
@@ -862,7 +861,7 @@ ul {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(16,44,36,0.12);
+  box-shadow: 0 0 0 3px rgba(64,39,19,0.12);
 }
 
 .form-group textarea {
@@ -897,7 +896,7 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  background: var(--forest);
+  background: var(--espresso);
   color: #fff !important;
   border: none;
   border-radius: var(--radius-md);
@@ -934,7 +933,7 @@ ul {
    FOOTER
 ============================================================ */
 .site-footer {
-  background: #17251E;
+  background: var(--blue-dark);
   padding: 64px 0 28px;
   color: #E0D9CE;
 }
@@ -1010,7 +1009,7 @@ ul {
   top: -100px; right: -100px;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(138,103,71,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(141,96,56,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1485,7 +1484,7 @@ ul {
 /* ===== BRAND DETAILS & ACCESSIBILITY ===== */
 ::selection {
   color: var(--white);
-  background: var(--forest);
+  background: var(--espresso);
 }
 
 :focus-visible {
