@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Commercial Coffee Machines, Grinders & Café Equipment India | The Fifth Table</title>
+  <meta name="description" content="Browse The Fifth Table's full catalogue: bean-to-cup machines, semi-automatic & fully automatic espresso machines, burr grinders, commercial blenders, cold brew brewers, roasters and kitchen equipment. WMF, La Marzocco, Mahlkönig, Rancilio, Blendtec & more. Pan-India delivery." />
+  <meta name="keywords" content="buy commercial coffee machine India, bean to cup machine India, fully automatic espresso machine, semi-automatic coffee machine, professional coffee grinder India, flat burr grinder, commercial blender cafe, sound enclosed blender, cold brew equipment India, coffee brewer India, commercial roaster India, cafe kitchen equipment, WMF, La Marzocco, Mahlkonig, Rancilio, Blendtec, Anfim, Hario" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thefifthtable.in/products.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Coffee Equipment Catalogue – The Fifth Table" />
+  <meta property="og:description" content="Full range of commercial coffee machines, grinders, blenders and café equipment from top global brands. Pan-India supply and support." />
+  <meta property="og:url" content="https://thefifthtable.in/products.html" />
+  <meta property="og:image" content="https://thefifthtable.in/images/brand-wordmark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Category Picker ── */
+    .cat-picker {
+      background: var(--frost);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+    }
+    .cat-picker-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .cat-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      align-items: start;
+    }
+    @media (min-width: 640px) { .cat-picker-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .cat-picker-grid { grid-template-columns: repeat(4, 1fr); } }
+    .cat-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1rem 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .cat-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(16,44,36,0.1);
+    }
+    .cat-card.open {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(16,44,36,0.12);
+    }
+    .cat-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .cat-card-left {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .cat-card-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .cat-card-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+    .cat-card-chevron {
+      font-size: 0.75rem;
+      color: var(--text-gray);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+    .cat-card.open .cat-card-chevron {
+      transform: rotate(90deg);
+    }
+    /* Subcategory chips panel */
+    .cat-subs {
+      display: none;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .cat-card.open .cat-subs {
+      display: flex;
+    }
+    .cat-sub-link {
+      display: block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: var(--ice);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+    .cat-sub-link:hover {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
+    .cat-sub-link.view-all {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+      font-weight: 600;
+    }
+    .cat-sub-link.view-all:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+    /* Hide the long all-products list on mobile; show full list only on desktop */
+    @media (max-width: 767px) {
+      .all-products-section { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION (same as index) ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+                  <ul class="nav-links" id="nav-links">
+        <li class="nav-item has-dropdown">
+          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
+          <ul class="dropdown">
+            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=grinders">Grinders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
+                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
+                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html">About Us</a></li>
+        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
+        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-eyebrow">Our Collection</p>
+      <h1>Commercial Coffee Machines, Grinders & Café Equipment — India</h1>
+      <p>Explore our full range of <strong>bean-to-cup machines</strong>, semi-automatic &amp; fully automatic <strong>espresso machines</strong>, <strong>burr coffee grinders</strong>, commercial blenders, cold brew equipment and professional barista accessories. Trusted by cafés, hotels, offices and restaurants across India.</p>
+    </div>
+  </section>
+  <!-- ===== CATEGORY PICKER ===== -->
+  <section class="cat-picker">
+    <div class="container">
+      <h2 class="cat-picker-heading">Browse by Category</h2>
+      <div class="cat-picker-grid">
+        <!-- Coffee Machines -->
+        <div class="cat-card" data-cat="coffee-machines">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">☕</span>
+              <span class="cat-card-name">Coffee Machines</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+          <div class="cat-subs">
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=small-capacity">Small Capacity</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=medium-capacity">Medium Capacity</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=high-capacity">High Capacity</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=economical">Economical</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=premium">Premium</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=specialty">Specialty</a>
+            <a class="cat-sub-link view-all" href="category.html?id=coffee-machines">View All ›</a>
+          </div>
+        </div>
+        <!-- Grinders -->
+        <div class="cat-card" data-cat="grinders">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">⚙️</span>
+              <span class="cat-card-name">Grinders</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+          <div class="cat-subs">
+            <a class="cat-sub-link" href="category.html?id=grinders&sub=economical">Economical</a>
+            <a class="cat-sub-link" href="category.html?id=grinders&sub=premium">Premium</a>
+            <a class="cat-sub-link" href="category.html?id=grinders&sub=industrial">Industrial</a>
+            <a class="cat-sub-link view-all" href="category.html?id=grinders">View All ›</a>
+          </div>
+        </div>
+        <!-- Espresso Accessories -->
+        <a class="cat-card" href="category.html?id=barista-accessories" style="text-decoration:none;">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">🧰</span>
+              <span class="cat-card-name">Espresso Accessories</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+        </a>
+        <!-- Blenders -->
+        <div class="cat-card" data-cat="blenders">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">🌀</span>
+              <span class="cat-card-name">Blenders</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+          <div class="cat-subs">
+            <a class="cat-sub-link" href="category.html?id=blenders&sub=open">Open Blenders</a>
+            <a class="cat-sub-link" href="category.html?id=blenders&sub=silent">Sound Enclosed</a>
+            <a class="cat-sub-link view-all" href="category.html?id=blenders">View All ›</a>
+          </div>
+        </div>
+        <!-- Coffee Brewers -->
+        <div class="cat-card" data-cat="coffee-brewers">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">☕</span>
+              <span class="cat-card-name">Coffee Brewers</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+          <div class="cat-subs">
+            <a class="cat-sub-link" href="category.html?id=coffee-brewers&sub=manual">Manual Brewers</a>
+            <a class="cat-sub-link" href="category.html?id=coffee-brewers&sub=automatic">Automatic Brewers</a>
+            <a class="cat-sub-link view-all" href="category.html?id=coffee-brewers">View All ›</a>
+          </div>
+        </div>
+        <!-- Roasters -->
+        <a class="cat-card" href="category.html?id=roasters" style="text-decoration:none;">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">🔥</span>
+              <span class="cat-card-name">Roasters</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+        </a>
+        <!-- Kitchen Equipment -->
+        <a class="cat-card" href="category.html?id=kitchen-equipment" style="text-decoration:none;">
+          <div class="cat-card-top">
+            <div class="cat-card-left">
+              <span class="cat-card-icon">🏪</span>
+              <span class="cat-card-name">Kitchen Equipment</span>
+            </div>
+            <span class="cat-card-chevron">›</span>
+          </div>
+        </a>
+      </div><!-- /.cat-picker-grid -->
+    </div>
+  </section>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="all-products-section">
+    <div class="container">
+      <!-- ======================================================
+           COFFEE MACHINES
+      ====================================================== -->
+      <section class="category-section" id="coffee-machines" data-category="coffee-machines">
+        <h2 class="category-title" id="coffee-machines-title">☕ Commercial Coffee Machines</h2>
+        <p class="category-description">From one-touch <strong>bean-to-cup coffee machines</strong> to precision <strong>semi-automatic espresso machines</strong>, we supply commercial-grade equipment for every setup — kiosks, cafés, restaurants, hotels, and corporate offices across India. Brands include WMF, La Marzocco, Rancilio, Carimali and Budan.</p>
+        <!-- ── AUTOMATIC ── -->
+        <div id="automatic">
+          <div class="subcategory-label" id="automatic-label">Automatic Coffee Machines</div>
+          <!-- Small Capacity -->
+          <div class="subcategory-label" id="small-capacity" style="color: var(--mid-gray); font-size:0.72rem;">Small Cup Capacity</div>
+          <!-- Budan Infinity -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-infinity">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-infinity-1.jpg" alt="Budan Infinity 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-2.jpg" alt="Budan Infinity 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-3.webp" alt="Budan Infinity 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-4.webp" alt="Budan Infinity 4" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-5.webp" alt="Budan Infinity 5" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan Infinity Coffee Machine</h3>
+              <p class="product-desc">The Budan Infinity is built for modern coffee lovers who want café-quality beverages at home. It combines multi-beverage capability with a large touchscreen and a seamless milk system, making every cup effortless.</p>
+              <div class="features-grid">
+                <div class="feature-item">Multi-beverage: espresso, cappuccino, latte &amp; more</div>
+                <div class="feature-item">7-inch full-touch display</div>
+                <div class="feature-item">Intuitive drink selection interface</div>
+                <div class="feature-item">Automatic milk frothing system</div>
+                <div class="feature-item">Connects milk container directly</div>
+                <div class="feature-item">Suitable for home &amp; small offices</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan Brew 500 -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-brew500">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-brew500-1.jpg" alt="Budan Brew 500 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-brew500-2.jpg" alt="Budan Brew 500 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-brew500-3.jpg" alt="Budan Brew 500 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-brew500-4.jpg" alt="Budan Brew 500 - 4" /></div>
+                  <div class="carousel-slide"><img src="images/budan-brew500-5.jpg" alt="Budan Brew 500 - 5" /></div>
+                  <div class="carousel-slide"><img src="images/budan-brew500-6.jpg" alt="Budan Brew 500 - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan Brew 500</h3>
+              <p class="product-desc">Enjoy café-quality coffee at the touch of a button. The Brew 500 combines advanced brewing technology with a built-in grinder, a dedicated milk frothing system, and smart reminders, making it perfect for home and small café use.</p>
+              <div class="features-grid">
+                <div class="feature-item">15-bar Italian pump pressure</div>
+                <div class="feature-item">9 preset beverage functions</div>
+                <div class="feature-item">Dual cup brewing capability</div>
+                <div class="feature-item">Built-in burr grinder</div>
+                <div class="feature-item">Detachable milk tank</div>
+                <div class="feature-item">Large water reservoir</div>
+                <div class="feature-item">Smart cleaning reminders</div>
+                <div class="feature-item">Espresso, cappuccino, latte &amp; more</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan X1 -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-x1">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-x1-1.jpg" alt="Budan X1 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-2.jpg" alt="Budan X1 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-3.jpg" alt="Budan X1 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-4.jpg" alt="Budan X1 - 4" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-5.jpg" alt="Budan X1 - 5" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-6.jpg" alt="Budan X1 - 6" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x1-7.jpg" alt="Budan X1 - 7" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan X1</h3>
+              <p class="product-desc">The Mini Home Barista. Designed for coffee lovers who want café-style beverages at home, the X1 delivers rich espresso in just 30 seconds with its 20-bar pressure pump. Compact, stylish, and beginner-friendly.</p>
+              <div class="features-grid">
+                <div class="feature-item">20-bar pressure pump</div>
+                <div class="feature-item">Professional brewing in 30 seconds</div>
+                <div class="feature-item">Adjustable steam wand</div>
+                <div class="feature-item">Temperature stability</div>
+                <div class="feature-item">Self-cleaning mode</div>
+                <div class="feature-item">Large water tank</div>
+                <div class="feature-item">Compact kitchen-friendly design</div>
+                <div class="feature-item">Suitable for beginners &amp; experts</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan Infinity Pro -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-infinity-pro">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-1.jpg" alt="Budan Infinity Pro - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-2.jpg" alt="Budan Infinity Pro - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-3.jpg" alt="Budan Infinity Pro - 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-4.jpg" alt="Budan Infinity Pro - 4" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-5.jpg" alt="Budan Infinity Pro - 5" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-6.jpg" alt="Budan Infinity Pro - 6" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-7.jpg" alt="Budan Infinity Pro - 7" /></div>
+                  <div class="carousel-slide"><img src="images/budan-infinity-pro-8.jpg" alt="Budan Infinity Pro - 8" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan Infinity Pro</h3>
+              <p class="product-desc">The Infinity Pro goes beyond standard automatic machines with 20+ beverage options, a 7-inch touchscreen, custom coffee recipes, and a Favourite Save feature, plus an automatic cleaning and descaling system for effortless maintenance.</p>
+              <div class="features-grid">
+                <div class="feature-item">20+ beverage options</div>
+                <div class="feature-item">7-inch touchscreen display</div>
+                <div class="feature-item">Custom strength, volume &amp; hot water settings</div>
+                <div class="feature-item">18 coffee recipe books</div>
+                <div class="feature-item">Favourite Save feature</div>
+                <div class="feature-item">Self-cleaning function</div>
+                <div class="feature-item">Holds up to 40 coffee pucks</div>
+                <div class="feature-item">Automatic milk frothing &amp; dispensing</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan X7 -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-x7">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-x7-1.jpg" alt="Budan X7 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-2.jpg" alt="Budan X7 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-3.jpg" alt="Budan X7 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-4.jpg" alt="Budan X7 - 4" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-5.jpg" alt="Budan X7 - 5" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-6.jpg" alt="Budan X7 - 6" /></div>
+                  <div class="carousel-slide"><img src="images/budan-x7-7.jpg" alt="Budan X7 - 7" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan X7</h3>
+              <p class="product-desc">A Bean-to-Cup Fully Automatic Espresso Machine offering café-quality coffee with one-touch convenience. Features a 19-bar extraction system, integrated burr grinder, and digital display, perfect for homes and offices alike.</p>
+              <div class="features-grid">
+                <div class="feature-item">19-bar extraction system</div>
+                <div class="feature-item">Integrated burr grinder</div>
+                <div class="feature-item">Digital display</div>
+                <div class="feature-item">16+ beverage options</div>
+                <div class="feature-item">Large water tank &amp; bean hopper</div>
+                <div class="feature-item">Automatic cleaning &amp; descaling</div>
+                <div class="feature-item">Espresso, cappuccino, latte, americano</div>
+                <div class="feature-item">Compact &amp; stylish design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan M80 -->
+          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-m80">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-m80-1.jpg" alt="Budan M80 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-m80-2.jpg" alt="Budan M80 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-m80-3.jpg" alt="Budan M80 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/budan-m80-4.jpg" alt="Budan M80 - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Small Capacity · Budan</span>
+              <h3 class="product-name">Budan M80</h3>
+              <p class="product-desc">Designed for high-demand environments like offices, cafés, and restaurants. The M80 features a dual thermoblock system for simultaneous brewing and steaming, with a premium steam wand and intelligent auto-cleaning.</p>
+              <div class="features-grid">
+                <div class="feature-item">7-inch touchscreen</div>
+                <div class="feature-item">20+ customizable beverage options</div>
+                <div class="feature-item">Built-in conical burr grinder</div>
+                <div class="feature-item">Dual thermoblock system</div>
+                <div class="feature-item">Simultaneous brewing &amp; steaming</div>
+                <div class="feature-item">Premium steam wand</div>
+                <div class="feature-item">6L water tank</div>
+                <div class="feature-item">750g bean hopper</div>
+                <div class="feature-item">Intelligent auto-cleaning</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Medium Capacity -->
+          <div class="subcategory-label" id="medium-capacity" style="color: var(--mid-gray); font-size:0.72rem;">Medium Cup Capacity</div>
+          <!-- Budan M200 -->
+          <div class="product-detail-card" data-tags="automatic,medium-capacity" id="budan-m200">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-m200-1.jpg" alt="Budan M200" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Medium Capacity · Budan</span>
+              <h3 class="product-name">Budan M200</h3>
+              <p class="product-desc">High-Volume Coffee, Simplified. The M200 is designed for high-demand coffee service with dual pump technology ensuring faster delivery of both coffee and milk beverages. Three adaptive UI modes make it ideal for cafés, offices, and self-service counters.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual pump technology</div>
+                <div class="feature-item">6L water tank</div>
+                <div class="feature-item">10-inch touch display</div>
+                <div class="feature-item">3 adaptive UI modes</div>
+                <div class="feature-item">20+ beverage options</div>
+                <div class="feature-item">Innovative milk system</div>
+                <div class="feature-item">Café, office &amp; self-service modes</div>
+                <div class="feature-item">Reduced manual intervention</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Carimali Mya Ultra -->
+          <div class="product-detail-card" data-tags="automatic,medium-capacity,carimali" id="carimali-mya-ultra">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/carimali-mya-ultra-1.jpg" alt="Carimali Mya Ultra - 1" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-mya-ultra-2.jpg" alt="Carimali Mya Ultra - 2" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-mya-ultra-3.jpg" alt="Carimali Mya Ultra - 3" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-mya-ultra-4.jpg" alt="Carimali Mya Ultra - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · Medium Capacity · Carimali</span>
+              <h3 class="product-name">Carimali Mya Ultra</h3>
+              <p class="product-desc">Built for busy cafés and restaurants, the Mya Ultra handles up to 400 cups per day without compromising quality. Features a 10" touchscreen, powerful steam wand, and precise milk pump system for consistent results every time.</p>
+              <div class="features-grid">
+                <div class="feature-item">Up to 400 cups per day</div>
+                <div class="feature-item">10-inch touchscreen</div>
+                <div class="feature-item">20g brewing unit (richer espresso shots)</div>
+                <div class="feature-item">Integrated steam wand</div>
+                <div class="feature-item">Milk pump system (consistent volume)</div>
+                <div class="feature-item">Suitable for high-volume service</div>
+                <div class="feature-item">Reduces training time for staff</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- High Capacity -->
+          <div class="subcategory-label" id="high-capacity" style="color: var(--mid-gray); font-size:0.72rem;">High Capacity</div>
+          <!-- Carimali Armonia -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,carimali" id="carimali-armonia">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/carimali-armonia-1.jpg" alt="Carimali Armonia - 1" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-armonia-2.jpg" alt="Carimali Armonia - 2" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-armonia-3.jpg" alt="Carimali Armonia - 3" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-armonia-4.jpg" alt="Carimali Armonia - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · Carimali</span>
+              <h3 class="product-name">Carimali Armonia</h3>
+              <p class="product-desc">Backed by over 100 years of Italian expertise, the Armonia is a compact, easy-to-use espresso machine designed for cafés, offices, and restaurants. Energy-efficient and space-saving, it delivers great coffee without hassle or high operating costs.</p>
+              <div class="features-grid">
+                <div class="feature-item">100+ years of Italian expertise</div>
+                <div class="feature-item">Customizable drink settings</div>
+                <div class="feature-item">Precise temperature control</div>
+                <div class="feature-item">Intuitive interface</div>
+                <div class="feature-item">Integrated milk system</div>
+                <div class="feature-item">Energy-efficient</div>
+                <div class="feature-item">Space-saving compact design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- WMF 1100S -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,wmf" id="wmf-1100s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/wmf-1100s-1.jpg" alt="WMF 1100S - 1" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1100s-2.jpg" alt="WMF 1100S - 2" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1100s-3.jpg" alt="WMF 1100S - 3" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · WMF</span>
+              <h3 class="product-name">WMF 1100S</h3>
+              <p class="product-desc">Compact yet powerful, the WMF 1100S is specially designed for small to medium-sized cafés, offices, and restaurants. Easy touchscreen operation, integrated milk system, and smart cleaning functions make it hassle-free for any team.</p>
+              <div class="features-grid">
+                <div class="feature-item">Easy-to-use touchscreen</div>
+                <div class="feature-item">Integrated milk system</div>
+                <div class="feature-item">Lattes, cappuccinos &amp; more at one touch</div>
+                <div class="feature-item">Smart cleaning functions</div>
+                <div class="feature-item">High-performance brewing system</div>
+                <div class="feature-item">Consistently great taste</div>
+                <div class="feature-item">Space-saving compact design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- WMF 1300S -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,wmf" id="wmf-1300s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/wmf-1300s-1.jpg" alt="WMF 1300S - 1" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1300s-2.jpg" alt="WMF 1300S - 2" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1300s-3.jpg" alt="WMF 1300S - 3" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1300s-4.jpg" alt="WMF 1300S - 4" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1300s-5.jpg" alt="WMF 1300S - 5" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · WMF</span>
+              <h3 class="product-name">WMF 1300S</h3>
+              <p class="product-desc">A fully automatic machine built with German engineering for cafés, restaurants, offices, and hotels. Quickly prepares espressos, cappuccinos, lattes, and more with great consistency. Offers flexibility with multiple hoppers and a manual insert for decaf.</p>
+              <div class="features-grid">
+                <div class="feature-item">Up to 3 hoppers (2 bean + 1 powder)</div>
+                <div class="feature-item">Eco Mode to reduce energy consumption</div>
+                <div class="feature-item">Manual insert for decaf coffee</div>
+                <div class="feature-item">Smart Milk system (pump-driven)</div>
+                <div class="feature-item">SteamJet cup warming</div>
+                <div class="feature-item">Automatic cleaning via touch display</div>
+                <div class="feature-item">Touchscreen display</div>
+                <div class="feature-item">Custom drink settings</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- WMF 1500 S+ -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,wmf" id="wmf-1500s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/wmf-1500s-1.jpg" alt="WMF 1500 S+ - 1" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-1500s-2.jpg" alt="WMF 1500 S+ - 2" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · WMF</span>
+              <h3 class="product-name">WMF 1500 S+</h3>
+              <p class="product-desc">Engineered for performance, flexibility, and consistency. The WMF 1500 S+ handles up to 180 cups per day with 48 programmable drink selections. Perfect for offices, premium cafés, and hospitality spaces that demand quality without compromise.</p>
+              <div class="features-grid">
+                <div class="feature-item">Up to 180 cups per day</div>
+                <div class="feature-item">48 programmable drink selections</div>
+                <div class="feature-item">10-inch HD colour touchscreen</div>
+                <div class="feature-item">Large bean hoppers</div>
+                <div class="feature-item">Height-adjustable spout</div>
+                <div class="feature-item">SteamJet cup warming</div>
+                <div class="feature-item">Dynamic Coffee Assist</div>
+                <div class="feature-item">Easily removable brewer for cleaning</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- WMF 5000 S+ -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,wmf" id="wmf-5000s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/wmf-5000s.jpg" alt="WMF 5000 S+" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · WMF</span>
+              <h3 class="product-name">WMF 5000 S+</h3>
+              <p class="product-desc">Designed to satisfy the needs of high-volume coffee shops. The WMF 5000 S+ delivers a broad variety of coffee drinks with outstanding flavour and consistent quality, even during the busiest service hours. Ideal for large restaurants, hotels, and corporate locations.</p>
+              <div class="features-grid">
+                <div class="feature-item">High-volume output</div>
+                <div class="feature-item">Automatic cleaning system</div>
+                <div class="feature-item">Adjustable beverage options</div>
+                <div class="feature-item">Intuitive touchscreen interface</div>
+                <div class="feature-item">Fast, consistent drink delivery</div>
+                <div class="feature-item">Reduces customer wait times</div>
+                <div class="feature-item">Ideal for coffee shops &amp; hotels</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- WMF 9000 S+ -->
+          <div class="product-detail-card" data-tags="automatic,high-capacity,wmf" id="wmf-9000s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/wmf-9000s-1.jpg" alt="WMF 9000 S+ - 1" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-9000s-2.jpg" alt="WMF 9000 S+ - 2" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-9000s-3.jpg" alt="WMF 9000 S+ - 3" /></div>
+                  <div class="carousel-slide"><img src="images/wmf-9000s-4.jpg" alt="WMF 9000 S+ - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Automatic · High Capacity · WMF</span>
+              <h3 class="product-name">WMF 9000 S+</h3>
+              <p class="product-desc">The flagship WMF machine, built for the most demanding cafés, hotels, and offices. Features WMF Dynamic Milk for hot and cold foamed milk drinks, a brandable LED menu, and up to 30% energy savings vs. competitors. HACCP Certified.</p>
+              <div class="features-grid">
+                <div class="feature-item">WMF Dynamic Milk (hot &amp; cold foam)</div>
+                <div class="feature-item">Brewer removable by hand in seconds</div>
+                <div class="feature-item">Height-adjustable cup tray (All-in-one spout)</div>
+                <div class="feature-item">Brandable LED menu system</div>
+                <div class="feature-item">Plays video files &amp; marketing content</div>
+                <div class="feature-item">Self-service &amp; food service modes</div>
+                <div class="feature-item">Up to 30% energy savings (HKI certified)</div>
+                <div class="feature-item">Fully automated HACCP-certified cleaning</div>
+                <div class="feature-item">ISO 14001 Certified (eco-friendly)</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+        </div><!-- end #automatic -->
+        <!-- ── SEMI-AUTOMATIC ── -->
+        <div id="semi-automatic">
+          <div class="subcategory-label" id="semi-automatic-label">Semi-Automatic Coffee Machines</div>
+          <p class="category-description" style="margin-top:-12px;"><strong>Semi-automatic espresso machines</strong> give baristas precise manual control — from 19-bar pressure extraction and dual-boiler systems to PID temperature control and steam wands. Available in economical, premium and specialty tiers for cafés of every scale.</p>
+          <!-- Economical -->
+          <div class="subcategory-label" id="economical" style="color: var(--mid-gray); font-size:0.72rem;">Economical</div>
+          <!-- Budan Maestro -->
+          <div class="product-detail-card" data-tags="semi-automatic,economical" id="budan-maestro">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-maestro-1.jpg" alt="Budan Maestro - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-maestro-2.jpg" alt="Budan Maestro - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-maestro-3.jpg" alt="Budan Maestro - 3" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Economical · Budan</span>
+              <h3 class="product-name">Budan Maestro</h3>
+              <p class="product-desc">A premium semi-automatic machine for serious coffee professionals and boutique cafés. The dual-boiler system ensures excellent temperature stability for both extraction and steaming simultaneously, with commercial-grade precision.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual stainless steel boilers (550ml coffee + 5.25L steam)</div>
+                <div class="feature-item">Commercial rotary vane pump (9 bar)</div>
+                <div class="feature-item">PID display with adjustable brewing time</div>
+                <div class="feature-item">Touch electronic controls</div>
+                <div class="feature-item">Simultaneous coffee, hot water &amp; steam</div>
+                <div class="feature-item">Adjustable pre-infusion &amp; temperature</div>
+                <div class="feature-item">Direct tap water connection</div>
+                <div class="feature-item">Stainless-steel construction</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Carimali Bubble 1 Group -->
+          <div class="product-detail-card" data-tags="semi-automatic,economical,carimali" id="carimali-bubble-1">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/carimali-bubble-1-1.jpg" alt="Carimali Bubble 1 Group - 1" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-bubble-1-2.jpg" alt="Carimali Bubble 1 Group - 2" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-bubble-1-3.jpg" alt="Carimali Bubble 1 Group - 3" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-bubble-1-4.jpg" alt="Carimali Bubble 1 Group - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Economical · Carimali</span>
+              <h3 class="product-name">Carimali Bubble 1 Group</h3>
+              <p class="product-desc">A compact and efficient espresso machine perfect for kiosk cafés and small coffee shops with limited space. Despite its smaller size, it delivers impressive performance with an intuitive interface and sleek contemporary design.</p>
+              <div class="features-grid">
+                <div class="feature-item">Digital temperature control</div>
+                <div class="feature-item">Electronic pre-infusion (adjustable)</div>
+                <div class="feature-item">Electronic washing cycle</div>
+                <div class="feature-item">Heat exchanger with thermo-syphonic circulation</div>
+                <div class="feature-item">Steam wand for lattes &amp; cappuccinos</div>
+                <div class="feature-item">Compact footprint</div>
+                <div class="feature-item">Sleek contemporary design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Carimali Bubble 2 Group -->
+          <div class="product-detail-card" data-tags="semi-automatic,economical,carimali" id="carimali-bubble-2">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/carimali-bubble-2-1.jpg" alt="Carimali Bubble 2 Group - 1" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-bubble-2-2.jpg" alt="Carimali Bubble 2 Group - 2" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Economical · Carimali</span>
+              <h3 class="product-name">Carimali Bubble 2 Group</h3>
+              <p class="product-desc">Combines traditional craftsmanship with modern design. The Bubble 2 Group adapts to various environments, from small cafés to busy coffee shops. With efficient steam wands and generous boiler capacity, it supports high-volume production.</p>
+              <div class="features-grid">
+                <div class="feature-item">Digital temperature control</div>
+                <div class="feature-item">Electronic pre-infusion (adjustable)</div>
+                <div class="feature-item">Flexible steam lever for perfect milk texture</div>
+                <div class="feature-item">Double-pressure gauge (real-time monitoring)</div>
+                <div class="feature-item">Electronic washing cycle</div>
+                <div class="feature-item">Heat exchanger with thermo-syphonic circulation</div>
+                <div class="feature-item">Generous boiler capacity</div>
+                <div class="feature-item">Ideal for latte art</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Budan Pro -->
+          <div class="product-detail-card" data-tags="semi-automatic,economical" id="budan-pro">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/budan-pro-1.jpg" alt="Budan Pro - 1" /></div>
+                  <div class="carousel-slide"><img src="images/budan-pro-2.jpg" alt="Budan Pro - 2" /></div>
+                  <div class="carousel-slide"><img src="images/budan-pro-3.jpg" alt="Budan Pro - 3" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Economical · Budan</span>
+              <h3 class="product-name">Budan Pro (SA 101T)</h3>
+              <p class="product-desc">Versatile, precise, and built for small coffee businesses. The Budan Pro is compact, powerful, and features user-friendly controls ideal for small cafés, office pantries, and boutique coffee bars. Create rich espressos, lattes, americanos, and hot chocolates with consistency.</p>
+              <div class="features-grid">
+                <div class="feature-item">Stainless steel housing</div>
+                <div class="feature-item">Dual boiler system</div>
+                <div class="feature-item">15–19 bar Italian pump</div>
+                <div class="feature-item">58mm portafilter</div>
+                <div class="feature-item">Volumetric dosing</div>
+                <div class="feature-item">Programmable electronic buttons</div>
+                <div class="feature-item">Removable water tank</div>
+                <div class="feature-item">Auto-clean system</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Premium -->
+          <div class="subcategory-label" id="premium" style="color: var(--mid-gray); font-size:0.72rem;">Premium</div>
+          <!-- La Carimali Glow -->
+          <div class="product-detail-card" data-tags="semi-automatic,premium,carimali" id="carimali-glow">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/carimali-glow-1.jpg" alt="La Carimali Glow - 1" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-2.jpg" alt="La Carimali Glow - 2" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-3.jpg" alt="La Carimali Glow - 3" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-4.jpg" alt="La Carimali Glow - 4" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-5.jpg" alt="La Carimali Glow - 5" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-6.jpg" alt="La Carimali Glow - 6" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-7.jpg" alt="La Carimali Glow - 7" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-8.jpg" alt="La Carimali Glow - 8" /></div>
+                  <div class="carousel-slide"><img src="images/carimali-glow-9.jpg" alt="La Carimali Glow - 9" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Premium · Carimali</span>
+              <h3 class="product-name">La Carimali Glow</h3>
+              <p class="product-desc">A high-performance semi-automatic espresso machine crafted for cafés, restaurants, and high-end hospitality environments. The Glow combines a sleek stainless-steel body with customisable extraction settings to deliver consistently exceptional espresso.</p>
+              <div class="features-grid">
+                <div class="feature-item">Stainless-steel body construction</div>
+                <div class="feature-item">Customisable extraction settings</div>
+                <div class="feature-item">Up to 250 cups per day</div>
+                <div class="feature-item">Ideal for cafés, restaurants &amp; hospitality</div>
+                <div class="feature-item">High-performance brewing system</div>
+                <div class="feature-item">Precision temperature control</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Rancilio Classe 5 USB -->
+          <div class="product-detail-card" data-tags="semi-automatic,premium,rancilio" id="rancilio-classe5">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/rancilio-classe5-1.jpg" alt="Rancilio Classe 5 USB - 1" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe5-2.jpg" alt="Rancilio Classe 5 USB - 2" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe5-3.jpg" alt="Rancilio Classe 5 USB - 3" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe5-4.jpg" alt="Rancilio Classe 5 USB - 4" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe5-5.jpg" alt="Rancilio Classe 5 USB - 5" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Premium · Rancilio</span>
+              <h3 class="product-name">Rancilio Classe 5 USB</h3>
+              <p class="product-desc">A professional semi-automatic espresso machine engineered for cafés that need consistent, high-volume output. Features Rancilio's intelligent iSteam wand alongside precise temperature and pressure control for repeatable results.</p>
+              <div class="features-grid">
+                <div class="feature-item">iSteam intelligent steam wand</div>
+                <div class="feature-item">Precise temperature &amp; pressure control</div>
+                <div class="feature-item">Up to 300 cups per day</div>
+                <div class="feature-item">Ideal for high-volume café output</div>
+                <div class="feature-item">Professional semi-automatic operation</div>
+                <div class="feature-item">Consistent extraction every shot</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Rancilio Classe 7 -->
+          <div class="product-detail-card" data-tags="semi-automatic,premium,rancilio" id="rancilio-classe7">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/rancilio-classe7-1.jpg" alt="Rancilio Classe 7 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe7-2.jpg" alt="Rancilio Classe 7 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe7-3.jpg" alt="Rancilio Classe 7 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe7-4.jpg" alt="Rancilio Classe 7 - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Premium · Rancilio</span>
+              <h3 class="product-name">Rancilio Classe 7</h3>
+              <p class="product-desc">A high-performance machine for medium to high-volume environments. The Classe 7 is available in both automatic and semi-automatic configurations, with advanced temperature and pressure control to meet the demands of busy coffee service.</p>
+              <div class="features-grid">
+                <div class="feature-item">Available in automatic &amp; semi-automatic</div>
+                <div class="feature-item">Advanced temperature &amp; pressure control</div>
+                <div class="feature-item">Up to 400 cups per day</div>
+                <div class="feature-item">Multiple group configurations</div>
+                <div class="feature-item">Built for medium to high-volume use</div>
+                <div class="feature-item">Robust commercial-grade construction</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Rancilio Classe 9 USB -->
+          <div class="product-detail-card" data-tags="semi-automatic,premium,rancilio" id="rancilio-classe9">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-1.jpg" alt="Rancilio Classe 9 USB - 1" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-2.jpg" alt="Rancilio Classe 9 USB - 2" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-3.jpg" alt="Rancilio Classe 9 USB - 3" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-4.jpg" alt="Rancilio Classe 9 USB - 4" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-5.jpg" alt="Rancilio Classe 9 USB - 5" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-classe9-6.jpg" alt="Rancilio Classe 9 USB - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Premium · Rancilio</span>
+              <h3 class="product-name">Rancilio Classe 9 USB</h3>
+              <p class="product-desc">A premium, high-volume espresso machine built from stainless steel and aluminium. Engineered for medium to high-volume operations that demand professional reliability, precision, and a refined aesthetic.</p>
+              <div class="features-grid">
+                <div class="feature-item">Stainless steel &amp; aluminium body</div>
+                <div class="feature-item">Up to 500 cups per day</div>
+                <div class="feature-item">Medium to high-volume operations</div>
+                <div class="feature-item">Professional semi-automatic control</div>
+                <div class="feature-item">Precise pressure management</div>
+                <div class="feature-item">Refined premium design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Specialty -->
+          <div class="subcategory-label" id="specialty" style="color: var(--mid-gray); font-size:0.72rem;">Specialty</div>
+          <!-- Rancilio Specialty RS 1 -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,rancilio" id="rancilio-rs1">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-1.jpg" alt="Rancilio Specialty RS 1 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-2.jpg" alt="Rancilio Specialty RS 1 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-3.jpg" alt="Rancilio Specialty RS 1 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-4.jpg" alt="Rancilio Specialty RS 1 - 4" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-5.jpg" alt="Rancilio Specialty RS 1 - 5" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-rs1-6.jpg" alt="Rancilio Specialty RS 1 - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · Rancilio</span>
+              <h3 class="product-name">Rancilio Specialty RS 1</h3>
+              <p class="product-desc">A cutting-edge specialty espresso machine with advanced temperature profiling and multi-boiler technology. The RS 1 offers customisable pre- and post-infusion stages, cool-touch steam wands, and a touchscreen with diagnostic tools, designed for high-footfall specialty cafés.</p>
+              <div class="features-grid">
+                <div class="feature-item">Advanced temperature profiling</div>
+                <div class="feature-item">Multi-boiler system</div>
+                <div class="feature-item">Customisable pre &amp; post-infusion stages</div>
+                <div class="feature-item">Cool-touch steam wands</div>
+                <div class="feature-item">Programmable hot water dispense</div>
+                <div class="feature-item">Touchscreen with diagnostic tools</div>
+                <div class="feature-item">Ideal for specialty &amp; high-footfall cafés</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- Rancilio Invicta -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,rancilio" id="rancilio-invicta">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-1.jpg" alt="Rancilio Invicta - 1" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-2.jpg" alt="Rancilio Invicta - 2" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-3.jpg" alt="Rancilio Invicta - 3" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-4.jpg" alt="Rancilio Invicta - 4" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-5.jpg" alt="Rancilio Invicta - 5" /></div>
+                  <div class="carousel-slide"><img src="images/rancilio-invicta-6.jpg" alt="Rancilio Invicta - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · Rancilio</span>
+              <h3 class="product-name">Rancilio Invicta</h3>
+              <p class="product-desc">Built for specialty environments where precision and speed coexist. The Invicta's Thermal Stability System (TSS) ensures consistent brew temperatures shot after shot, while its touchscreen interface with programmable dosing and Steady Brew technology keeps every extraction reliably on target.</p>
+              <div class="features-grid">
+                <div class="feature-item">Thermal Stability System (TSS)</div>
+                <div class="feature-item">Steady Brew technology</div>
+                <div class="feature-item">Touchscreen with programmable dosing</div>
+                <div class="feature-item">Ergonomic steam wands</div>
+                <div class="feature-item">Up to 400 cups per day</div>
+                <div class="feature-item">Consistent extraction at high volume</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco Linea PB -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-linea-pb">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-1.jpg" alt="La Marzocco Linea PB - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-2.jpg" alt="La Marzocco Linea PB - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-3.jpg" alt="La Marzocco Linea PB - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-4.jpg" alt="La Marzocco Linea PB - 4" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-5.jpg" alt="La Marzocco Linea PB - 5" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-6.jpg" alt="La Marzocco Linea PB - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco Linea PB</h3>
+              <p class="product-desc">A benchmark in specialty coffee, the Linea PB pairs La Marzocco's legendary dual-boiler system with an intuitive touchpad interface and an ergonomic stainless-steel body. Trusted by some of the world's finest cafés for its reliability and exceptional cup quality.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual-boiler system</div>
+                <div class="feature-item">Intuitive touchpad interface</div>
+                <div class="feature-item">Stainless-steel ergonomic body</div>
+                <div class="feature-item">Up to 600 cups per day</div>
+                <div class="feature-item">PID temperature control</div>
+                <div class="feature-item">Industry benchmark for specialty coffee</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco Linea PB X -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-linea-pb-x">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-x-1.jpg" alt="La Marzocco Linea PB X - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-x-2.jpg" alt="La Marzocco Linea PB X - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-x-3.jpg" alt="La Marzocco Linea PB X - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-pb-x-4.jpg" alt="La Marzocco Linea PB X - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco Linea PB X</h3>
+              <p class="product-desc">The advanced evolution of the Linea PB, featuring a saturated group head with PID control and an integrated Brew-by-Weight (BBW) system for precise shot dosing by weight. Improved eco-mode and energy efficiency make it ideal for high-volume specialty operations.</p>
+              <div class="features-grid">
+                <div class="feature-item">Saturated group head with PID control</div>
+                <div class="feature-item">Integrated Brew-by-Weight (BBW) system</div>
+                <div class="feature-item">Eco-mode for energy efficiency</div>
+                <div class="feature-item">Up to 700 cups per day</div>
+                <div class="feature-item">Dual-boiler system</div>
+                <div class="feature-item">Precise shot dosing by weight</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco Strada S -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-strada-s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-strada-s-1.jpg" alt="La Marzocco Strada S - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-s-2.jpg" alt="La Marzocco Strada S - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-s-3.jpg" alt="La Marzocco Strada S - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-s-4.jpg" alt="La Marzocco Strada S - 4" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-s-5.jpg" alt="La Marzocco Strada S - 5" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-s-6.jpg" alt="La Marzocco Strada S - 6" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco Strada S</h3>
+              <p class="product-desc">A specialty espresso machine designed with the barista's workflow in mind. The Strada S features dual boilers with saturated group heads, customisable volumetric dosing, and a lower-profile design that enhances the communication and experience between barista and customer.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual-boiler with saturated group heads</div>
+                <div class="feature-item">Customisable volumetric dosing</div>
+                <div class="feature-item">Lower-profile barista-friendly design</div>
+                <div class="feature-item">Up to 700 cups per day</div>
+                <div class="feature-item">Enhanced barista workflow</div>
+                <div class="feature-item">PID temperature control</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco Strada X -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-strada-x">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-strada-x-1.jpg" alt="La Marzocco Strada X - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-x-2.jpg" alt="La Marzocco Strada X - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-x-3.jpg" alt="La Marzocco Strada X - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-x-4.jpg" alt="La Marzocco Strada X - 4" /></div>
+                  <div class="carousel-slide"><img src="images/lm-strada-x-5.jpg" alt="La Marzocco Strada X - 5" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco Strada X</h3>
+              <p class="product-desc">Built for high-end specialty cafés and experimental brewing. The Strada X combines dual-boiler technology with PID control and pressure profiling, giving baristas unparalleled control over the extraction curve and enabling creative coffee exploration.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual-boiler with PID control</div>
+                <div class="feature-item">Pressure profiling technology</div>
+                <div class="feature-item">Up to 700 cups per day</div>
+                <div class="feature-item">For high-end specialty &amp; experimental brewing</div>
+                <div class="feature-item">Full extraction curve control</div>
+                <div class="feature-item">Premium build quality</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco KB 90 -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-kb90">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-kb90-1.jpg" alt="La Marzocco KB 90 - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-2.jpg" alt="La Marzocco KB 90 - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-3.jpg" alt="La Marzocco KB 90 - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-4.jpg" alt="La Marzocco KB 90 - 4" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-5.jpg" alt="La Marzocco KB 90 - 5" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-6.jpg" alt="La Marzocco KB 90 - 6" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-7.jpg" alt="La Marzocco KB 90 - 7" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-8.jpg" alt="La Marzocco KB 90 - 8" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-9.jpg" alt="La Marzocco KB 90 - 9" /></div>
+                  <div class="carousel-slide"><img src="images/lm-kb90-10.jpg" alt="La Marzocco KB 90 - 10" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco KB 90</h3>
+              <p class="product-desc">Engineered for speed and ergonomics, the KB 90 features a straight-in portafilter system that eliminates the twist for faster workflow. Its unique Steam Flush system automatically cleans the group heads after every shot, while dual boilers and PID control maintain thermal precision throughout service.</p>
+              <div class="features-grid">
+                <div class="feature-item">Straight-in portafilter system (faster workflow)</div>
+                <div class="feature-item">Steam Flush auto-cleans group heads after each shot</div>
+                <div class="feature-item">Dual boiler + PID temperature control</div>
+                <div class="feature-item">Up to 800 cups per day</div>
+                <div class="feature-item">Designed for high-speed specialty service</div>
+                <div class="feature-item">Ergonomic barista-first design</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco GB 5 S -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-gb5s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-gb5s-1.jpg" alt="La Marzocco GB 5 S - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-gb5s-2.jpg" alt="La Marzocco GB 5 S - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-gb5s-3.jpg" alt="La Marzocco GB 5 S - 3" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco GB 5 S</h3>
+              <p class="product-desc">A timeless Italian icon. The GB 5 S brings La Marzocco's signature dual-boiler and saturated group head design with PID temperature control in a form that has defined specialty espresso for decades. Its elegant lines and reliable performance make it a cornerstone of world-class cafés.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual-boiler with saturated group heads</div>
+                <div class="feature-item">PID temperature control</div>
+                <div class="feature-item">Timeless Italian design</div>
+                <div class="feature-item">Up to 600 cups per day</div>
+                <div class="feature-item">Proven specialty coffee heritage</div>
+                <div class="feature-item">Premium café cornerstone machine</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco GB 5 X -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-gb5x">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-gb5x-1.jpg" alt="La Marzocco GB 5 X - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-gb5x-2.jpg" alt="La Marzocco GB 5 X - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-gb5x-3.jpg" alt="La Marzocco GB 5 X - 3" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco GB 5 X</h3>
+              <p class="product-desc">The GB 5 X takes the legendary GB 5 platform further with Auto Brew Ratio (ABR) technology, automatically dosing shots by weight for repeatable accuracy across a busy service. Dual-boiler with PID control ensures thermal consistency shot after shot.</p>
+              <div class="features-grid">
+                <div class="feature-item">Auto Brew Ratio (ABR) technology</div>
+                <div class="feature-item">Accurate shot dosing by weight</div>
+                <div class="feature-item">Dual-boiler with PID control</div>
+                <div class="feature-item">Up to 600 cups per day</div>
+                <div class="feature-item">Consistent extraction at scale</div>
+                <div class="feature-item">Built on the legendary GB 5 platform</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <!-- La Marzocco Linea Classic S -->
+          <div class="product-detail-card" data-tags="semi-automatic,specialty,la-marzocco" id="lm-linea-classic-s">
+            <div class="product-detail-image">
+              <div class="product-carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide"><img src="images/lm-linea-classic-s-1.jpg" alt="La Marzocco Linea Classic S - 1" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-classic-s-2.jpg" alt="La Marzocco Linea Classic S - 2" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-classic-s-3.jpg" alt="La Marzocco Linea Classic S - 3" /></div>
+                  <div class="carousel-slide"><img src="images/lm-linea-classic-s-4.jpg" alt="La Marzocco Linea Classic S - 4" /></div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+                <div class="carousel-dots"></div>
+              </div>
+            </div>
+            <div class="product-detail-body">
+              <span class="product-category">Semi-Automatic · Specialty · La Marzocco</span>
+              <h3 class="product-name">La Marzocco Linea Classic S</h3>
+              <p class="product-desc">An icon reimagined. The Linea Classic S carries the trusted legacy of the original Linea, dual boilers, saturated group heads, and PID control, with updated ergonomics and improved energy efficiency for the modern specialty café environment.</p>
+              <div class="features-grid">
+                <div class="feature-item">Dual-boiler with saturated group heads</div>
+                <div class="feature-item">PID temperature control</div>
+                <div class="feature-item">Updated ergonomics &amp; energy efficiency</div>
+                <div class="feature-item">Up to 600 cups per day</div>
+                <div class="feature-item">Trusted worldwide in specialty cafés</div>
+                <div class="feature-item">Iconic design with modern improvements</div>
+              </div>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+        </div><!-- end #semi-automatic -->
+      </section>
+      <!-- ======================================================
+           GRINDERS
+      ====================================================== -->
+      <section class="category-section" id="grinders" data-category="grinders">
+        <h2 class="category-title">⚙️ Coffee Grinders</h2>
+        <p class="category-description">The quality of your grind defines the quality of your cup. We supply <strong>commercial coffee grinders</strong> with flat burr and conical burr technology — from compact on-demand espresso grinders to high-capacity industrial bulk grinders. Brands: Mahlkönig, Anfim, Hey Cafe.</p>
+        <!-- Economical Grinders -->
+        <div class="subcategory-label" id="grinders-electric">Economical Grinders, Hey Cafe</div>
+        <!-- Hey Cafe Buddy Doser -->
+        <div class="product-detail-card" data-tags="grinder,economical,hey-cafe" id="heycafe-buddy-doser">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/heycafe-buddy-doser-1.jpg" alt="Hey Cafe Buddy Doser" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Economical · Hey Cafe</span>
+            <h3 class="product-name">Hey Cafe Buddy Doser</h3>
+            <p class="product-desc">A compact and reliable espresso grinder for small cafés and kiosks. The Buddy Doser features 64mm flat burrs with a dose mechanism for pre-measured dispensing and stepless grind adjustment, delivering consistent results in a space-saving footprint.</p>
+            <div class="features-grid">
+              <div class="feature-item">64mm flat burrs</div>
+              <div class="feature-item">Dose mechanism (pre-measured dispensing)</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Compact, space-saving design</div>
+              <div class="feature-item">Up to 2 kg per day</div>
+              <div class="feature-item">Ideal for small cafés &amp; kiosks</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Hey Cafe HC 600 v2.0 -->
+        <div class="product-detail-card" data-tags="grinder,economical,hey-cafe" id="heycafe-hc600">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/heycafe-hc600-1.jpg" alt="Hey Cafe HC 600 v2.0 - 1" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-hc600-2.jpg" alt="Hey Cafe HC 600 v2.0 - 2" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-hc600-3.jpg" alt="Hey Cafe HC 600 v2.0 - 3" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Economical · Hey Cafe</span>
+            <h3 class="product-name">Hey Cafe HC 600 v2.0</h3>
+            <p class="product-desc">A heavy-duty commercial grinder built for high-volume coffee service. The HC 600 v2.0 features flat burrs with stepless grind adjustment and a powerful motor designed to handle continuous high-demand operation without compromising grind quality.</p>
+            <div class="features-grid">
+              <div class="feature-item">Commercial flat burrs</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Heavy-duty motor for high-volume use</div>
+              <div class="feature-item">Up to 3 kg per day</div>
+              <div class="feature-item">Consistent grind quality under load</div>
+              <div class="feature-item">Durable commercial construction</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Hey Cafe Buddy on Demand -->
+        <div class="product-detail-card" data-tags="grinder,economical,hey-cafe" id="heycafe-buddy-od">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/heycafe-buddy-od-1.jpg" alt="Hey Cafe Buddy on Demand - 1" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-buddy-od-2.jpg" alt="Hey Cafe Buddy on Demand - 2" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-buddy-od-3.jpg" alt="Hey Cafe Buddy on Demand - 3" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-buddy-od-4.jpg" alt="Hey Cafe Buddy on Demand - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Economical · Hey Cafe</span>
+            <h3 class="product-name">Hey Cafe Buddy on Demand</h3>
+            <p class="product-desc">An on-demand espresso grinder offering fresh-ground coffee for every shot. Featuring 64mm flat burrs and stepless adjustment, the Buddy on Demand is compact and space-efficient, perfect for smaller café setups that prioritise freshness and simplicity.</p>
+            <div class="features-grid">
+              <div class="feature-item">64mm flat burrs</div>
+              <div class="feature-item">On-demand dosing (fresh per shot)</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Space-saving compact form</div>
+              <div class="feature-item">Up to 2 kg per day</div>
+              <div class="feature-item">Simple, straightforward operation</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Premium Grinders -->
+        <div class="subcategory-label" id="grinders-manual">Premium Grinders, Mahlkönig</div>
+        <!-- Mahlkönig X54 -->
+        <div class="product-detail-card" data-tags="grinder,premium,mahlkonig" id="mahlkonig-x54">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-1.jpg" alt="Mahlkönig X54 - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-2.jpg" alt="Mahlkönig X54 - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-3.jpg" alt="Mahlkönig X54 - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-4.jpg" alt="Mahlkönig X54 - 4" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-5.jpg" alt="Mahlkönig X54 - 5" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x54-6.jpg" alt="Mahlkönig X54 - 6" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Premium · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig X54</h3>
+            <p class="product-desc">A versatile all-purpose grinder suited for espresso, filter, and French press. The X54 features stepless grind adjustment and stainless-steel burrs, delivering repeatable precision for home baristas and small cafés that demand flexibility across multiple brew methods.</p>
+            <div class="features-grid">
+              <div class="feature-item">All-purpose: espresso, filter, French press</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Stainless-steel burrs</div>
+              <div class="feature-item">Up to 500 g per day</div>
+              <div class="feature-item">Ideal for home &amp; small café use</div>
+              <div class="feature-item">Flexible across multiple brew methods</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+          <!-- Mahlkönig X64 -->
+        <div class="product-detail-card" data-tags="grinder,premium,mahlkonig" id="mahlkonig-x64">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-x64-1.jpg" alt="Mahlkönig X64 - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x64-2.jpg" alt="Mahlkönig X64 - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x64-3.jpg" alt="Mahlkönig X64 - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x64-4.jpg" alt="Mahlkönig X64 - 4" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-x64-5.jpg" alt="Mahlkönig X64 - 5" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Premium · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig X64</h3>
+            <p class="product-desc">A true single-dose precision grinder with zero retention design. The X64's 64mm flat steel burrs and micron-level stepless adjustment deliver whisper-quiet operation at ~3 g/sec, making it the go-to choice for home baristas and specialty enthusiasts exploring different brew methods.</p>
+            <div class="features-grid">
+              <div class="feature-item">True single-dose with zero retention</div>
+              <div class="feature-item">64mm flat steel burrs</div>
+              <div class="feature-item">Micron-level stepless adjustment</div>
+              <div class="feature-item">Whisper-quiet operation (~3 g/sec)</div>
+              <div class="feature-item">For home baristas &amp; specialty enthusiasts</div>
+              <div class="feature-item">Suited to experimental brew methods</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Professional Grinders -->
+        <div class="subcategory-label" id="grinders-professional">Professional Grinders, Mahlkönig, Hey Cafe &amp; Anfim</div>
+        <!-- Mahlkönig EK43 -->
+        <div class="product-detail-card" data-tags="grinder,professional,mahlkonig" id="mahlkonig-ek43">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-ek43-1.jpg" alt="Mahlkönig EK43 - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek43-2.jpg" alt="Mahlkönig EK43 - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek43-3.jpg" alt="Mahlkönig EK43 - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek43-4.jpg" alt="Mahlkönig EK43 - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig EK43</h3>
+            <p class="product-desc">The industry benchmark multi-purpose grinder for espresso, filter, and batch brewing. The EK43 features 98mm flat burrs for superior grind consistency, stepless adjustment, and a powerful motor, delivering unmatched versatility for specialty coffee shops and roasteries.</p>
+            <div class="features-grid">
+              <div class="feature-item">98mm flat burrs for superior consistency</div>
+              <div class="feature-item">Multi-purpose: espresso, filter &amp; batch brewing</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Powerful high-speed motor</div>
+              <div class="feature-item">Minimal retention</div>
+              <div class="feature-item">Up to 12 kg per day</div>
+              <div class="feature-item">Ideal for specialty shops &amp; roasteries</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Hey Cafe HC-880 LAB S -->
+        <div class="product-detail-card" data-tags="grinder,professional,hey-cafe" id="heycafe-hc880">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/heycafe-hc880-1.jpg" alt="Hey Cafe HC-880 LAB S - 1" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-hc880-2.jpg" alt="Hey Cafe HC-880 LAB S - 2" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-hc880-3.jpg" alt="Hey Cafe HC-880 LAB S - 3" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-hc880-4.jpg" alt="Hey Cafe HC-880 LAB S - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Hey Cafe</span>
+            <h3 class="product-name">Hey Cafe HC-880 LAB S</h3>
+            <p class="product-desc">A high-performance espresso grinder designed for medium to high-volume commercial coffee setups. The HC-880 LAB S features 83mm flat burrs, stepless grind adjustment, and a powerful motor, built for busy cafés that demand speed, precision, and efficiency all day long.</p>
+            <div class="features-grid">
+              <div class="feature-item">83mm flat burrs for precision grinding</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Powerful motor for high-speed use</div>
+              <div class="feature-item">Large capacity hopper</div>
+              <div class="feature-item">Up to 8 kg per day</div>
+              <div class="feature-item">Ideal for medium to high-volume cafés</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Hey Cafe Jack -->
+        <div class="product-detail-card" data-tags="grinder,professional,hey-cafe" id="heycafe-jack">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/heycafe-jack-1.jpg" alt="Hey Cafe Jack - 1" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-jack-2.jpg" alt="Hey Cafe Jack - 2" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-jack-3.jpg" alt="Hey Cafe Jack - 3" /></div>
+                <div class="carousel-slide"><img src="images/heycafe-jack-4.jpg" alt="Hey Cafe Jack - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Hey Cafe</span>
+            <h3 class="product-name">Hey Cafe Jack</h3>
+            <p class="product-desc">A compact on-demand espresso grinder built for precision and efficiency in small cafés and coffee kiosks. The Jack features 64mm flat burrs, stepless grind adjustment, and a hands-free portafilter holder for a seamless, professional-quality workflow.</p>
+            <div class="features-grid">
+              <div class="feature-item">64mm flat burrs for uniform grinding</div>
+              <div class="feature-item">On-demand dosing for freshness</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Hands-free portafilter holder</div>
+              <div class="feature-item">Compact small-footprint design</div>
+              <div class="feature-item">Up to 3 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Mahlkönig E65S GBW -->
+        <div class="product-detail-card" data-tags="grinder,professional,mahlkonig" id="mahlkonig-e65s">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-e65s-1.jpg" alt="Mahlkönig E65S GBW - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e65s-2.jpg" alt="Mahlkönig E65S GBW - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e65s-3.jpg" alt="Mahlkönig E65S GBW - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e65s-4.jpg" alt="Mahlkönig E65S GBW - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig E65S GBW</h3>
+            <p class="product-desc">A precision on-demand espresso grinder with Grind-by-Weight (GBW) technology. The E65S GBW uses 65mm flat burrs and real-time weight-based dosing to deliver exact coffee measurements with every grind, backed by silent grinding technology for a quieter café environment.</p>
+            <div class="features-grid">
+              <div class="feature-item">Grind-by-Weight (GBW) technology</div>
+              <div class="feature-item">65mm flat burrs</div>
+              <div class="feature-item">Real-time weight-based dosing</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Silent grinding technology</div>
+              <div class="feature-item">Up to 5 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Mahlkönig E80S GBW -->
+        <div class="product-detail-card" data-tags="grinder,professional,mahlkonig" id="mahlkonig-e80s">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-e80s-1.jpg" alt="Mahlkönig E80S GBW - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e80s-2.jpg" alt="Mahlkönig E80S GBW - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e80s-3.jpg" alt="Mahlkönig E80S GBW - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-e80s-4.jpg" alt="Mahlkönig E80S GBW - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig E80S GBW</h3>
+            <p class="product-desc">A high-performance on-demand espresso grinder with Grind-by-Weight (GBW) technology. The E80S GBW steps up with 80mm special steel flat burrs and a powerful motor for high-volume cafés that need both speed and dosing accuracy in every shot.</p>
+            <div class="features-grid">
+              <div class="feature-item">Grind-by-Weight (GBW) technology</div>
+              <div class="feature-item">80mm special steel flat burrs</div>
+              <div class="feature-item">Real-time weight-based dosing</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Powerful motor for high-volume service</div>
+              <div class="feature-item">Up to 10 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Mahlkönig Ek Omnia -->
+        <div class="product-detail-card" data-tags="grinder,professional,mahlkonig" id="mahlkonig-ek-omnia">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-ek-omnia-1.jpg" alt="Mahlkönig Ek Omnia - 1" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek-omnia-2.jpg" alt="Mahlkönig Ek Omnia - 2" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek-omnia-3.jpg" alt="Mahlkönig Ek Omnia - 3" /></div>
+                <div class="carousel-slide"><img src="images/mahlkonig-ek-omnia-4.jpg" alt="Mahlkönig Ek Omnia - 4" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig Ek Omnia</h3>
+            <p class="product-desc">The next-generation multi-purpose grinder for espresso, filter, and batch brewing. The Ek Omnia upgrades the legendary EK43 platform with 98mm premium flat burrs, an enhanced motor and cooling system, and an optimised retention and dosing system for minimal waste at maximum speed.</p>
+            <div class="features-grid">
+              <div class="feature-item">98mm premium flat burrs</div>
+              <div class="feature-item">Multi-purpose: espresso, filter &amp; batch brewing</div>
+              <div class="feature-item">Enhanced motor &amp; cooling system</div>
+              <div class="feature-item">Optimised dosing with minimal waste</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Up to 12 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Industrial Grinders -->
+        <div class="subcategory-label" id="grinders-industrial">Industrial Grinders, Mahlkönig</div>
+        <!-- Mahlkönig DK15 -->
+        <div class="product-detail-card" data-tags="grinder,industrial,mahlkonig" id="mahlkonig-dk15">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-dk15-1.jpg" alt="Mahlkönig DK15" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Industrial · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig DK15</h3>
+            <p class="product-desc">A heavy-duty bulk grinder designed for large-scale coffee processing. The DK15 features 150mm flat burrs and an industrial-grade motor for continuous high-speed grinding, built to deliver precise and uniform results in demanding roastery and wholesale environments.</p>
+            <div class="features-grid">
+              <div class="feature-item">150mm flat burrs</div>
+              <div class="feature-item">Industrial-grade motor</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">Full range of brewing methods</div>
+              <div class="feature-item">Robust stainless-steel construction</div>
+              <div class="feature-item">Up to 120 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Mahlkönig DK27 -->
+        <div class="product-detail-card" data-tags="grinder,industrial,mahlkonig" id="mahlkonig-dk27">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/mahlkonig-dk27-1.jpg" alt="Mahlkönig DK27" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Industrial · Mahlkönig</span>
+            <h3 class="product-name">Mahlkönig DK27</h3>
+            <p class="product-desc">The flagship industrial bulk coffee grinder for large-scale operations. The DK27 features 180mm flat burrs and a high-performance motor for continuous operation, delivering exceptional speed, consistency, and durability for roasteries and large-scale coffee businesses.</p>
+            <div class="features-grid">
+              <div class="feature-item">180mm flat burrs</div>
+              <div class="feature-item">High-performance industrial motor</div>
+              <div class="feature-item">Stepless fine-to-coarse adjustment</div>
+              <div class="feature-item">Continuous high-speed operation</div>
+              <div class="feature-item">Durable stainless-steel construction</div>
+              <div class="feature-item">Up to 200 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Anfim Luna -->
+        <div class="product-detail-card" data-tags="grinder,professional,anfim" id="anfim-luna">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/anfim-luna-1.jpg" alt="Anfim Luna - 1" /></div>
+                <div class="carousel-slide"><img src="images/anfim-luna-2.jpg" alt="Anfim Luna - 2" /></div>
+                <div class="carousel-slide"><img src="images/anfim-luna-3.jpg" alt="Anfim Luna - 3" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Grinder · Professional · Anfim</span>
+            <h3 class="product-name">Anfim Luna</h3>
+            <p class="product-desc">A high-performance on-demand espresso grinder designed for specialty coffee shops. The Anfim Luna combines 65mm flat burrs with a user-friendly touchscreen interface and programmable dosing, delivering fast, precise, and consistent grinding for espresso excellence in busy café environments.</p>
+            <div class="features-grid">
+              <div class="feature-item">65mm flat burrs</div>
+              <div class="feature-item">Touchscreen interface</div>
+              <div class="feature-item">Programmable dosing</div>
+              <div class="feature-item">Stepless grind adjustment</div>
+              <div class="feature-item">High-speed powerful motor</div>
+              <div class="feature-item">Up to 5 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- ======================================================
+           ESPRESSO ACCESSORIES
+      ====================================================== -->
+      <section class="category-section" id="barista-accessories" data-category="barista-accessories">
+        <h2 class="category-title">🧰 Espresso & Barista Accessories</h2>
+        <p class="category-description">Professional-grade <strong>barista accessories</strong> for the perfect espresso setup — precision tampers, coffee distributors, stainless steel milk pitchers, knock boxes, cupping bowls, and barista cloths. Essential tools for every café and coffee bar.</p>
+        <div class="subcategory-label">Distribution &amp; Tamping</div>
+        <!-- Leveler / Distributor -->
+        <div class="product-detail-card" data-tags="accessories,tamping" id="leveler">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/leveler-1.jpg" alt="Leveler / Distributor - 1" /></div>
+                <div class="carousel-slide"><img src="images/leveler-2.jpg" alt="Leveler / Distributor - 2" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Distribution</span>
+            <h3 class="product-name">Leveler / Distributor</h3>
+            <p class="product-desc">A precision instrument for consistent espresso. The leveler ensures even and uniform distribution of coffee grounds in the portafilter basket before tamping, creating a balanced, well-extracted espresso shot every time.</p>
+            <div class="features-grid">
+              <div class="feature-item">Ensures even coffee distribution</div>
+              <div class="feature-item">Prevents channelling during extraction</div>
+              <div class="feature-item">Compatible with 58mm portafilters</div>
+              <div class="feature-item">Adjustable depth settings</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- 58mm Click Tamper -->
+        <div class="product-detail-card" data-tags="accessories,tamping" id="tamper-click">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/tamper-click-1.jpg" alt="58mm Click Tamper" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Tamping</span>
+            <h3 class="product-name">58mm Click Tamper</h3>
+            <p class="product-desc">A push tamper that promises a perfect, level, and consistent tamp every use. The click mechanism confirms the ideal tamping pressure has been reached, ensuring repeatable results and excellent flavour extraction from freshly ground coffee beans.</p>
+            <div class="features-grid">
+              <div class="feature-item">Click mechanism for consistent pressure</div>
+              <div class="feature-item">58mm base for standard portafilters</div>
+              <div class="feature-item">Level and even tamping guaranteed</div>
+              <div class="feature-item">High-quality espresso tamper</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Standard Tamper -->
+        <div class="product-detail-card" data-tags="accessories,tamping" id="tamper-standard">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/tamper-standard-1.jpg" alt="Standard Tamper" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Tamping</span>
+            <h3 class="product-name">Standard Tamper</h3>
+            <p class="product-desc">A classic wooden-handled tamper that is an essential component for preparing espresso. It compresses coffee grounds in the portafilter basket, creating a dense and even coffee puck for proper extraction and consistently great-tasting espresso.</p>
+            <div class="features-grid">
+              <div class="feature-item">Wooden handle for comfortable grip</div>
+              <div class="feature-item">Compresses grounds for even extraction</div>
+              <div class="feature-item">Creates a dense, uniform coffee puck</div>
+              <div class="feature-item">Essential espresso accessory</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Tamping Mat -->
+        <div class="product-detail-card" data-tags="accessories,tamping" id="tamping-mat">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/tamping-mat-1.jpg" alt="Tamping Mat" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Tamping</span>
+            <h3 class="product-name">Tamping Mat</h3>
+            <p class="product-desc">A thoughtful and practical accessory that enhances the espresso-making process. Made from high-quality silicone or rubber, the tamping mat protects the countertop from scratches during tamping while providing a stable, non-slip surface for consistent tamp pressure.</p>
+            <div class="features-grid">
+              <div class="feature-item">Silicone / rubber construction</div>
+              <div class="feature-item">Protects countertop from scratches</div>
+              <div class="feature-item">Non-slip stable surface</div>
+              <div class="feature-item">Comfortable tamping support</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="subcategory-label">Milk &amp; Cleaning Tools</div>
+        <!-- Milk Pitcher -->
+        <div class="product-detail-card" data-tags="accessories,milk" id="milk-pitcher">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/milk-pitcher-1.jpg" alt="Milk Pitcher" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Milk Tools</span>
+            <h3 class="product-name">Milk Pitcher</h3>
+            <p class="product-desc">A stainless steel milk pitcher designed to take milk frothing to new heights. With exceptional balance and adaptability, this pitcher has the potential to revolutionise how coffee shops approach milk frothing and latte art, delivering silky microfoam every time.</p>
+            <div class="features-grid">
+              <div class="feature-item">Stainless steel construction</div>
+              <div class="feature-item">Designed for latte art</div>
+              <div class="feature-item">Ideal for espresso-based beverages</div>
+              <div class="feature-item">Easy pour spout design</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Pitcher Rinser -->
+        <div class="product-detail-card" data-tags="accessories,cleaning" id="pitcher-rinser">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/pitcher-rinser-1.jpg" alt="Pitcher Rinser" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Cleaning</span>
+            <h3 class="product-name">Pitcher Rinser</h3>
+            <p class="product-desc">A practical and useful innovation designed for semi-automatic coffee machines. The pitcher rinser provides a quick and efficient way to rinse pitchers and milk frothing jugs, promoting cleanliness and convenience while enabling a faster workflow in any coffee environment.</p>
+            <div class="features-grid">
+              <div class="feature-item">Quick &amp; efficient pitcher rinsing</div>
+              <div class="feature-item">Designed for semi-automatic machines</div>
+              <div class="feature-item">Promotes cleanliness &amp; hygiene</div>
+              <div class="feature-item">Speeds up barista workflow</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Cleaning Cloth -->
+        <div class="product-detail-card" data-tags="accessories,cleaning" id="cleaning-cloth">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/cleaning-cloth-1.jpg" alt="Cleaning Cloth" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Cleaning</span>
+            <h3 class="product-name">Barista Cleaning Cloth</h3>
+            <p class="product-desc">A critical accessory that plays a vital role in maintaining hygiene and ensuring quality in cafés. The barista cloth facilitates smooth operations and is an indispensable tool for baristas worldwide, keeping equipment clean and service professional.</p>
+            <div class="features-grid">
+              <div class="feature-item">Essential hygiene accessory</div>
+              <div class="feature-item">Keeps equipment clean between uses</div>
+              <div class="feature-item">Used by baristas worldwide</div>
+              <div class="feature-item">Soft, absorbent material</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="subcategory-label">Knock Boxes &amp; Cupping Tools</div>
+        <!-- Knock Box Stand Black -->
+        <div class="product-detail-card" data-tags="accessories,knockbox" id="knock-box-stand">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/knock-box-stand-1.jpg" alt="Knock Box Stand Black" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Knock Box</span>
+            <h3 class="product-name">Knock Box Stand (Black)</h3>
+            <p class="product-desc">An indispensable tool for efficiently discarding used coffee grounds. The Knock Box Stand provides a reliable and functional solution for the ritual of knocking out coffee grounds after pulling espresso shots, enhancing barista workflow with style and efficiency.</p>
+            <div class="features-grid">
+              <div class="feature-item">Efficient grounds disposal</div>
+              <div class="feature-item">Sturdy stand design</div>
+              <div class="feature-item">Durable construction</div>
+              <div class="feature-item">Enhances barista workflow</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Round Knock Box -->
+        <div class="product-detail-card" data-tags="accessories,knockbox" id="knock-box-round">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/knock-box-round-1.jpg" alt="Round Knock Box" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Knock Box</span>
+            <h3 class="product-name">Round Knock Box</h3>
+            <p class="product-desc">A primary essential accessory, especially required for semi-automatic coffee machines. The round knock box provides a convenient and hygienic solution for disposing of used coffee grounds, keeping the workspace clean and the workflow efficient.</p>
+            <div class="features-grid">
+              <div class="feature-item">Essential for semi-automatic machines</div>
+              <div class="feature-item">Hygienic grounds disposal</div>
+              <div class="feature-item">Compact round design</div>
+              <div class="feature-item">Easy to clean</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Plastic Knock Box -->
+        <div class="product-detail-card" data-tags="accessories,knockbox" id="knock-box-plastic">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/knock-box-plastic-1.jpg" alt="Plastic Knock Box" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Knock Box</span>
+            <h3 class="product-name">Plastic Knock Box</h3>
+            <p class="product-desc">Made from durable ABS material, this knock box features good cushioning capabilities, a removable rubber bar for simple cleaning, and noise-dampening properties. The rubber bar and plastic body work together to lessen noise when in use, ideal for quieter environments.</p>
+            <div class="features-grid">
+              <div class="feature-item">Durable ABS material</div>
+              <div class="feature-item">Removable rubber bar for easy cleaning</div>
+              <div class="feature-item">Noise-dampening design</div>
+              <div class="feature-item">Discourages bacterial growth</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Cupping Bowl -->
+        <div class="product-detail-card" data-tags="accessories,cupping" id="cupping-bowl">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/cupping-bowl-1.jpg" alt="Cupping Bowl" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Cupping</span>
+            <h3 class="product-name">Cupping Bowl</h3>
+            <p class="product-desc">A versatile and indispensable tool for both coffee cupping sessions and café operations. The cupping bowl is used where experts evaluate the sensory qualities of coffee, a dual-purpose vessel that enhances both professional coffee evaluation and everyday café service.</p>
+            <div class="features-grid">
+              <div class="feature-item">Ideal for coffee cupping sessions</div>
+              <div class="feature-item">Dual-purpose café use</div>
+              <div class="feature-item">Enhances sensory evaluation</div>
+              <div class="feature-item">Standard cupping bowl dimensions</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Cupping Spoon -->
+        <div class="product-detail-card" data-tags="accessories,cupping" id="cupping-spoon">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/cupping-spoon-1.jpg" alt="Cupping Spoon" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Espresso Accessories · Cupping</span>
+            <h3 class="product-name">Cupping Spoon</h3>
+            <p class="product-desc">In the realm of specialty coffee, the cupping process is a sacred ritual. The Cupping Spoon is designed with precision and thoughtfulness, serving as an extension of the cupper's discerning palate, allowing it to delve deep into the nuances of coffee flavours during professional evaluations.</p>
+            <div class="features-grid">
+              <div class="feature-item">Essential cupping tool</div>
+              <div class="feature-item">Precision-designed for evaluation</div>
+              <div class="feature-item">Used by Q-graders &amp; coffee professionals</div>
+              <div class="feature-item">Standard cupping spoon shape</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- ======================================================
+           BLENDERS
+      ====================================================== -->
+      <section class="category-section" id="blenders" data-category="blenders">
+        <h2 class="category-title">🌀 Commercial Blenders for Cafes</h2>
+        <p class="category-description">High-performance <strong>commercial blenders</strong> for smoothies, frappes, cold coffee and specialty beverages. Available as open blenders for back-of-house and <strong>sound-enclosed silent blenders</strong> for counter-top use where noise reduction matters. Brand: Blendtec.</p>
+        <div class="subcategory-label" id="blenders-noise">Open Blenders</div>
+        <!-- Harmony Classic -->
+        <div class="product-detail-card" data-tags="blender,open" id="harmony-classic">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/harmony-classic-1.jpg" alt="Harmony Classic - 1" /></div>
+                <div class="carousel-slide"><img src="images/harmony-classic-2.jpg" alt="Harmony Classic - 2" /></div>
+                <div class="carousel-slide"><img src="images/harmony-classic-3.jpg" alt="Harmony Classic - 3" /></div>
+                <div class="carousel-slide"><img src="images/harmony-classic-4.jpg" alt="Harmony Classic - 4" /></div>
+                <div class="carousel-slide"><img src="images/harmony-classic-5.jpg" alt="Harmony Classic - 5" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Blender · Open · Harmony</span>
+            <h3 class="product-name">Harmony Classic</h3>
+            <p class="product-desc">A commercial-grade open blender built to effortlessly crush ice and blend tough ingredients. The Harmony Classic handles frappes, smoothies, milkshakes, and more with uniform texture in every blend, built for longevity and ease of operation in busy café environments.</p>
+            <div class="features-grid">
+              <div class="feature-item">Effortlessly crushes ice &amp; tough ingredients</div>
+              <div class="feature-item">Commercial-grade materials for longevity</div>
+              <div class="feature-item">Simple controls for efficient operation</div>
+              <div class="feature-item">Uniform texture in every blend</div>
+              <div class="feature-item">Ideal for frappes, smoothies, milkshakes</div>
+              <div class="feature-item">100–150 servings per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="subcategory-label" id="blenders-silent">Sound Enclosed Blenders</div>
+        <!-- Harmony Silent -->
+        <div class="product-detail-card" data-tags="blender,silent" id="harmony-silent">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/harmony-silent-1.jpg" alt="Harmony Silent - 1" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-2.jpg" alt="Harmony Silent - 2" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-3.jpg" alt="Harmony Silent - 3" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-4.jpg" alt="Harmony Silent - 4" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-5.jpg" alt="Harmony Silent - 5" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-6.jpg" alt="Harmony Silent - 6" /></div>
+                <div class="carousel-slide"><img src="images/harmony-silent-7.jpg" alt="Harmony Silent - 7" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Blender · Sound Enclosed · Harmony</span>
+            <h3 class="product-name">Harmony Silent</h3>
+            <p class="product-desc">Powerful blending performance with significantly reduced noise levels. The Harmony Silent uses sound-dampening technology to create a quieter workspace without compromising on power, ideal for counter-top use in open café environments where customer comfort matters.</p>
+            <div class="features-grid">
+              <div class="feature-item">Sound-dampening technology</div>
+              <div class="feature-item">Powerful blending performance</div>
+              <div class="feature-item">Durable heavy-duty construction</div>
+              <div class="feature-item">Ideal for frappes, smoothies &amp; iced drinks</div>
+              <div class="feature-item">Consistent results with every blend</div>
+              <div class="feature-item">100–150 servings per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Blendtec 825 Spacesaver -->
+        <div class="product-detail-card" data-tags="blender,silent" id="blendtec-825">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/blendtec-825-1.jpg" alt="Blendtec 825 Spacesaver" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Blender · Sound Enclosed · Blendtec</span>
+            <h3 class="product-name">Blendtec 825 Spacesaver</h3>
+            <p class="product-desc">A compact, high-performance commercial blender designed for cafés and food counters with limited space. Delivers consistent blending of smoothies, frappes, and iced beverages with a powerful motor, durable stainless-steel blades, and built-in safety features for streamlined operations.</p>
+            <div class="features-grid">
+              <div class="feature-item">Compact space-saving design</div>
+              <div class="feature-item">Powerful motor with stainless-steel blades</div>
+              <div class="feature-item">Easy-to-clean interface</div>
+              <div class="feature-item">Built-in safety features</div>
+              <div class="feature-item">Customisable blend cycles</div>
+              <div class="feature-item">100–150 blends per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Blendtec Connoisseur 825 -->
+        <div class="product-detail-card" data-tags="blender,silent" id="blendtec-connoisseur">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/blendtec-connoisseur-1.jpg" alt="Blendtec Connoisseur 825" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Blender · Sound Enclosed · Blendtec</span>
+            <h3 class="product-name">Blendtec Connoisseur 825</h3>
+            <p class="product-desc">A compact commercial blender designed for high-volume cafés and juice bars. Features pre-programmed blend cycles for easy, hands-free operation, a durable sound enclosure for a quieter blending experience, and a space-saving design that fits seamlessly into tight countertops.</p>
+            <div class="features-grid">
+              <div class="feature-item">Pre-programmed blend cycles</div>
+              <div class="feature-item">Hands-free operation</div>
+              <div class="feature-item">Durable sound enclosure</div>
+              <div class="feature-item">Space-saving compact design</div>
+              <div class="feature-item">Ideal for high-volume cafés &amp; juice bars</div>
+              <div class="feature-item">~180 blends per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Blendtec Stealth 885 -->
+        <div class="product-detail-card" data-tags="blender,silent" id="blendtec-stealth">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/blendtec-stealth-1.jpg" alt="Blendtec Stealth 885" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Blender · Sound Enclosed · Blendtec</span>
+            <h3 class="product-name">Blendtec Stealth 885</h3>
+            <p class="product-desc">A high-performance commercial blender for the busiest cafés and foodservice outlets. Features 42 pre-programmed blend cycles, a fully enclosed ultra-quiet sound enclosure, and intuitive touchscreen controls, delivering powerful blending performance with near-silent operation.</p>
+            <div class="features-grid">
+              <div class="feature-item">42 pre-programmed blend cycles</div>
+              <div class="feature-item">Ultra-quiet fully enclosed sound enclosure</div>
+              <div class="feature-item">Intuitive touchscreen controls</div>
+              <div class="feature-item">Advanced blending for complex recipes</div>
+              <div class="feature-item">Ideal for premium foodservice outlets</div>
+              <div class="feature-item">~250 blends per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- ======================================================
+           COFFEE BREWERS
+      ====================================================== -->
+      <section class="category-section" id="coffee-brewers" data-category="coffee-brewers">
+        <h2 class="category-title">☕ Coffee Brewers & Cold Brew Equipment</h2>
+        <p class="category-description">From <strong>slow-drip cold brew towers</strong> and <strong>pour-over brewers</strong> to smart automatic batch brewers — we supply specialty coffee brewing equipment for cafés, brew bars and restaurants. Brands: Fellow, Hario, Toddy.</p>
+        <div class="subcategory-label" id="manual-brewers">Manual Brewers</div>
+        <!-- Fellow Stagg EKG -->
+        <div class="product-detail-card" data-tags="brewer,manual" id="fellow-stagg-ekg">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/fellow-stagg-ekg-1.jpg" alt="Fellow Stagg EKG Kettle" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual · Fellow</span>
+            <h3 class="product-name">Fellow Stagg EKG Electric Kettle</h3>
+            <p class="product-desc">Precision pour control meets elegant design. The Stagg EKG features a gooseneck spout for variable temperature brewing, 1200W fast heat-up, a built-in brew stopwatch, and a 60-minute hold function, making it the preferred kettle for specialty cafés and professional brew bars.</p>
+            <div class="features-grid">
+              <div class="feature-item">Precision gooseneck spout pour control</div>
+              <div class="feature-item">Variable temperature settings</div>
+              <div class="feature-item">1200W fast heat time</div>
+              <div class="feature-item">Built-in brew stopwatch</div>
+              <div class="feature-item">60-minute hold function</div>
+              <div class="feature-item">50–70 cups comfortably brewed per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Deluxe Ice Drip -->
+        <div class="product-detail-card" data-tags="brewer,manual,cold-brew" id="zero-hero-deluxe">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-deluxe-1.jpg" alt="Zero Hero Deluxe Ice Drip" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Cold Brew · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Deluxe Ice Drip</h3>
+            <p class="product-desc">Slow-drip brewing at its finest. The Zero Hero Deluxe Ice Drip brews smooth, crystal-clear cold brews with an adjustable valve for customised flow control. Its premium borosilicate glass construction and visually striking design make it a statement piece on any specialty café counter.</p>
+            <div class="features-grid">
+              <div class="feature-item">Slow-drip method for smooth cold brews</div>
+              <div class="feature-item">Adjustable valve for customised flow</div>
+              <div class="feature-item">Premium borosilicate glass</div>
+              <div class="feature-item">Reusable stainless steel filter</div>
+              <div class="feature-item">Visually striking café counter display</div>
+              <div class="feature-item">Up to 8–10 batches per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Deluxe MAX Ice Drip -->
+        <div class="product-detail-card" data-tags="brewer,manual,cold-brew" id="zero-hero-deluxe-max">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-deluxe-max-1.jpg" alt="Zero Hero Deluxe MAX Ice Drip" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Cold Brew · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Deluxe MAX Ice Drip</h3>
+            <p class="product-desc">The larger sibling of the Deluxe, the MAX delivers the same classic slow-drip cold brew refinement with adjustable drip rate for flavour control. Built from durable borosilicate glass and stainless steel, it is compact, elegant, and built for sustainable brewing with reusable components.</p>
+            <div class="features-grid">
+              <div class="feature-item">Classic slow-drip cold brew method</div>
+              <div class="feature-item">Adjustable drip rate for flavour control</div>
+              <div class="feature-item">Borosilicate glass &amp; stainless-steel build</div>
+              <div class="feature-item">Compact &amp; elegant countertop design</div>
+              <div class="feature-item">Reusable sustainable components</div>
+              <div class="feature-item">6–8 batches of cold brew per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Hammered Server -->
+        <div class="product-detail-card" data-tags="brewer,manual,pour-over" id="zero-hero-hammered">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-hammered-1.jpg" alt="Zero Hero Hammered Server" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Pour-Over · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Hammered Server – 400ml</h3>
+            <p class="product-desc">A premium heat-resistant borosilicate glass server with a distinctive textured hammered finish for grip and aesthetics. Compatible with most pour-over brewers and drippers, its sturdy handle and minimalist form complement any brew bar setup beautifully.</p>
+            <div class="features-grid">
+              <div class="feature-item">Premium heat-resistant borosilicate glass</div>
+              <div class="feature-item">Textured hammered finish for grip &amp; aesthetics</div>
+              <div class="feature-item">Compatible with most pour-over brewers</div>
+              <div class="feature-item">Sturdy handle for safe steady pouring</div>
+              <div class="feature-item">400ml capacity</div>
+              <div class="feature-item">40–60 pour-overs per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Original Server -->
+        <div class="product-detail-card" data-tags="brewer,manual,pour-over" id="zero-hero-original">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-original-1.jpg" alt="Zero Hero Original Server" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Pour-Over · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Original Server – 450ml</h3>
+            <p class="product-desc">A sleek borosilicate glass server designed for temperature stability and flavour clarity. Featuring a wide spout for smooth and controlled pours and an ergonomic handle for a safe comfortable grip, it is compatible with most drippers and pour-over brewers.</p>
+            <div class="features-grid">
+              <div class="feature-item">Sleek borosilicate glass construction</div>
+              <div class="feature-item">Wide spout for controlled pours</div>
+              <div class="feature-item">Temperature stable for flavour clarity</div>
+              <div class="feature-item">Ergonomic handle for safe grip</div>
+              <div class="feature-item">450ml capacity</div>
+              <div class="feature-item">60–70 brews served per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Pour Over Support -->
+        <div class="product-detail-card" data-tags="brewer,manual,pour-over" id="zero-hero-support">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-support-1.jpg" alt="Zero Hero Pour Over Support" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Pour-Over · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Pour Over Support – Walnut Base Dripper Stand</h3>
+            <p class="product-desc">Designed to bring stability and style to your pour-over brewing routine. The Zero Hero Pour Over Support features a sleek walnut base and durable construction that ensures a smooth and precise brewing process. Its minimalist design adds elegance to any coffee setup.</p>
+            <div class="features-grid">
+              <div class="feature-item">Sleek walnut base</div>
+              <div class="feature-item">Stable &amp; precise brewing support</div>
+              <div class="feature-item">Minimalist elegant design</div>
+              <div class="feature-item">Solid foundation for consistent extraction</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Zero Hero Prisma PCTG Dripper -->
+        <div class="product-detail-card" data-tags="brewer,manual,pour-over" id="zero-hero-prisma">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/zero-hero-prisma-1.jpg" alt="Zero Hero Prisma Dripper" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Pour-Over · Zero Hero</span>
+            <h3 class="product-name">Zero Hero Prisma PCTG Dripper</h3>
+            <p class="product-desc">A flat-bottomed dripper made from durable, BPA-free PCTG material, designed for consistent extraction with a three-column ribbed interior for a stable flow rate. Lightweight and shatter-resistant for daily café use, it is compatible with standard V60 and Kalita filters.</p>
+            <div class="features-grid">
+              <div class="feature-item">Flat-bottomed for consistent extraction</div>
+              <div class="feature-item">BPA-free PCTG material</div>
+              <div class="feature-item">3-column ribbed interior for stable flow</div>
+              <div class="feature-item">Lightweight &amp; shatter-resistant</div>
+              <div class="feature-item">Compatible with V60 &amp; Kalita filters</div>
+              <div class="feature-item">50–80 manual brews per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Toddy Cold Brew System -->
+        <div class="product-detail-card" data-tags="brewer,manual,cold-brew" id="toddy-cold-brew">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/toddy-cold-brew-1.jpg" alt="Toddy Cold Brew System" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Cold Brew · Toddy</span>
+            <h3 class="product-name">Toddy Cold Brew System</h3>
+            <p class="product-desc">The classic home cold brew maker with a reusable filter, brewing container, glass decanter, and stopper. Steeps coarse coffee grounds for 12–24 hours to produce smooth, rich, low-acidity cold brew concentrate, ideal for home brewers seeking café-style cold brew in convenient weekly batches.</p>
+            <div class="features-grid">
+              <div class="feature-item">Manual cold brew with reusable filter</div>
+              <div class="feature-item">Includes brewing container, decanter &amp; stopper</div>
+              <div class="feature-item">12–24 hour steep for smooth concentrate</div>
+              <div class="feature-item">Low-acidity rich flavour profile</div>
+              <div class="feature-item">Easy to clean up</div>
+              <div class="feature-item">4–6 servings per batch (lasts days refrigerated)</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Toddy Cold Brew Commercial -->
+        <div class="product-detail-card" data-tags="brewer,manual,cold-brew" id="toddy-commercial">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/toddy-commercial-1.jpg" alt="Toddy Cold Brew Commercial" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Cold Brew · Toddy</span>
+            <h3 class="product-name">Toddy Cold Brew System – Commercial Model</h3>
+            <p class="product-desc">Scalable cold brew solutions for cafés, kitchens, and large-batch brewing. The commercial Toddy is designed for high-volume production with a durable brewing container and heavy-duty filter system, producing smooth, low-acid concentrate perfect for serving on tap or in batches.</p>
+            <div class="features-grid">
+              <div class="feature-item">Designed for high-volume cold brew</div>
+              <div class="feature-item">Durable container &amp; heavy-duty filter</div>
+              <div class="feature-item">Smooth low-acid coffee concentrate</div>
+              <div class="feature-item">Ideal for cafés, restaurants &amp; roasters</div>
+              <div class="feature-item">Serve cold brew on tap or in batches</div>
+              <div class="feature-item">Up to 2.5 gallons (~9.5L) per batch</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Moka Pot -->
+        <div class="product-detail-card" data-tags="brewer,manual" id="moka-pot">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/moka-pot-1.jpg" alt="Moka Pot" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual · Stovetop</span>
+            <h3 class="product-name">Moka Pot</h3>
+            <p class="product-desc">A remarkable combination of design and functionality. The stovetop espresso maker features a distinctive three-chamber structure, water at the bottom, coffee in the filter basket in the middle, and collection at the top, delivering rich, concentrated coffee through steam pressure.</p>
+            <div class="features-grid">
+              <div class="feature-item">Three-chamber stovetop design</div>
+              <div class="feature-item">Brews rich concentrated coffee</div>
+              <div class="feature-item">Steam pressure extraction method</div>
+              <div class="feature-item">Classic Italian coffee heritage</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Hario Syphon -->
+        <div class="product-detail-card" data-tags="brewer,manual" id="hario-syphon">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/hario-syphon-1.jpg" alt="Hario Syphon - 1" /></div>
+                <div class="carousel-slide"><img src="images/hario-syphon-2.jpg" alt="Hario Syphon - 2" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual · Hario</span>
+            <h3 class="product-name">Hario Syphon</h3>
+            <p class="product-desc">A Japanese-designed vacuum brewer that combines clarity, flavour, and coffee theatre. The full-immersion brewing method with an alcohol burner creates dramatically clean, aromatic coffee, ideal for barista training, live demonstrations, and the slow bar experience at specialty cafés.</p>
+            <div class="features-grid">
+              <div class="feature-item">Vacuum brewing for clean, aromatic coffee</div>
+              <div class="feature-item">Full-immersion brewing method</div>
+              <div class="feature-item">Heat-resistant borosilicate glass</div>
+              <div class="feature-item">Alcohol burner for stable controlled heating</div>
+              <div class="feature-item">Ideal for barista training &amp; live demos</div>
+              <div class="feature-item">10–15 brews per syphon per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Timemore V60 Pour Over -->
+        <div class="product-detail-card" data-tags="brewer,manual,pour-over" id="timemore-v60">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/timemore-v60-1.jpg" alt="Timemore V60 Pour Over" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Manual Pour-Over · Timemore</span>
+            <h3 class="product-name">Timemore V60 Pour Over Kit</h3>
+            <p class="product-desc">A complete manual brew kit including a V-shaped dripper, glass server, filters, and accessories. Made from durable heat-resistant glass and BPA-free plastic, the spiral ribs ensure even water flow and extraction, a sleek, compact, and travel-friendly brewing solution ideal for new cafés and home brewers.</p>
+            <div class="features-grid">
+              <div class="feature-item">Complete kit: dripper, server, filters &amp; accessories</div>
+              <div class="feature-item">Heat-resistant glass &amp; BPA-free plastic</div>
+              <div class="feature-item">Spiral ribs for even water flow &amp; extraction</div>
+              <div class="feature-item">Compact &amp; travel-friendly</div>
+              <div class="feature-item">Ideal for new cafés &amp; training counters</div>
+              <div class="feature-item">30–50 pour-over brews per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="subcategory-label" id="automatic-brewers">Automatic Brewers</div>
+        <!-- xBloom Studio -->
+        <div class="product-detail-card" data-tags="brewer,automatic" id="xbloom-studio">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/xbloom-studio-1.jpg" alt="xBloom Studio - 1" /></div>
+                <div class="carousel-slide"><img src="images/xbloom-studio-2.jpg" alt="xBloom Studio - 2" /></div>
+                <div class="carousel-slide"><img src="images/xbloom-studio-3.jpg" alt="xBloom Studio - 3" /></div>
+                <div class="carousel-slide"><img src="images/xbloom-studio-4.jpg" alt="xBloom Studio - 4" /></div>
+                <div class="carousel-slide"><img src="images/xbloom-studio-5.jpg" alt="xBloom Studio - 5" /></div>
+                <div class="carousel-slide"><img src="images/xbloom-studio-6.jpg" alt="xBloom Studio - 6" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Brewer · Automatic · xBloom</span>
+            <h3 class="product-name">xBloom Studio</h3>
+            <p class="product-desc">A precision automatic coffee brewer with a built-in grinder that effortlessly delivers specialty coffee quality. The xBloom Studio features RFID-enabled innovative brewing with personalised settings, mimics barista-style pour-over techniques, and sports a sleek modern design, perfect for coffee business setups and office use.</p>
+            <div class="features-grid">
+              <div class="feature-item">Built-in precision grinder</div>
+              <div class="feature-item">RFID-enabled personalised brewing</div>
+              <div class="feature-item">Mimics barista-style pour-over technique</div>
+              <div class="feature-item">Sleek &amp; modern design</div>
+              <div class="feature-item">Intuitive controls for hands-free precision</div>
+              <div class="feature-item">~10 brews per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- ======================================================
+           ROASTERS
+      ====================================================== -->
+      <section class="category-section" id="roasters" data-category="roasters">
+        <h2 class="category-title">🔥 Commercial Coffee Roasters</h2>
+        <p class="category-description">From <strong>sample roasters</strong> for precision profile development to <strong>commercial drum roasters</strong> for large-scale production — we supply roasting machines for specialty roasteries, boutique coffee producers, and high-volume roasting operations. Brand: Probat.</p>
+        <!-- Nucleus Link Roaster -->
+        <div class="product-detail-card" data-tags="roaster" id="nucleus-link">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/nucleus-link-1.jpg" alt="Nucleus Link Roaster" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Roaster · Sample Roaster · Nucleus</span>
+            <h3 class="product-name">Nucleus Link Roaster</h3>
+            <p class="product-desc">An innovative sample roaster designed for high-precision coffee roasting. The Nucleus Link enables real-time data monitoring, logging, and profiling, with precise control of airflow, temperature, and roast curves. Built for roasters, Q-graders, and specialty coffee professionals who need accurate, repeatable sample roasting.</p>
+            <div class="features-grid">
+              <div class="feature-item">Real-time data monitoring &amp; profiling</div>
+              <div class="feature-item">Precise airflow, temperature &amp; roast curve control</div>
+              <div class="feature-item">Compact design for micro-lots &amp; sample testing</div>
+              <div class="feature-item">Ideal for Q-graders &amp; green coffee buyers</div>
+              <div class="feature-item">500–750 grams per roasting session</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Probat P5 -->
+        <div class="product-detail-card" data-tags="roaster" id="probat-p5">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/probat-p5-1.jpg" alt="Probat P5" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Roaster · Drum Roaster · Probat</span>
+            <h3 class="product-name">Probat P5</h3>
+            <p class="product-desc">A compact drum roaster crafted for small-batch specialty coffee production. The P5 roasts up to 5 kilograms per batch with precision, offering independent adjustments for air flow, drum speed, and burner power. Built with Probat's signature German engineering, the ideal machine for boutique roasteries, micro-lots, and experimental roasting.</p>
+            <div class="features-grid">
+              <div class="feature-item">Up to 5 kg per batch</div>
+              <div class="feature-item">Independent airflow, drum speed &amp; burner control</div>
+              <div class="feature-item">Probat German engineering for consistency</div>
+              <div class="feature-item">Ideal for boutique roasteries &amp; micro-lots</div>
+              <div class="feature-item">Up to 20–30 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+        <!-- Probat P12 -->
+        <div class="product-detail-card" data-tags="roaster" id="probat-p12">
+          <div class="product-detail-image">
+            <div class="product-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="images/probat-p12-1.jpg" alt="Probat P12" /></div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="product-detail-body">
+            <span class="product-category">Roaster · Drum Roaster · Probat</span>
+            <h3 class="product-name">Probat P12</h3>
+            <p class="product-desc">A premium drum roaster designed for medium-sized specialty coffee production. The P12 roasts up to 12 kilograms per batch with complete control over every variable, built with Probat's renowned German engineering for consistency, longevity, and exceptional roast quality as your roastery scales up.</p>
+            <div class="features-grid">
+              <div class="feature-item">Up to 12 kg per batch</div>
+              <div class="feature-item">Independent airflow, drum speed &amp; burner control</div>
+              <div class="feature-item">Probat renowned German engineering</div>
+              <div class="feature-item">Ideal for specialty roasteries scaling up</div>
+              <div class="feature-item">Up to 48–60 kg per day</div>
+            </div>
+            <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+          </div>
+        </div>
+      </section>
+      <!-- ======================================================
+           KITCHEN EQUIPMENT
+      ====================================================== -->
+      <section class="category-section" id="kitchen-equipment" data-category="kitchen-equipment" style="padding-bottom: 80px;">
+        <h2 class="category-title">🏪 Café Kitchen Equipment</h2>
+        <p class="category-description">Complete your <strong>café or restaurant setup</strong> with professional kitchen equipment — stainless steel workstations, under-counter sink units, commercial refrigeration units and display counters. Everything you need for a fully functional commercial kitchen.</p>
+        <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="product-card" data-tags="kitchen">
+            <div class="product-image-wrap" style="background: var(--light-cream); height:160px;"><div style="position:absolute;font-size:3rem;opacity:0.25;">🪣</div></div>
+            <div class="product-info">
+              <span class="product-category">Kitchen Equipment</span>
+              <h3 class="product-name">Table &amp; Sink Units</h3>
+              <p class="product-desc">Stainless steel workstations and sink units designed for high-use café and restaurant environments.</p>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <div class="product-card" data-tags="kitchen">
+            <div class="product-image-wrap" style="background: var(--light-cream); height:160px;"><div style="position:absolute;font-size:3rem;opacity:0.25;">❄️</div></div>
+            <div class="product-info">
+              <span class="product-category">Kitchen Equipment</span>
+              <h3 class="product-name">Refrigeration Units</h3>
+              <p class="product-desc">Commercial refrigerators in 4-door and 2-door configurations, perfect for milk, syrups, and perishables.</p>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+          <div class="product-card" data-tags="kitchen">
+            <div class="product-image-wrap" style="background: var(--light-cream); height:160px;"><div style="position:absolute;font-size:3rem;opacity:0.25;">🖼️</div></div>
+            <div class="product-info">
+              <span class="product-category">Kitchen Equipment</span>
+              <h3 class="product-name">Display Units</h3>
+              <p class="product-desc">Elegant display counters to showcase pastries, desserts, and merchandise, driving add-on sales effortlessly.</p>
+              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div><!-- end .container -->
+  </main>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/brand-wordmark-light.svg" alt="The Fifth Table" class="footer-logo-img" />
+          </a>
+          <p>Your trusted partner for premium coffee equipment from espresso machines and grinders to full kitchen setups.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="category.html?id=coffee-machines#automatic">Automatic Machines</a></li>
+            <li><a href="category.html?id=coffee-machines#semi-automatic">Semi-Automatic Machines</a></li>
+            <li><a href="category.html?id=grinders">Grinders</a></li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a></li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a></li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="index.html#enquiry">Get a Quote</a></li>
+            <li><a href="about.html#about-contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Brands We Carry</h4>
+          <ul>
+            <li><a href="#budan">Budan</a></li>
+            <li><a href="#wmf">WMF</a></li>
+            <li><a href="#carimali">Carimali</a></li>
+            <li><a href="#rancilio">Rancilio</a></li>
+            <li><a href="#la-marzocco">La Marzocco</a></li>
+            <li><a href="#hey-cafe">Hey Cafe</a></li>
+            <li><a href="#mahlkonig">Mahlkönig</a></li>
+            <li><a href="#anfim">Anfim</a></li>
+            <li><a href="#probat">Probat</a></li>
+            <li><a href="#blendtec">Blendtec</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-address">55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p>
+        <p>&copy; 2026 The Fifth Table. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918424832663" style="color:inherit;">+91 84248 32663</a> &nbsp;|&nbsp; <a href="mailto:thisvishnurajnair@gmail.com" style="color:inherit;">thisvishnurajnair@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    // Category picker – expand/collapse subcategory chips
+    document.querySelectorAll('.cat-card[data-cat]').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // Don't toggle if a sub-link chip was tapped
+        if (e.target.closest('.cat-sub-link')) return;
+        const isOpen = card.classList.contains('open');
+        // Close all others
+        document.querySelectorAll('.cat-card.open').forEach(function(c) { c.classList.remove('open'); });
+        if (!isOpen) card.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Commercial Coffee Equipment India – The Fifth Table</title>
+  <meta name="description" content="Buy commercial coffee machines, bean-to-cup machines, espresso grinders, commercial blenders, cold brew brewers and café accessories in India. WMF, La Marzocco, Mahlkönig, Blendtec & more." />
+  <meta name="keywords" content="commercial coffee machine India, bean to cup machine, fully automatic espresso machine, semi-automatic coffee machine, coffee grinder India, commercial blender cafe, sound enclosed blender, cold brew equipment, barista accessories India, WMF, La Marzocco, Mahlkonig, Rancilio" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thefifthtable.in/products.html" id="page-canonical" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Coffee Equipment by Category – The Fifth Table" />
+  <meta property="og:description" content="Commercial coffee machines, grinders, blenders and accessories from WMF, La Marzocco, Mahlkönig, Rancilio and more." />
+  <meta property="og:image" content="https://thefifthtable.in/images/brand-wordmark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .category-page-hero {
+      padding: 7rem 0 2.5rem;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .category-page-hero .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      margin-bottom: 1rem;
+    }
+    .category-page-hero .breadcrumb a {
+      color: var(--mid-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .category-page-hero .breadcrumb a:hover { color: var(--dark-espresso); }
+    .category-page-hero .breadcrumb span { color: var(--border-color); }
+    .category-page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--dark-espresso);
+      margin: 0 0 0.5rem;
+    }
+    .category-page-hero p {
+      color: var(--mid-gray);
+      font-size: 0.97rem;
+      margin: 0;
+      max-width: 600px;
+    }
+    .category-page-main {
+      padding: 3rem 0 5rem;
+    }
+    .loading-state {
+      text-align: center;
+      padding: 5rem 0;
+      color: var(--mid-gray);
+    }
+    .loading-state .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--warm-brown);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    /* ── Subcategory quick-nav strip ── */
+    .subcat-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      box-shadow: 0 2px 8px rgba(16,44,36,0.06);
+    }
+    .subcat-strip-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 0.65rem 0;
+    }
+    .subcat-strip-inner::-webkit-scrollbar { display: none; }
+    .subcat-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 1rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-gray);
+      font-size: 0.82rem;
+      font-weight: 500;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .subcat-chip:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--ice);
+    }
+    .subcat-chip.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+      font-weight: 600;
+    }
+    .subcat-chip.group-header {
+      background: var(--frost);
+      border-color: var(--border);
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      cursor: default;
+      pointer-events: none;
+    }
+    .subcat-divider {
+      width: 1px;
+      height: 22px;
+      background: var(--border);
+      flex-shrink: 0;
+      margin: 0 0.15rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+                  <ul class="nav-links" id="nav-links">
+        <li class="nav-item has-dropdown">
+          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
+          <ul class="dropdown">
+            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=grinders">Grinders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
+                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
+                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html">About Us</a></li>
+        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
+        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="category-page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="products.html">All Products</a>
+        <span>›</span>
+        <span id="breadcrumb-name">Loading...</span>
+      </div>
+      <h1 id="category-page-title">Loading...</h1>
+      <p id="category-page-desc"></p>
+    </div>
+  </section>
+  <!-- ===== SUBCATEGORY QUICK-NAV ===== -->
+  <div class="subcat-strip" id="subcat-strip" style="display:none">
+    <div class="container">
+      <div class="subcat-strip-inner" id="subcat-chips"></div>
+    </div>
+  </div>
+  <!-- ===== CATEGORY CONTENT ===== -->
+  <main class="category-page-main">
+    <div class="container">
+      <div id="category-page-content">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading products...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/brand-wordmark-light.svg" alt="The Fifth Table" class="footer-logo-img" />
+          </a>
+          <p>Your trusted partner for premium coffee equipment from espresso machines and grinders to full kitchen setups.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="category.html?id=coffee-machines">Coffee Machines</a></li>
+            <li><a href="category.html?id=grinders">Grinders</a></li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a></li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a></li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="index.html#enquiry">Get a Quote</a></li>
+            <li><a href="about.html#about-contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Brands We Carry</h4>
+          <ul>
+            <li><a href="category.html?id=coffee-machines">Budan</a></li>
+            <li><a href="category.html?id=coffee-machines">WMF</a></li>
+            <li><a href="category.html?id=coffee-machines">Carimali</a></li>
+            <li><a href="category.html?id=coffee-machines">Rancilio</a></li>
+            <li><a href="category.html?id=coffee-machines">La Marzocco</a></li>
+            <li><a href="category.html?id=grinders">Hey Cafe</a></li>
+            <li><a href="category.html?id=grinders">Mahlkönig</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-address">55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p>
+        <p>&copy; 2026 The Fifth Table. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918424832663" style="color:inherit;">+91 84248 32663</a> &nbsp;|&nbsp; <a href="mailto:thisvishnurajnair@gmail.com" style="color:inherit;">thisvishnurajnair@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const sub = params.get('sub');
+      const contentEl = document.getElementById('category-page-content');
+      const categoryMeta = {
+        'coffee-machines':      { title: 'Coffee Machines',      emoji: '☕' },
+        'grinders':             { title: 'Grinders',             emoji: '⚙️' },
+        'barista-accessories':  { title: 'Espresso Accessories', emoji: '🧰' },
+        'blenders':             { title: 'Blenders',             emoji: '🌀' },
+        'coffee-brewers':       { title: 'Coffee Brewers',       emoji: '☕' },
+        'roasters':             { title: 'Roasters',             emoji: '🔥' },
+        'kitchen-equipment':    { title: 'Kitchen Equipment',    emoji: '🏪' },
+      };
+      // Subcategory display names and tags to match (OR logic when array)
+      const subMeta = {
+        'coffee-machines/small-capacity':  { title: 'Small Capacity Machines',        tags: ['small-capacity'] },
+        'coffee-machines/medium-capacity': { title: 'Medium Capacity Machines',       tags: ['medium-capacity'] },
+        'coffee-machines/high-capacity':   { title: 'High Capacity Machines',         tags: ['high-capacity'] },
+        'coffee-machines/automatic':       { title: 'Automatic Coffee Machines',      tags: ['automatic'] },
+        'coffee-machines/semi-automatic':  { title: 'Semi-Automatic Coffee Machines', tags: ['semi-automatic'] },
+        'coffee-machines/economical':      { title: 'Economical Semi-Automatic',      tags: ['economical'] },
+        'coffee-machines/premium':         { title: 'Premium Semi-Automatic',         tags: ['premium'] },
+        'coffee-machines/specialty':       { title: 'Specialty Semi-Automatic',       tags: ['specialty'] },
+        'grinders/economical':             { title: 'Economical Grinders',            tags: ['economical'] },
+        'grinders/premium':                { title: 'Premium Grinders',               tags: ['premium', 'professional'] },
+        'grinders/industrial':             { title: 'Industrial Grinders',            tags: ['industrial'] },
+        'blenders/open':                   { title: 'Open Blenders',                  tags: ['open'] },
+        'blenders/silent':                 { title: 'Sound Enclosed Blenders',        tags: ['silent'] },
+        'coffee-brewers/manual':           { title: 'Manual Brewers',                 tags: ['manual'] },
+        'coffee-brewers/automatic':        { title: 'Automatic Brewers',              tags: ['automatic'] },
+      };
+      // Subcategory quick-nav chip definitions
+      const subcatNav = {
+        'coffee-machines': [
+          { type: 'group', label: 'Automatic' },
+          { label: 'Small Capacity',  sub: 'small-capacity' },
+          { label: 'Medium Capacity', sub: 'medium-capacity' },
+          { label: 'High Capacity',   sub: 'high-capacity' },
+          { type: 'divider' },
+          { type: 'group', label: 'Semi-Auto' },
+          { label: 'Economical', sub: 'economical' },
+          { label: 'Premium',    sub: 'premium' },
+          { label: 'Specialty',  sub: 'specialty' },
+        ],
+        'grinders': [
+          { label: 'Economical', sub: 'economical' },
+          { label: 'Premium',    sub: 'premium' },
+          { label: 'Industrial', sub: 'industrial' },
+        ],
+        'blenders': [
+          { label: 'Open',           sub: 'open' },
+          { label: 'Sound Enclosed', sub: 'silent' },
+        ],
+        'coffee-brewers': [
+          { label: 'Manual',    sub: 'manual' },
+          { label: 'Automatic', sub: 'automatic' },
+        ],
+      };
+      // Build and show the subcategory chip strip
+      const navItems = subcatNav[id];
+      if (navItems) {
+        const chipsEl = document.getElementById('subcat-chips');
+        const stripEl = document.getElementById('subcat-strip');
+        navItems.forEach(item => {
+          if (item.type === 'group') {
+            const lbl = document.createElement('span');
+            lbl.className = 'subcat-chip group-header';
+            lbl.textContent = item.label;
+            chipsEl.appendChild(lbl);
+          } else if (item.type === 'divider') {
+            const div = document.createElement('span');
+            div.className = 'subcat-divider';
+            chipsEl.appendChild(div);
+          } else {
+            const chip = document.createElement('a');
+            chip.className = 'subcat-chip' + (sub === item.sub ? ' active' : '');
+            chip.href = `category.html?id=${id}&sub=${item.sub}`;
+            chip.textContent = item.label;
+            chipsEl.appendChild(chip);
+          }
+        });
+        stripEl.style.display = '';
+      }
+      if (!id) {
+        contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">No category specified. <a href="products.html">Browse all products</a></p>';
+        return;
+      }
+      const meta = categoryMeta[id] || { title: id, emoji: '' };
+      const subKey = sub ? `${id}/${sub}` : null;
+      const subInfo = subKey ? subMeta[subKey] : null;
+      const pageTitle = subInfo ? subInfo.title : meta.title;
+      document.title = pageTitle + ' | Buy Commercial ' + meta.title + ' India – The Fifth Table';
+      // Category-specific keyword descriptions for SEO
+      const catDescriptions = {
+        'coffee-machines': 'Buy commercial espresso machines and bean-to-cup coffee machines in India. Fully automatic, semi-automatic and professional machines for cafés, hotels, offices and restaurants. Brands: WMF, La Marzocco, Rancilio, Carimali.',
+        'grinders': 'Buy commercial coffee grinders in India — flat burr, conical burr, on-demand and industrial bulk grinders. For cafés, specialty coffee shops and roasteries. Brands: Mahlkönig, Anfim, Hey Cafe.',
+        'barista-accessories': 'Professional barista accessories and espresso equipment — tampers, coffee distributors, milk pitchers, knock boxes, cupping bowls. For café setups and professional baristas across India.',
+        'blenders': 'Commercial blenders for cafés and restaurants in India. Open blenders and sound-enclosed silent blenders for frappes, smoothies and cold coffee. Brand: Blendtec.',
+        'coffee-brewers': 'Coffee brewing equipment in India — cold brew towers, pour-over drippers, gooseneck kettles and automatic batch brewers. For specialty cafés and brew bars. Brands: Fellow, Hario, Toddy.',
+        'roasters': 'Commercial coffee roasters in India — sample roasters and drum roasters for specialty roasteries and large-scale production. Brand: Probat.',
+        'kitchen-equipment': 'Professional café and restaurant kitchen equipment — stainless steel workstations, sink units, refrigeration and display counters for commercial setups across India.',
+      };
+      const subDescriptions = {
+        'coffee-machines/small-capacity': 'Small capacity automatic coffee machines for home, office and kiosk use. Bean-to-cup convenience with one-touch operation. India delivery.',
+        'coffee-machines/medium-capacity': 'Medium capacity commercial espresso machines for cafés and restaurants. High-output, dual-boiler and PID-controlled options. India delivery.',
+        'coffee-machines/high-capacity': 'High capacity commercial coffee machines for hotels, large restaurants and high-footfall venues. Industrial-grade espresso systems. India delivery.',
+        'coffee-machines/economical': 'Economical semi-automatic espresso machines for budget-conscious cafés and kiosks. Professional quality at accessible price points. India delivery.',
+        'coffee-machines/premium': 'Premium semi-automatic espresso machines with dual boilers, PID control and steam wands — for specialty cafés and serious baristas. India delivery.',
+        'coffee-machines/specialty': 'Specialty espresso machines with pressure profiling, temperature control and advanced extraction — for high-footfall specialty cafés. India delivery.',
+        'grinders/economical': 'Economical coffee grinders for small cafés and kiosks. Compact espresso grinders with flat burrs and stepless adjustment. India delivery.',
+        'grinders/premium': 'Premium coffee grinders with grind-by-weight technology, 65mm flat burrs and silent operation — for specialty cafés and high-volume use. India delivery.',
+        'grinders/industrial': 'Industrial bulk coffee grinders with 150mm+ flat burrs for roasteries and large-scale coffee processing. High-speed, continuous operation. India delivery.',
+        'blenders/open': 'Open commercial blenders for cafés — high-power motors for crushing ice and blending frappes, smoothies and specialty cold drinks. India delivery.',
+        'blenders/silent': 'Sound-enclosed silent blenders for café counter use — powerful blending with noise reduction for a better customer experience. India delivery.',
+        'coffee-brewers/manual': 'Manual coffee brewers — gooseneck kettles, pour-over drippers and cold brew towers for specialty brew bars and cafés. India delivery.',
+        'coffee-brewers/automatic': 'Automatic coffee brewers for batch brewing — programmable, consistent and high-volume. For cafés, hotels and offices. India delivery.',
+      };
+      // Dynamically update meta description for SEO
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) { metaDesc = document.createElement('meta'); metaDesc.name = 'description'; document.head.appendChild(metaDesc); }
+      const descKey = subKey || id;
+      metaDesc.content = subDescriptions[descKey] || catDescriptions[id] || `Shop ${pageTitle} from The Fifth Table — India's trusted supplier of commercial coffee equipment. WMF, La Marzocco, Mahlkönig, Rancilio & more. Pan-India delivery.`;
+      // Canonical URL
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+      canonical.href = `https://thefifthtable.in/category.html?id=${id}${sub ? '&sub=' + sub : ''}`;
+      document.getElementById('category-page-title').textContent = (subInfo ? '' : meta.emoji + ' ') + pageTitle;
+      document.getElementById('breadcrumb-name').textContent = meta.title;
+      // Build breadcrumb with subcategory
+      if (subInfo) {
+        const breadcrumb = document.querySelector('.breadcrumb');
+        const catSpan = document.createElement('span');
+        catSpan.textContent = '›';
+        const catLink = document.createElement('a');
+        catLink.href = `category.html?id=${id}`;
+        catLink.textContent = meta.title;
+        const subSpan = document.createElement('span');
+        subSpan.textContent = '›';
+        const subFinal = document.createElement('span');
+        subFinal.textContent = subInfo.title;
+        breadcrumb.appendChild(catSpan);
+        breadcrumb.appendChild(catLink);
+        breadcrumb.appendChild(subSpan);
+        breadcrumb.appendChild(subFinal);
+        document.getElementById('breadcrumb-name').textContent = '';
+      }
+      try {
+        const res = await fetch('products.html');
+        const html = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const section = doc.getElementById(id);
+        if (!section) {
+          contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">Category not found. <a href="products.html">Browse all products</a></p>';
+          return;
+        }
+        // Pull description from the section
+        const descEl = section.querySelector('.category-description');
+        if (descEl) {
+          if (!subInfo) {
+            document.getElementById('category-page-desc').textContent = descEl.textContent.trim();
+          }
+          descEl.remove();
+        }
+        // Remove the category title (already shown in hero)
+        const titleEl = section.querySelector('.category-title');
+        if (titleEl) titleEl.remove();
+        // Filter by subcategory if sub param is set
+        if (subInfo) {
+          const tagsToMatch = subInfo.tags;
+          const allCards = section.querySelectorAll('.product-detail-card[data-tags]');
+          allCards.forEach(card => {
+            const cardTags = card.dataset.tags.split(',').map(t => t.trim());
+            const matches = tagsToMatch.some(t => cardTags.includes(t));
+            if (!matches) card.remove();
+          });
+          // Remove subcategory labels that are now empty
+          section.querySelectorAll('.subcategory-label').forEach(label => {
+            // Check if any cards follow this label (within same parent until next label)
+            let next = label.nextElementSibling;
+            let hasCards = false;
+            while (next && !next.classList.contains('subcategory-label')) {
+              if (next.classList.contains('product-detail-card')) { hasCards = true; break; }
+              next = next.nextElementSibling;
+            }
+            if (!hasCards) label.remove();
+          });
+          // Remove sub-section wrappers that have no visible cards
+          section.querySelectorAll('.sub-section').forEach(ss => {
+            if (!ss.querySelector('.product-detail-card')) ss.remove();
+          });
+        }
+        contentEl.innerHTML = '';
+        contentEl.appendChild(section);
+        // Add View Details buttons and init carousels
+        initProductLinks();
+        initCarousels();
+      } catch (err) {
+        contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">Failed to load products. <a href="products.html">Browse all products</a></p>';
+      }
+    })();
+  </script>
+</body>
+</html>

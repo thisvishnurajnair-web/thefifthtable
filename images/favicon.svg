@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>The Fifth Table</title>
+  <rect width="64" height="64" rx="10" fill="#102C24"/>
+  <path d="M9 10H55M9 54H55" stroke="#C6AB87" stroke-width="1"/>
+  <text x="32" y="43" text-anchor="middle" fill="#FAF7F0" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="-3">FT</text>
+</svg>

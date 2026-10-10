@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <title>Coffee Industry Insights &amp; Tips | The Fifth Table Blog</title>
+  <meta name="description" content="Expert tips on commercial coffee equipment, café setup guides, and coffee industry insights from The Fifth Table" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thefifthtable.in/blogs.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Hero ── */
+    .blogs-hero {
+      padding: 8rem 0 4rem;
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .blogs-hero .eyebrow {
+      font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.65); margin-bottom: 1rem;
+    }
+    .blogs-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem,5vw,3rem); font-weight: 700; margin-bottom: 1.25rem; }
+    .blogs-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 580px; margin: 0 auto; line-height: 1.75; }
+    /* ── Public post list ── */
+    .blog-list-section { padding: 5rem 0; background: var(--frost); min-height: 40vh; }
+    .blog-list-section h2 { font-family: var(--font-heading); font-size: 1.9rem; color: var(--blue-dark); margin-bottom: 2.5rem; text-align: center; }
+    .blog-posts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+    .blog-post-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--radius-md); overflow: hidden;
+      transition: all var(--transition); box-shadow: var(--shadow-sm);
+      display: flex; flex-direction: column;
+    }
+    .blog-post-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--blue); }
+    .blog-card-body { padding: 1.5rem; flex: 1; }
+    .blog-card-meta { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .blog-card-cat {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; background: var(--ice); color: var(--blue);
+      padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border);
+    }
+    .blog-card-date { font-size: 0.78rem; color: var(--text-gray); }
+    .blog-card-title {
+      font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 0.65rem; line-height: 1.35;
+    }
+    .blog-card-excerpt { font-size: 0.875rem; color: var(--text-gray); line-height: 1.65; margin-bottom: 1rem; }
+    .blog-card-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .blog-read-more { font-size: 0.85rem; font-weight: 600; color: var(--blue); text-decoration: none; transition: color var(--transition); }
+    .blog-read-more:hover { color: var(--blue-mid); }
+    .blog-author { font-size: 0.78rem; color: var(--text-gray); }
+    .no-posts-msg { text-align: center; padding: 4rem 0; color: var(--text-gray); }
+    .no-posts-msg .icon { font-size: 3rem; margin-bottom: 1rem; }
+    .no-posts-msg p { font-size: 1rem; }
+    /* ── Full post modal ── */
+    .post-modal {
+      display: none; position: fixed; inset: 0; z-index: 9000;
+      background: rgba(18,39,30,0.7); backdrop-filter: blur(4px);
+      padding: 1.5rem; overflow-y: auto;
+    }
+    .post-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+    .post-modal-inner {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 780px; padding: 2.5rem 3rem;
+      margin: auto; position: relative;
+    }
+    .post-modal-close {
+      position: absolute; top: 1rem; right: 1.25rem;
+      background: none; border: none; font-size: 1.5rem; cursor: pointer;
+      color: var(--text-gray); line-height: 1;
+    }
+    .post-modal-cat { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+    .post-modal-title { font-family: var(--font-heading); font-size: clamp(1.4rem,3vw,2rem); font-weight: 700; color: var(--blue-dark); margin: 0.5rem 0; }
+    .post-modal-meta { font-size: 0.82rem; color: var(--text-gray); margin-bottom: 1.75rem; }
+    .post-modal-content { font-size: 0.95rem; line-height: 1.85; color: var(--text-dark); }
+    .post-modal-content table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; }
+    .post-modal-content th,.post-modal-content td { border: 1px solid var(--border); padding: 0.5rem; text-align: left; }
+    .post-modal-content { overflow-wrap: anywhere; overflow-x: auto; }
+    .post-modal-content h1,.post-modal-content h2,.post-modal-content h3 { font-family: var(--font-heading); color: var(--blue-dark); margin: 1.5rem 0 0.75rem; }
+    .post-modal-content p { margin-bottom: 1rem; }
+    .post-modal-content ul,.post-modal-content ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .post-modal-content li { margin-bottom: 0.4rem; }
+    /* ── Admin trigger ── */
+    .admin-trigger-bar {
+      background: var(--blue-dark); padding: 0.6rem 0; text-align: center;
+    }
+    .admin-trigger-btn {
+      background: none; border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.45); font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .admin-trigger-btn:hover { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.4); }
+    /* ── Admin overlay ── */
+    .admin-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9500;
+      background: rgba(18,39,30,0.75); backdrop-filter: blur(6px);
+      padding: 1.5rem; overflow-y: auto;
+    }
+    .admin-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .admin-panel {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 680px; margin: auto;
+      box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    /* ── Admin header ── */
+    .admin-panel-header {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    }
+    .admin-panel-header h2 { color: var(--white); font-family: var(--font-heading); font-size: 1.3rem; margin: 0; }
+    .admin-close-btn { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.4rem; cursor: pointer; line-height: 1; }
+    .admin-close-btn:hover { color: white; }
+    /* ── Admin body ── */
+    .admin-body { padding: 2rem; }
+    .admin-section { display: none; }
+    .admin-section.active { display: block; }
+    /* ── Form styles ── */
+    .admin-form-group { margin-bottom: 1.1rem; }
+    .admin-form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 0.4rem; }
+    .admin-form-group input, .admin-form-group select, .admin-form-group textarea {
+      width: 100%; padding: 10px 14px; border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.9rem;
+      color: var(--text-dark); background: var(--white); outline: none; transition: border var(--transition);
+    }
+    .admin-form-group input:focus, .admin-form-group select:focus, .admin-form-group textarea:focus {
+      border-color: var(--blue);
+    }
+    .admin-form-group textarea { resize: vertical; min-height: 160px; }
+    .admin-msg { font-size: 0.82rem; padding: 8px 12px; border-radius: var(--radius-sm); margin-bottom: 1rem; display: none; }
+    .admin-msg.error { background: #FFF0F0; color: #C0392B; border: 1px solid #F5C6C6; display: block; }
+    .admin-msg.success { background: #F0FFF4; color: #27AE60; border: 1px solid #B2EBC0; display: block; }
+    .admin-btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .btn-admin { padding: 10px 20px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; cursor: pointer; border: none; transition: all var(--transition); }
+    .btn-admin-primary { background: var(--blue); color: var(--white); }
+    .btn-admin-primary:hover { background: var(--blue-mid); }
+    .btn-admin-outline { background: none; border: 1.5px solid var(--border); color: var(--text-dark); }
+    .btn-admin-outline:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-admin-danger { background: #E74C3C; color: var(--white); }
+    .btn-admin-danger:hover { background: #C0392B; }
+    /* ── Toolbar ── */
+    .editor-toolbar {
+      display: flex; gap: 0.35rem; flex-wrap: wrap; padding: 8px;
+      background: var(--ice); border: 1.5px solid var(--border);
+      border-bottom: none; border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    }
+    .toolbar-btn {
+      background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+      padding: 4px 10px; font-size: 0.8rem; cursor: pointer; color: var(--text-dark);
+      transition: all var(--transition); font-family: var(--font-body);
+    }
+    .toolbar-btn:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+    .editor-area {
+      width: 100%; min-height: 200px; padding: 12px 14px;
+      border: 1.5px solid var(--border); border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--text-dark);
+      outline: none; line-height: 1.7;
+    }
+    .editor-area:focus { border-color: var(--blue); }
+    /* ── Post manager list ── */
+    .post-list-item {
+      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem; margin-bottom: 0.75rem; display: flex;
+      justify-content: space-between; align-items: center; gap: 1rem;
+      background: var(--frost);
+    }
+    .post-list-title { font-weight: 600; font-size: 0.9rem; color: var(--blue-dark); }
+    .post-list-meta { font-size: 0.75rem; color: var(--text-gray); margin-top: 2px; }
+    .post-list-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .post-action-btn {
+      background: none; border: 1px solid var(--border); border-radius: 4px;
+      padding: 4px 10px; font-size: 0.75rem; cursor: pointer; color: var(--text-gray);
+      transition: all var(--transition);
+    }
+    .post-action-btn.del:hover { background: #E74C3C; color: white; border-color: #E74C3C; }
+    .post-action-btn.edit:hover { background: var(--blue); color: white; border-color: var(--blue); }
+    .post-draft-badge {
+      font-size: 0.65rem; background: #FFF3CD; color: #856404;
+      border: 1px solid #FFEEBA; padding: 2px 7px; border-radius: 20px;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    /* ── Admin tabs ── */
+    .admin-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+    .admin-tab {
+      padding: 9px 18px; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+      border: none; background: none; color: var(--text-gray); border-bottom: 2px solid transparent;
+      margin-bottom: -2px; transition: all var(--transition);
+    }
+    .admin-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .admin-tab:hover:not(.active) { color: var(--text-dark); }
+    /* ── Topics (shown when no published posts) ── */
+    .blogs-topics { padding: 4rem 0; background: var(--white); }
+    .blogs-topics h2 { font-family: var(--font-heading); font-size: 1.75rem; color: var(--blue-dark); text-align: center; margin-bottom: 2.5rem; }
+    .topics-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .topic-card { background: var(--frost); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: center; transition: box-shadow var(--transition); }
+    .topic-card:hover { box-shadow: var(--shadow-md); }
+    .topic-card .topic-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .topic-card h3 { font-size: 1rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 0.5rem; }
+    .topic-card p { font-size: 0.875rem; color: var(--text-gray); line-height: 1.6; }
+    @media (max-width: 767px) {
+      .blog-posts-grid { grid-template-columns: 1fr; }
+      .topics-grid { grid-template-columns: 1fr; }
+      .post-modal-inner { padding: 1.75rem 1.25rem; }
+      .admin-body { padding: 1.25rem; }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .blog-posts-grid { grid-template-columns: repeat(2,1fr); }
+      .topics-grid { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item has-dropdown">
+          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
+          <ul class="dropdown">
+            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=grinders">Grinders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
+                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
+                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html">About Us</a></li>
+        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
+        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== HERO ===== -->
+  <section class="blogs-hero">
+    <div class="container">
+      <p class="eyebrow">Knowledge Hub</p>
+      <h1>Coffee Industry Insights</h1>
+      <p>Expert guides on equipment selection, café setup, maintenance tips, and the latest trends in commercial coffee across India.</p>
+    </div>
+  </section>
+  <!-- ===== PUBLIC BLOG LIST ===== -->
+  <section class="blog-list-section" id="blog-list-section">
+    <div class="container">
+      <h2 id="blog-section-title">Latest Articles</h2>
+      <div class="blog-posts-grid" id="blog-posts-grid">
+        <!-- Posts rendered by JS -->
+      </div>
+      <div class="no-posts-msg" id="no-posts-msg" style="display:none;">
+        <div class="icon">&#9749;</div>
+        <p>Our first articles are on the way. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+  <!-- ===== TOPICS (shown only when no posts) ===== -->
+  <section class="blogs-topics" id="topics-section" style="display:none;">
+    <div class="container">
+      <h2>Topics We Will Cover</h2>
+      <div class="topics-grid">
+        <div class="topic-card"><div class="topic-icon">&#9749;</div><h3>Choosing the Right Espresso Machine</h3><p>How to select a commercial espresso machine for your café, restaurant, or hotel based on volume and budget.</p></div>
+        <div class="topic-card"><div class="topic-icon">&#9881;</div><h3>Coffee Grinder Guide</h3><p>Understanding burr grinders, grind consistency, and how the right grinder improves every cup you serve.</p></div>
+        <div class="topic-card"><div class="topic-icon">&#127968;</div><h3>Setting Up a Café in India</h3><p>Step-by-step checklist for opening a specialty café — from equipment selection to layout planning.</p></div>
+        <div class="topic-card"><div class="topic-icon">&#128295;</div><h3>Equipment Maintenance Tips</h3><p>Best practices to extend the life of your coffee machines, grinders, and blenders with regular servicing.</p></div>
+        <div class="topic-card"><div class="topic-icon">&#9749;</div><h3>Bean-to-Cup vs Semi-Automatic</h3><p>A clear comparison to help you decide which coffee machine type suits your business operations best.</p></div>
+        <div class="topic-card"><div class="topic-icon">&#127985;</div><h3>Top Coffee Equipment Brands</h3><p>An overview of WMF, La Marzocco, Mahlkonig, Rancilio, and Blendtec — and what makes each stand out.</p></div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== ADMIN TRIGGER BAR ===== -->
+  <div class="admin-trigger-bar">
+    <button class="admin-trigger-btn" id="admin-trigger-btn">&#128274; Admin</button>
+  </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="footer-logo" />
+        <p>India's trusted partner for premium commercial coffee equipment. Serving cafes, hotels, offices and restaurants pan-India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Equipment</h4>
+        <ul>
+          <li><a href="category.html?id=coffee-machines">Coffee Machines</a></li>
+          <li><a href="category.html?id=grinders">Grinders</a></li>
+          <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+          <li><a href="category.html?id=blenders">Blenders</a></li>
+          <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a></li>
+          <li><a href="category.html?id=roasters">Roasters</a></li>
+          <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="index.html#enquiry">Get a Quote</a></li>
+          <li><a href="about.html#about-contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>+91 84248 32663</li>
+          <li>thisvishnurajnair@gmail.com</li>
+          <li>55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</li>
+          <li>Pan-India delivery &amp; installation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 The Fifth Table. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- ===== POST READ MODAL ===== -->
+  <div class="post-modal" id="post-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="post-modal-inner">
+      <button class="post-modal-close" id="post-modal-close" aria-label="Close article">&times;</button>
+      <p class="post-modal-cat" id="modal-cat"></p>
+      <h1 class="post-modal-title" id="modal-title"></h1>
+      <p class="post-modal-meta" id="modal-meta"></p>
+      <div class="post-modal-content" id="modal-content"></div>
+    </div>
+  </div>
+  <!-- ===== ADMIN OVERLAY ===== -->
+  <div class="admin-overlay" id="admin-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-panel-title">
+    <div class="admin-panel">
+      <div class="admin-panel-header">
+        <h2 id="admin-panel-title">&#9749; Blog Admin</h2>
+        <button class="admin-close-btn" id="admin-close-btn" aria-label="Close admin">&times;</button>
+      </div>
+      <div class="admin-body">
+        <!-- ── SETUP SECTION (first time only) ── -->
+        <div class="admin-section" id="section-unavailable">
+          <p id="admin-unavailable-msg" role="status">Blog administration is available after this site is connected to its hosting service.</p>
+        </div>
+        <div class="admin-section" id="section-setup">
+          <p style="margin-bottom:1.25rem;color:var(--text-gray);font-size:0.9rem;">
+            Set up blog access for <strong>thisvishnurajnair@gmail.com</strong>. Use the owner setup key from your hosting account.
+          </p>
+          <div class="admin-msg" id="setup-msg" role="status"></div>
+          <div class="admin-form-group">
+            <label for="setup-key">Owner Setup Key</label>
+            <input type="password" id="setup-key" placeholder="Your private setup key" autocomplete="off" />
+          </div>
+          <div class="admin-form-group">
+            <label for="setup-pw">New Password</label>
+            <input type="password" id="setup-pw" placeholder="At least 12 characters" minlength="12" autocomplete="new-password" />
+          </div>
+          <div class="admin-form-group">
+            <label for="setup-pw2">Confirm Password</label>
+            <input type="password" id="setup-pw2" placeholder="Repeat your password" autocomplete="new-password" />
+          </div>
+          <div class="admin-btn-row">
+            <button class="btn-admin btn-admin-primary" id="setup-btn">Set Password &amp; Continue</button>
+          </div>
+        </div>
+        <!-- ── LOGIN SECTION ── -->
+        <div class="admin-section" id="section-login">
+          <p style="margin-bottom:1.25rem;color:var(--text-gray);font-size:0.9rem;">
+            Sign in as <strong>thisvishnurajnair@gmail.com</strong>
+          </p>
+          <div class="admin-msg" id="login-msg"></div>
+          <div class="admin-form-group">
+            <label for="login-pw">Password</label>
+            <input type="password" id="login-pw" placeholder="Enter your password" autocomplete="current-password" />
+          </div>
+          <div class="admin-btn-row">
+            <button class="btn-admin btn-admin-primary" id="login-btn">Sign In</button>
+          </div>
+        </div>
+        <!-- ── DASHBOARD SECTION ── -->
+        <div class="admin-section" id="section-dashboard">
+          <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="new-post">&#43; New Post</button>
+            <button class="admin-tab" data-tab="manage">Manage Posts</button>
+            <button class="admin-tab" data-tab="settings">Settings</button>
+          </div>
+          <!-- New Post tab -->
+          <div id="tab-new-post">
+            <div class="admin-msg" id="post-msg"></div>
+            <input type="hidden" id="editing-post-id" value="" />
+            <div class="admin-form-group">
+              <label for="post-title">Title *</label>
+              <input type="text" id="post-title" placeholder="e.g. How to Choose the Right Espresso Machine" />
+            </div>
+            <div class="admin-form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+              <div>
+                <label for="post-category">Category</label>
+                <select id="post-category">
+                  <option value="Equipment Guide">Equipment Guide</option>
+                  <option value="Café Setup">Café Setup</option>
+                  <option value="Brand Spotlight">Brand Spotlight</option>
+                  <option value="Maintenance Tips">Maintenance Tips</option>
+                  <option value="Industry Insights">Industry Insights</option>
+                  <option value="How-To">How-To</option>
+                </select>
+              </div>
+              <div>
+                <label for="post-date">Date</label>
+                <input type="date" id="post-date" />
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label>Content *</label>
+              <div class="editor-toolbar">
+                <button class="toolbar-btn" data-cmd="bold"><b>B</b></button>
+                <button class="toolbar-btn" data-cmd="italic"><i>I</i></button>
+                <button class="toolbar-btn" data-cmd="underline"><u>U</u></button>
+                <button class="toolbar-btn" data-cmd="insertUnorderedList">&#8226; List</button>
+                <button class="toolbar-btn" data-cmd="insertOrderedList">1. List</button>
+                <button class="toolbar-btn" data-cmd="h2">H2</button>
+                <button class="toolbar-btn" data-cmd="h3">H3</button>
+                <button class="toolbar-btn" data-cmd="createLink">Link</button>
+              </div>
+              <div class="editor-area" id="post-editor" contenteditable="true" data-placeholder="Write your blog post here..."></div>
+            </div>
+            <div class="admin-btn-row">
+              <button class="btn-admin btn-admin-primary" id="publish-btn">&#10003; Publish Post</button>
+              <button class="btn-admin btn-admin-outline" id="draft-btn">Save as Draft</button>
+              <button class="btn-admin btn-admin-outline" id="clear-editor-btn" style="margin-left:auto;">Clear</button>
+            </div>
+          </div>
+          <!-- Manage Posts tab -->
+          <div id="tab-manage" style="display:none;">
+            <p id="manage-error" role="status" style="display:none;color:#9c382a;"></p>
+            <div id="manage-list"><!-- rendered by JS --></div>
+            <p id="manage-empty" style="color:var(--text-gray);font-size:0.9rem;text-align:center;display:none;">No posts yet. Create your first post!</p>
+          </div>
+          <!-- Settings tab -->
+          <div id="tab-settings" style="display:none;">
+            <p style="color:var(--text-gray);font-size:0.9rem;margin-bottom:1.25rem;">Change your blog admin password.</p>
+            <div class="admin-msg" id="settings-msg"></div>
+            <div class="admin-form-group">
+              <label for="curr-pw">Current Password</label>
+              <input type="password" id="curr-pw" placeholder="Enter current password" />
+            </div>
+            <div class="admin-form-group">
+              <label for="new-pw">New Password</label>
+              <input type="password" id="new-pw" placeholder="Enter new password" />
+            </div>
+            <div class="admin-form-group">
+              <label for="new-pw2">Confirm New Password</label>
+              <input type="password" id="new-pw2" placeholder="Repeat new password" />
+            </div>
+            <div class="admin-btn-row">
+              <button class="btn-admin btn-admin-primary" id="change-pw-btn">Update Password</button>
+              <button class="btn-admin btn-admin-danger" id="logout-btn" style="margin-left:auto;">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- /admin-body -->
+    </div><!-- /admin-panel -->
+  </div><!-- /admin-overlay -->
+  <script src="js/main.js"></script>
+  <script type="module" src="js/blog.js"></script>
+</body>
+</html>

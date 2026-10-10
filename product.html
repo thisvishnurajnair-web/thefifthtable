@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details – The Fifth Table</title>
+  <meta name="description" content="Detailed specs and features for commercial coffee equipment from The Fifth Table. Request a quote or enquire about delivery and support across India." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thefifthtable.in/products.html" id="page-canonical" />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="Product Details – The Fifth Table" />
+  <meta property="og:description" content="Commercial coffee equipment specs and enquiry – The Fifth Table, Pan-India supplier." />
+  <meta property="og:image" content="https://thefifthtable.in/images/brand-wordmark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-page-hero {
+      padding: 7rem 0 2.5rem;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .product-page-hero .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      margin-bottom: 1rem;
+    }
+    .product-page-hero .breadcrumb a {
+      color: var(--mid-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .product-page-hero .breadcrumb a:hover { color: var(--dark-espresso); }
+    .product-page-hero .breadcrumb span { color: var(--border-color); }
+    .product-page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--dark-espresso);
+      margin: 0;
+    }
+    .product-page-main {
+      padding: 3rem 0 5rem;
+    }
+    .product-page-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .product-page-card { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .product-page-image {
+      position: sticky;
+      top: 100px;
+    }
+    .product-page-image .product-carousel {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    .product-page-body { display: flex; flex-direction: column; gap: 1.2rem; }
+    .product-page-body .product-category {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--warm-brown);
+      font-weight: 600;
+    }
+    .product-page-body .product-name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--dark-espresso);
+      margin: 0;
+      line-height: 1.25;
+    }
+    .product-page-body .product-desc {
+      color: var(--mid-gray);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .product-page-body .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .product-page-body .feature-item {
+      font-size: 0.85rem;
+      color: var(--dark-espresso);
+      background: var(--light-cream);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      border-left: 3px solid var(--warm-brown);
+    }
+    .product-page-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .loading-state {
+      text-align: center;
+      padding: 5rem 0;
+      color: var(--mid-gray);
+    }
+    .loading-state .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--warm-brown);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+                  <ul class="nav-links" id="nav-links">
+        <li class="nav-item has-dropdown">
+          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
+          <ul class="dropdown">
+            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=grinders">Grinders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
+                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
+            <li><a href="category.html?id=blenders">Blenders</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
+                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
+              <ul class="sub-dropdown">
+                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
+                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
+              </ul>
+            </li>
+            <li><a href="category.html?id=roasters">Roasters</a></li>
+            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html">About Us</a></li>
+        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
+        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="product-page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="products.html">Products</a>
+        <span>›</span>
+        <span id="breadcrumb-name">Loading...</span>
+      </div>
+      <h1 id="product-page-title">Loading product...</h1>
+    </div>
+  </section>
+  <!-- ===== PRODUCT CONTENT ===== -->
+  <main class="product-page-main">
+    <div class="container">
+      <div id="product-page-content">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading product details...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/brand-wordmark-light.svg" alt="The Fifth Table" class="footer-logo-img" />
+          </a>
+          <p>Your trusted partner for premium coffee equipment from espresso machines and grinders to full kitchen setups.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#automatic">Automatic Machines</a></li>
+            <li><a href="products.html#semi-automatic">Semi-Automatic Machines</a></li>
+            <li><a href="products.html#grinders">Grinders</a></li>
+            <li><a href="products.html#barista-accessories">Barista Accessories</a></li>
+            <li><a href="products.html#blenders">Blenders</a></li>
+            <li><a href="products.html#roasters">Roasters</a></li>
+            <li><a href="products.html#kitchen-equipment">Kitchen Equipment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="index.html#enquiry">Get a Quote</a></li>
+            <li><a href="about.html#about-contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Brands We Carry</h4>
+          <ul>
+            <li><a href="products.html#budan-infinity">Budan</a></li>
+            <li><a href="products.html#wmf-1100s">WMF</a></li>
+            <li><a href="products.html#carimali-mya-ultra">Carimali</a></li>
+            <li><a href="products.html#rancilio-classe5">Rancilio</a></li>
+            <li><a href="products.html#lm-linea-pb">La Marzocco</a></li>
+            <li><a href="products.html#heycafe-buddy-doser">Hey Cafe</a></li>
+            <li><a href="products.html#mahlkonig-x54">Mahlkönig</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-address">55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p>
+        <p>&copy; 2026 The Fifth Table. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918424832663" style="color:inherit;">+91 84248 32663</a> &nbsp;|&nbsp; <a href="mailto:thisvishnurajnair@gmail.com" style="color:inherit;">thisvishnurajnair@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const contentEl = document.getElementById('product-page-content');
+      if (!id) {
+        contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">No product specified. <a href="products.html">Browse all products</a></p>';
+        return;
+      }
+      try {
+        const res = await fetch('products.html');
+        const html = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const card = doc.getElementById(id);
+        if (!card || !card.classList.contains('product-detail-card')) {
+          contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">Product not found. <a href="products.html">Browse all products</a></p>';
+          return;
+        }
+        const productName = card.querySelector('.product-name')?.textContent?.trim() || 'Product';
+        const productCategory = card.querySelector('.product-category')?.textContent?.trim() || '';
+        document.title = productName + ' – The Fifth Table';
+        document.getElementById('product-page-title').textContent = productName;
+        document.getElementById('breadcrumb-name').textContent = productName;
+        // Build the image section
+        const imageSection = card.querySelector('.product-detail-image');
+        const bodySection = card.querySelector('.product-detail-body');
+        // Build page layout
+        const wrapper = document.createElement('div');
+        wrapper.className = 'product-page-card';
+        // Image column
+        const imgCol = document.createElement('div');
+        imgCol.className = 'product-page-image';
+        if (imageSection) imgCol.appendChild(imageSection.cloneNode(true));
+        // Body column
+        const bodyCol = document.createElement('div');
+        bodyCol.className = 'product-page-body';
+        if (bodySection) {
+          const clonedBody = bodySection.cloneNode(true);
+          // Fix enquire link
+          const enquireBtn = clonedBody.querySelector('.btn-outline');
+          if (enquireBtn) {
+            enquireBtn.href = 'index.html#enquiry';
+            enquireBtn.textContent = 'Enquire Now';
+            enquireBtn.className = 'btn btn-primary';
+          }
+          // Add back to products button
+          const backBtn = document.createElement('a');
+          backBtn.href = 'products.html';
+          backBtn.className = 'btn btn-outline';
+          backBtn.textContent = '← Back to Products';
+          const actions = document.createElement('div');
+          actions.className = 'product-page-actions';
+          if (enquireBtn) actions.appendChild(clonedBody.querySelector('.btn'));
+          actions.appendChild(backBtn);
+          // Remove the old button from cloned body and append actions
+          const oldBtn = clonedBody.querySelector('.btn');
+          if (oldBtn) oldBtn.remove();
+          clonedBody.appendChild(actions);
+          bodyCol.appendChild(clonedBody);
+        }
+        wrapper.appendChild(imgCol);
+        wrapper.appendChild(bodyCol);
+        contentEl.innerHTML = '';
+        contentEl.appendChild(wrapper);
+        // Re-initialize carousels for the injected content
+        initCarousels();
+      } catch (err) {
+        contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">Failed to load product. <a href="products.html">Browse all products</a></p>';
+      }
+    })();
+  </script>
+</body>
+</html>

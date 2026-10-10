@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-labelledby="equipment-title equipment-desc">
+  <title id="equipment-title">Coffee equipment</title>
+  <desc id="equipment-desc">A neutral illustration of an espresso machine and coffee cup.</desc>
+  <rect width="400" height="300" fill="#F6F1E8"/>
+  <ellipse cx="200" cy="246" rx="122" ry="10" fill="#DED5C7" opacity="0.55"/>
+  <g stroke="#102C24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 77Q104 65 116 65H286Q298 65 298 77V198H104Z" fill="#E8DDCE"/>
+    <path d="M104 116H298V144H104Z" fill="#102C24"/>
+    <path d="M120 53H282M129 53V65M274 53V65" fill="none"/>
+    <rect x="94" y="198" width="214" height="28" rx="5" fill="#FFFDF8"/>
+    <path d="M113 226V240H129V226M274 226V240H290V226" fill="#102C24"/>
+    <circle cx="262" cy="90" r="13" fill="#FFFDF8"/>
+    <path d="M262 90L268 83" fill="none" stroke="#8A6747"/>
+    <circle cx="130" cy="90" r="4" fill="#8A6747" stroke="none"/>
+    <circle cx="148" cy="90" r="4" fill="#8A6747" stroke="none"/>
+    <path d="M149 144V155Q149 164 158 164H176Q185 164 185 155V144" fill="#FFFDF8"/>
+    <path d="M183 153H215" stroke-width="7"/>
+    <path d="M167 164V176M278 147V175L291 183" fill="none"/>
+    <path d="M148 177H185V188Q185 201 167 201Q148 201 148 188Z" fill="#FFFDF8"/>
+    <path d="M185 180H190Q198 180 198 187Q198 194 185 194" fill="none"/>
+    <path d="M135 204H199M110 214H291" fill="none" stroke="#8A6747" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block query-string variations that are thin/duplicate content
+Disallow: /category.html?id=coffee-machines&sub=
+Disallow: /category.html?id=grinders&sub=
+Disallow: /category.html?id=blenders&sub=
+Disallow: /category.html?id=coffee-brewers&sub=
+
+Sitemap: https://thefifthtable.in/sitemap.xml
