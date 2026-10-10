@@ -4,14 +4,20 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": ">=22.12.0"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
-    "build": "node scripts/build.mjs"
+    "test": "node --no-experimental-require-module --no-experimental-detect-module --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "build:sanitizer": "node scripts/build-sanitizer.mjs",
+    "pretest": "npm run build:sanitizer",
+    "prebuild": "npm run build:sanitizer"
   },
   "dependencies": {
     "@netlify/blobs": "^10.5.0",
-    "sanitize-html": "^2.17.0"
+    "sanitize-html": "2.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

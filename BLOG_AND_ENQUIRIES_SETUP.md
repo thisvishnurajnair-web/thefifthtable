@@ -6,7 +6,9 @@ The public site is static. Blog posts and admin access use this site's Netlify F
 
 Serve the repository with an HTTP server and open `blogs.html`. Published articles bundled in `data/blog-posts.js` render locally. Blog administration and enquiry submission show a clear preview notice until hosting is connected; the preview never claims to publish or submit data.
 
-Run `npm ci`, `npm test` and `npm run build` with Node 22 or later. The build output is `dist`. Netlify builds the API separately from `netlify/functions`; these server files, tests, dependencies and setup documentation are not copied into the public output.
+Run `npm ci`, `npm test` and `npm run build` with Node 22.12 or later. The build output is `dist`. Netlify builds the API separately from `netlify/functions`; these server files, tests, dependencies and setup documentation are not copied into the public output.
+
+Both tests and builds first bundle the pinned, current HTML sanitizer and its parser into `netlify/generated/sanitize-html.cjs`. AWS Lambda disables loading ES modules with `require()`, even on modern Node runtimes; the private bundle avoids that incompatibility without downgrading security fixes or enabling experimental flags. Tests run with Lambda's disabled-feature flags. The generated file is ignored by Git and excluded from the public `dist` directory, but included through the function's server-side import when Netlify packages it.
 
 ## Deploy to the owner's Netlify project
 

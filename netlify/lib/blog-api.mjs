@@ -1,6 +1,6 @@
 import { createHash, randomBytes, scrypt as scryptCallback, timingSafeEqual } from 'node:crypto';
 import { promisify } from 'node:util';
-import sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from '../generated/sanitize-html.cjs';
 
 const scrypt = promisify(scryptCallback);
 const COOKIE = '__Host-fifthtable_admin';
