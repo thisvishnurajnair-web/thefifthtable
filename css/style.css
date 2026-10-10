@@ -1244,6 +1244,12 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    /* Keep the fixed menu relative to the viewport, not the 72px header. */
+    backdrop-filter: none;
+    background: var(--ivory);
+  }
+
   .menu-toggle {
     display: flex;
   }
