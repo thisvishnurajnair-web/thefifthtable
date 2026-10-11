@@ -16,179 +16,27 @@
   <meta property="og:image" content="https://thefifthtable.in/images/brand-wordmark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=site-refresh-4" />
   <style>
-    /* ── Category Picker ── */
-    .cat-picker {
-      background: var(--frost);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 0 2rem;
-    }
-    .cat-picker-heading {
-      font-family: var(--font-heading);
-      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-      color: var(--text-dark);
-      margin-bottom: 1.25rem;
-      text-align: center;
-    }
-    .cat-picker-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      align-items: start;
-    }
-    @media (min-width: 640px) { .cat-picker-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 960px) { .cat-picker-grid { grid-template-columns: repeat(4, 1fr); } }
-    .cat-card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem 1rem 0.9rem;
-      cursor: pointer;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      user-select: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-    .cat-card:hover {
-      border-color: var(--blue);
-      box-shadow: 0 4px 16px rgba(64,39,19,0.1);
-    }
-    .cat-card.open {
-      border-color: var(--blue);
-      box-shadow: 0 4px 16px rgba(64,39,19,0.12);
-    }
-    .cat-card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-    .cat-card-left {
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-    }
-    .cat-card-icon {
-      font-size: 1.3rem;
-      line-height: 1;
-    }
-    .cat-card-name {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      line-height: 1.3;
-    }
-    .cat-card-chevron {
-      font-size: 0.75rem;
-      color: var(--text-gray);
-      transition: transform 0.25s ease;
-      flex-shrink: 0;
-    }
-    .cat-card.open .cat-card-chevron {
-      transform: rotate(90deg);
-    }
-    /* Subcategory chips panel */
-    .cat-subs {
-      display: none;
-      flex-direction: column;
-      gap: 0.4rem;
-      padding-top: 0.65rem;
-      border-top: 1px solid var(--border);
-      margin-top: 0.5rem;
-    }
-    .cat-card.open .cat-subs {
-      display: flex;
-    }
-    .cat-sub-link {
-      display: block;
-      padding: 0.4rem 0.75rem;
-      border-radius: 999px;
-      background: var(--ice);
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      text-align: center;
-      transition: background 0.18s, color 0.18s;
-      white-space: nowrap;
-    }
-    .cat-sub-link:hover {
-      background: var(--blue);
-      color: var(--white);
-      border-color: var(--blue);
-    }
-    .cat-sub-link.view-all {
-      background: var(--blue);
-      color: var(--white);
-      border-color: var(--blue);
-      font-weight: 600;
-    }
-    .cat-sub-link.view-all:hover {
-      background: var(--blue-dark);
-      border-color: var(--blue-dark);
-    }
-    /* Hide the long all-products list on mobile; show full list only on desktop */
-    @media (max-width: 767px) {
-      .all-products-section { display: none; }
-    }
+    @media (max-width: 767px) { .all-products-section { display: none; } }
   </style>
+  <link rel="stylesheet" href="css/hospitality.css" />
+  <link rel="stylesheet" href="css/categories.css?v=category-directory-6" />
 </head>
 <body>
   <!-- ===== NAVIGATION (same as index) ===== -->
   <header class="site-header" id="site-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
-      </a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-                  <ul class="nav-links" id="nav-links">
-        <li class="nav-item has-dropdown">
-          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
-          <ul class="dropdown">
-            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=grinders">Grinders</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
-                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
-                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
-            <li><a href="category.html?id=blenders">Blenders</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
-                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
-                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=roasters">Roasters</a></li>
-            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="about.html">About Us</a></li>
-        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
-        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
-        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo text-wordmark" aria-label="The Fifth Table — Home">The Fifth Table</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="solutions.html">Our Solutions</a></li>
+        <li class="nav-item"><a href="products.html">Equipment</a></li>
+        <li class="nav-item"><a href="projects.html">Projects</a></li>
+        <li class="nav-item"><a href="blogs.html">Insights</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -200,108 +48,52 @@
       <p>Explore our full range of <strong>bean-to-cup machines</strong>, semi-automatic &amp; fully automatic <strong>espresso machines</strong>, <strong>burr coffee grinders</strong>, commercial blenders, cold brew equipment and professional barista accessories. Trusted by cafés, hotels, offices and restaurants across India.</p>
     </div>
   </section>
-  <!-- ===== CATEGORY PICKER ===== -->
-  <section class="cat-picker">
-    <div class="container">
-      <h2 class="cat-picker-heading">Browse by Category</h2>
-      <div class="cat-picker-grid">
-        <!-- Coffee Machines -->
-        <div class="cat-card" data-cat="coffee-machines">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">☕</span>
-              <span class="cat-card-name">Coffee Machines</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-          <div class="cat-subs">
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=small-capacity">Small Capacity</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=medium-capacity">Medium Capacity</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=high-capacity">High Capacity</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=economical">Economical</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=premium">Premium</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-machines&sub=specialty">Specialty</a>
-            <a class="cat-sub-link view-all" href="category.html?id=coffee-machines">View All ›</a>
-          </div>
+  <!-- ===== CATEGORY DIRECTORY ===== -->
+  <section class="catalogue-category-section" id="browse-categories" aria-labelledby="browse-categories-title">
+    <div class="container"><div class="category-directory catalogue-directory">
+        <div class="category-directory-intro">
+          <p class="category-directory-eyebrow">The equipment collection</p>
+          <h2 class="category-directory-title" id="browse-categories-title">Browse by<br /> <em>category.</em></h2>
+          <p class="category-directory-description">Find the right tools for your counter, your kitchen and everything in between.</p>
         </div>
-        <!-- Grinders -->
-        <div class="cat-card" data-cat="grinders">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">⚙️</span>
-              <span class="cat-card-name">Grinders</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-          <div class="cat-subs">
-            <a class="cat-sub-link" href="category.html?id=grinders&sub=economical">Economical</a>
-            <a class="cat-sub-link" href="category.html?id=grinders&sub=premium">Premium</a>
-            <a class="cat-sub-link" href="category.html?id=grinders&sub=industrial">Industrial</a>
-            <a class="cat-sub-link view-all" href="category.html?id=grinders">View All ›</a>
-          </div>
+        <div class="category-directory-list">
+          <a class="category-directory-link" href="category.html?id=coffee-machines">
+            <span class="category-directory-number" aria-hidden="true">01</span>
+            <div><h3 class="category-directory-name">Coffee Machines</h3><p class="category-directory-detail">Automatic &amp; semi-automatic</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=grinders">
+            <span class="category-directory-number" aria-hidden="true">02</span>
+            <div><h3 class="category-directory-name">Grinders</h3><p class="category-directory-detail">Electric &amp; manual</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=barista-accessories">
+            <span class="category-directory-number" aria-hidden="true">03</span>
+            <div><h3 class="category-directory-name">Espresso Accessories</h3><p class="category-directory-detail">Tampers, distributors &amp; bar tools</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=blenders">
+            <span class="category-directory-number" aria-hidden="true">04</span>
+            <div><h3 class="category-directory-name">Blenders</h3><p class="category-directory-detail">Open &amp; sound enclosed</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=coffee-brewers">
+            <span class="category-directory-number" aria-hidden="true">05</span>
+            <div><h3 class="category-directory-name">Coffee Brewers</h3><p class="category-directory-detail">Manual &amp; automatic brewing</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=roasters">
+            <span class="category-directory-number" aria-hidden="true">06</span>
+            <div><h3 class="category-directory-name">Roasters</h3><p class="category-directory-detail">Sample, boutique &amp; commercial</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-directory-link" href="category.html?id=kitchen-equipment">
+            <span class="category-directory-number" aria-hidden="true">07</span>
+            <div><h3 class="category-directory-name">Kitchen Equipment</h3><p class="category-directory-detail">Refrigeration, tables &amp; displays</p></div>
+            <span class="category-directory-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
-        <!-- Espresso Accessories -->
-        <a class="cat-card" href="category.html?id=barista-accessories" style="text-decoration:none;">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">🧰</span>
-              <span class="cat-card-name">Espresso Accessories</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-        </a>
-        <!-- Blenders -->
-        <div class="cat-card" data-cat="blenders">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">🌀</span>
-              <span class="cat-card-name">Blenders</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-          <div class="cat-subs">
-            <a class="cat-sub-link" href="category.html?id=blenders&sub=open">Open Blenders</a>
-            <a class="cat-sub-link" href="category.html?id=blenders&sub=silent">Sound Enclosed</a>
-            <a class="cat-sub-link view-all" href="category.html?id=blenders">View All ›</a>
-          </div>
-        </div>
-        <!-- Coffee Brewers -->
-        <div class="cat-card" data-cat="coffee-brewers">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">☕</span>
-              <span class="cat-card-name">Coffee Brewers</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-          <div class="cat-subs">
-            <a class="cat-sub-link" href="category.html?id=coffee-brewers&sub=manual">Manual Brewers</a>
-            <a class="cat-sub-link" href="category.html?id=coffee-brewers&sub=automatic">Automatic Brewers</a>
-            <a class="cat-sub-link view-all" href="category.html?id=coffee-brewers">View All ›</a>
-          </div>
-        </div>
-        <!-- Roasters -->
-        <a class="cat-card" href="category.html?id=roasters" style="text-decoration:none;">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">🔥</span>
-              <span class="cat-card-name">Roasters</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-        </a>
-        <!-- Kitchen Equipment -->
-        <a class="cat-card" href="category.html?id=kitchen-equipment" style="text-decoration:none;">
-          <div class="cat-card-top">
-            <div class="cat-card-left">
-              <span class="cat-card-icon">🏪</span>
-              <span class="cat-card-name">Kitchen Equipment</span>
-            </div>
-            <span class="cat-card-chevron">›</span>
-          </div>
-        </a>
-      </div><!-- /.cat-picker-grid -->
-    </div>
+      </div></div>
   </section>
   <!-- ===== MAIN CONTENT ===== -->
   <main class="all-products-section">
@@ -310,7 +102,7 @@
            COFFEE MACHINES
       ====================================================== -->
       <section class="category-section" id="coffee-machines" data-category="coffee-machines">
-        <h2 class="category-title" id="coffee-machines-title">☕ Commercial Coffee Machines</h2>
+        <h2 class="category-title" id="coffee-machines-title">Commercial Coffee Machines</h2>
         <p class="category-description">From one-touch <strong>bean-to-cup coffee machines</strong> to precision <strong>semi-automatic espresso machines</strong>, we supply commercial-grade equipment for every setup — kiosks, cafés, restaurants, hotels, and corporate offices across India. Brands include WMF, La Marzocco, Rancilio, Carimali and Budan.</p>
         <!-- ── AUTOMATIC ── -->
         <div id="automatic">
@@ -488,70 +280,8 @@
               <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
             </div>
           </div>
-          <!-- Budan M80 -->
-          <div class="product-detail-card" data-tags="automatic,small-capacity" id="budan-m80">
-            <div class="product-detail-image">
-              <div class="product-carousel">
-                <div class="carousel-track">
-                  <div class="carousel-slide"><img src="images/budan-m80-1.jpg" alt="Budan M80 - 1" /></div>
-                  <div class="carousel-slide"><img src="images/budan-m80-2.jpg" alt="Budan M80 - 2" /></div>
-                  <div class="carousel-slide"><img src="images/budan-m80-3.jpg" alt="Budan M80 - 3" /></div>
-                  <div class="carousel-slide"><img src="images/budan-m80-4.jpg" alt="Budan M80 - 4" /></div>
-                </div>
-                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
-                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
-                <div class="carousel-dots"></div>
-              </div>
-            </div>
-            <div class="product-detail-body">
-              <span class="product-category">Automatic · Small Capacity · Budan</span>
-              <h3 class="product-name">Budan M80</h3>
-              <p class="product-desc">Designed for high-demand environments like offices, cafés, and restaurants. The M80 features a dual thermoblock system for simultaneous brewing and steaming, with a premium steam wand and intelligent auto-cleaning.</p>
-              <div class="features-grid">
-                <div class="feature-item">7-inch touchscreen</div>
-                <div class="feature-item">20+ customizable beverage options</div>
-                <div class="feature-item">Built-in conical burr grinder</div>
-                <div class="feature-item">Dual thermoblock system</div>
-                <div class="feature-item">Simultaneous brewing &amp; steaming</div>
-                <div class="feature-item">Premium steam wand</div>
-                <div class="feature-item">6L water tank</div>
-                <div class="feature-item">750g bean hopper</div>
-                <div class="feature-item">Intelligent auto-cleaning</div>
-              </div>
-              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
-            </div>
-          </div>
           <!-- Medium Capacity -->
           <div class="subcategory-label" id="medium-capacity" style="color: var(--mid-gray); font-size:0.72rem;">Medium Cup Capacity</div>
-          <!-- Budan M200 -->
-          <div class="product-detail-card" data-tags="automatic,medium-capacity" id="budan-m200">
-            <div class="product-detail-image">
-              <div class="product-carousel">
-                <div class="carousel-track">
-                  <div class="carousel-slide"><img src="images/budan-m200-1.jpg" alt="Budan M200" /></div>
-                </div>
-                <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
-                <button class="carousel-btn next" aria-label="Next">&#8250;</button>
-                <div class="carousel-dots"></div>
-              </div>
-            </div>
-            <div class="product-detail-body">
-              <span class="product-category">Automatic · Medium Capacity · Budan</span>
-              <h3 class="product-name">Budan M200</h3>
-              <p class="product-desc">High-Volume Coffee, Simplified. The M200 is designed for high-demand coffee service with dual pump technology ensuring faster delivery of both coffee and milk beverages. Three adaptive UI modes make it ideal for cafés, offices, and self-service counters.</p>
-              <div class="features-grid">
-                <div class="feature-item">Dual pump technology</div>
-                <div class="feature-item">6L water tank</div>
-                <div class="feature-item">10-inch touch display</div>
-                <div class="feature-item">3 adaptive UI modes</div>
-                <div class="feature-item">20+ beverage options</div>
-                <div class="feature-item">Innovative milk system</div>
-                <div class="feature-item">Café, office &amp; self-service modes</div>
-                <div class="feature-item">Reduced manual intervention</div>
-              </div>
-              <a href="index.html#enquiry" class="btn btn-outline">Enquire Now</a>
-            </div>
-          </div>
           <!-- Carimali Mya Ultra -->
           <div class="product-detail-card" data-tags="automatic,medium-capacity,carimali" id="carimali-mya-ultra">
             <div class="product-detail-image">
@@ -1352,7 +1082,7 @@
            GRINDERS
       ====================================================== -->
       <section class="category-section" id="grinders" data-category="grinders">
-        <h2 class="category-title">⚙️ Coffee Grinders</h2>
+        <h2 class="category-title">Coffee Grinders</h2>
         <p class="category-description">The quality of your grind defines the quality of your cup. We supply <strong>commercial coffee grinders</strong> with flat burr and conical burr technology — from compact on-demand espresso grinders to high-capacity industrial bulk grinders. Brands: Mahlkönig, Anfim, Hey Cafe.</p>
         <!-- Economical Grinders -->
         <div class="subcategory-label" id="grinders-electric">Economical Grinders, Hey Cafe</div>
@@ -1780,7 +1510,7 @@
            ESPRESSO ACCESSORIES
       ====================================================== -->
       <section class="category-section" id="barista-accessories" data-category="barista-accessories">
-        <h2 class="category-title">🧰 Espresso & Barista Accessories</h2>
+        <h2 class="category-title">Espresso & Barista Accessories</h2>
         <p class="category-description">Professional-grade <strong>barista accessories</strong> for the perfect espresso setup — precision tampers, coffee distributors, stainless steel milk pitchers, knock boxes, cupping bowls, and barista cloths. Essential tools for every café and coffee bar.</p>
         <div class="subcategory-label">Distribution &amp; Tamping</div>
         <!-- Leveler / Distributor -->
@@ -2091,7 +1821,7 @@
            BLENDERS
       ====================================================== -->
       <section class="category-section" id="blenders" data-category="blenders">
-        <h2 class="category-title">🌀 Commercial Blenders for Cafes</h2>
+        <h2 class="category-title">Commercial Blenders for Cafes</h2>
         <p class="category-description">High-performance <strong>commercial blenders</strong> for smoothies, frappes, cold coffee and specialty beverages. Available as open blenders for back-of-house and <strong>sound-enclosed silent blenders</strong> for counter-top use where noise reduction matters. Brand: Blendtec.</p>
         <div class="subcategory-label" id="blenders-noise">Open Blenders</div>
         <!-- Harmony Classic -->
@@ -2245,7 +1975,7 @@
            COFFEE BREWERS
       ====================================================== -->
       <section class="category-section" id="coffee-brewers" data-category="coffee-brewers">
-        <h2 class="category-title">☕ Coffee Brewers & Cold Brew Equipment</h2>
+        <h2 class="category-title">Coffee Brewers & Cold Brew Equipment</h2>
         <p class="category-description">From <strong>slow-drip cold brew towers</strong> and <strong>pour-over brewers</strong> to smart automatic batch brewers — we supply specialty coffee brewing equipment for cafés, brew bars and restaurants. Brands: Fellow, Hario, Toddy.</p>
         <div class="subcategory-label" id="manual-brewers">Manual Brewers</div>
         <!-- Fellow Stagg EKG -->
@@ -2607,7 +2337,7 @@
            ROASTERS
       ====================================================== -->
       <section class="category-section" id="roasters" data-category="roasters">
-        <h2 class="category-title">🔥 Commercial Coffee Roasters</h2>
+        <h2 class="category-title">Commercial Coffee Roasters</h2>
         <p class="category-description">From <strong>sample roasters</strong> for precision profile development to <strong>commercial drum roasters</strong> for large-scale production — we supply roasting machines for specialty roasteries, boutique coffee producers, and high-volume roasting operations. Brand: Probat.</p>
         <!-- Nucleus Link Roaster -->
         <div class="product-detail-card" data-tags="roaster" id="nucleus-link">
@@ -2692,7 +2422,7 @@
            KITCHEN EQUIPMENT
       ====================================================== -->
       <section class="category-section" id="kitchen-equipment" data-category="kitchen-equipment" style="padding-bottom: 80px;">
-        <h2 class="category-title">🏪 Café Kitchen Equipment</h2>
+        <h2 class="category-title">Café Kitchen Equipment</h2>
         <p class="category-description">Complete your <strong>café or restaurant setup</strong> with professional kitchen equipment — stainless steel workstations, under-counter sink units, commercial refrigeration units and display counters. Everything you need for a fully functional commercial kitchen.</p>
         <div class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           <div class="product-card" data-tags="kitchen">
@@ -2731,70 +2461,28 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/brand-wordmark-light.svg" alt="The Fifth Table" class="footer-logo-img" />
-          </a>
-          <p>Your trusted partner for premium coffee equipment from espresso machines and grinders to full kitchen setups.</p>
+          <a href="index.html" class="logo text-wordmark">The Fifth Table</a>
+          <p>Everything it takes to build a hospitality business.</p>
+          <p class="footer-promise">One partner. Every stage.</p>
         </div>
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="category.html?id=coffee-machines&amp;sub=automatic">Automatic Machines</a></li>
-            <li><a href="category.html?id=coffee-machines&amp;sub=semi-automatic">Semi-Automatic Machines</a></li>
-            <li><a href="category.html?id=grinders">Grinders</a></li>
-            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
-            <li><a href="category.html?id=blenders">Blenders</a></li>
-            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a></li>
-            <li><a href="category.html?id=roasters">Roasters</a></li>
-            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="index.html#enquiry">Get a Quote</a></li>
-            <li><a href="about.html#about-contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Brands We Carry</h4>
-          <ul>
-            <li><a href="product.html?id=budan-infinity">Budan</a></li>
-            <li><a href="product.html?id=wmf-1100s">WMF</a></li>
-            <li><a href="product.html?id=carimali-mya-ultra">Carimali</a></li>
-            <li><a href="product.html?id=rancilio-classe5">Rancilio</a></li>
-            <li><a href="product.html?id=lm-linea-pb">La Marzocco</a></li>
-            <li><a href="product.html?id=heycafe-buddy-doser">Hey Cafe</a></li>
-            <li><a href="product.html?id=mahlkonig-x54">Mahlkönig</a></li>
-            <li><a href="product.html?id=anfim-luna">Anfim</a></li>
-            <li><a href="product.html?id=probat-p5">Probat</a></li>
-            <li><a href="product.html?id=blendtec-825">Blendtec</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h4>Discover</h4><ul>
+          <li><a href="solutions.html">Our Solutions</a></li><li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About The Fifth Table</a></li><li><a href="blogs.html">Insights</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Equipment</h4><ul>
+          <li><a href="category.html?id=coffee-machines">Coffee Machines</a></li><li><a href="category.html?id=grinders">Grinders</a></li>
+          <li><a href="category.html?id=blenders">Blenders</a></li><li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          <li><a href="products.html">View All Equipment</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Start a conversation</h4><ul>
+          <li><a href="tel:+918424832663">+91 84248 32663</a></li>
+          <li><a href="mailto:thisvishnurajnair@gmail.com">thisvishnurajnair@gmail.com</a></li>
+          <li><a href="index.html#enquiry">Discuss Your Project</a></li>
+        </ul></div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-address">55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p>
-        <p>&copy; 2026 The Fifth Table. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918424832663" style="color:inherit;">+91 84248 32663</a> &nbsp;|&nbsp; <a href="mailto:thisvishnurajnair@gmail.com" style="color:inherit;">thisvishnurajnair@gmail.com</a></p>
-      </div>
+      <div class="footer-bottom"><p>55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p><p>&copy; 2026 The Fifth Table. All rights reserved.</p></div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
-  <script>
-    // Category picker – expand/collapse subcategory chips
-    document.querySelectorAll('.cat-card[data-cat]').forEach(function(card) {
-      card.addEventListener('click', function(e) {
-        // Don't toggle if a sub-link chip was tapped
-        if (e.target.closest('.cat-sub-link')) return;
-        const isOpen = card.classList.contains('open');
-        // Close all others
-        document.querySelectorAll('.cat-card.open').forEach(function(c) { c.classList.remove('open'); });
-        if (!isOpen) card.classList.add('open');
-      });
-    });
-  </script>
+  <script src="js/main.js?v=site-refresh-4"></script>
 </body>
 </html>

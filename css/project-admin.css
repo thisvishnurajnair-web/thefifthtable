@@ -1,0 +1,75 @@
+.gallery-sample-notice { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:22px 26px; border:1px solid var(--border); background:var(--frost); margin-bottom:32px; font-size:.78rem; }
+.gallery-sample-notice strong { font-size:.8rem; font-weight:500; }
+.gallery-sample-notice p { margin-top:6px; color:var(--text-gray); line-height:1.65; }
+.gallery-sample-notice a { flex-shrink:0; color:var(--espresso); border-bottom:1px solid var(--bronze); padding-bottom:5px; }
+.gallery-sample-notice[hidden], .project-admin-dialog [hidden] { display:none !important; }
+.project-admin-entry { padding:0 0 36px; text-align:right; }
+.project-admin-entry button { font:400 .72rem var(--font-body); letter-spacing:.03em; color:var(--text-gray); border:0; border-bottom:1px solid var(--border); padding:8px 0; background:none; cursor:pointer; }
+.project-admin-dialog { width:min(860px,calc(100% - 40px)); max-height:90dvh; margin:auto; padding:0; border:1px solid var(--border); color:var(--text-dark); background:var(--ivory); }
+.project-admin-dialog::backdrop { background:rgba(30,27,22,.72); backdrop-filter:blur(5px); }
+.project-admin-header { position:sticky; top:0; z-index:2; display:flex; justify-content:space-between; gap:20px; align-items:center; padding:26px 34px; border-bottom:1px solid var(--border); background:var(--frost); }
+.project-admin-header .section-eyebrow { margin-bottom:8px; font-size:.61rem; }
+.project-admin-header h2 { font:500 2.3rem/1.1 var(--font-heading); }
+.project-admin-header > button, .project-signout { font:400 .75rem var(--font-body); color:var(--espresso); border:0; border-bottom:1px solid var(--border); padding:8px 0; background:none; cursor:pointer; white-space:nowrap; }
+.project-admin-body { padding:30px 34px; }
+.project-admin-body h3 { font:500 1.9rem/1.15 var(--font-heading); margin-bottom:10px; }
+.project-admin-body p { font-size:.8rem; line-height:1.75; color:var(--text-gray); }
+.project-admin-body h4 { font:500 1.5rem/1.2 var(--font-heading); }
+.project-admin-body section > .btn { margin-top:24px; }
+.project-admin-status:empty { display:none; }
+.project-admin-status { padding:12px 15px; border:1px solid #cbd3c2; background:#eef2e8; margin-bottom:22px; }
+.project-admin-status.is-error { background:#fbede7; border-color:#d8b4a6; color:#963d27; }
+.project-admin-body .btn { font-size:.76rem; }
+.project-admin-body button:disabled { opacity:.45; cursor:wait; }
+.project-admin-body button:disabled#project-upload-button { cursor:default; }
+#project-admin-login { margin-top:22px; max-width:400px; }
+#project-admin-login label { display:block; font-size:.76rem; margin-bottom:8px; }
+#project-admin-password { width:100%; font:inherit; padding:12px; background:var(--white); border:1px solid var(--border); margin-bottom:20px; }
+.project-manager-intro { display:flex; justify-content:space-between; align-items:start; gap:20px; }
+.project-local-note { margin:18px 0; padding-left:12px; border-left:2px solid var(--bronze); }
+.project-upload-zone { margin:26px 0 34px; padding:24px; border:1px dashed #b6a88f; background:var(--white); }
+.project-upload-zone > p { margin:10px 0 16px; font-size:.72rem; }
+.project-file-label { display:inline-block; border:1px solid var(--espresso); padding:10px 17px; font-size:.75rem; font-weight:500; cursor:pointer; }
+#project-photo-files { position:absolute; width:1px; height:1px; opacity:0; }
+.project-upload-zone:focus-within .project-file-label { outline-offset:4px; }
+.project-file-label:has(+ input:focus-visible) { outline:2px solid var(--bronze); }
+.project-pending-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:20px; }
+.project-pending-grid:empty { display:none; }
+.pending-photo { position:relative; }
+.pending-photo img { width:100%; aspect-ratio:1; object-fit:cover; display:block; }
+.pending-photo button { position:absolute; right:4px; top:4px; width:28px; height:28px; border:0; background:var(--ivory); color:var(--espresso); font-size:1.15rem; cursor:pointer; }
+#project-upload-button { margin-top:14px; }
+.project-manage-heading { display:flex; align-items:baseline; gap:20px; justify-content:space-between; margin-bottom:18px; }
+.project-manage-heading p { font-size:.68rem; }
+.project-manage-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.managed-photo { border:1px solid var(--border); background:var(--white); }
+.managed-photo > img { display:block; width:100%; height:150px; object-fit:cover; }
+.managed-photo-actions { padding:12px; }
+.managed-photo-actions button { background:none; border:0; font:400 .7rem var(--font-body); cursor:pointer; padding:4px 0; }
+.managed-photo-actions .photo-delete-button { color:#9c402d; }
+.photo-delete-confirm button + button { margin-left:15px; }
+.photo-delete-confirm p { margin-bottom:6px; font-size:.7rem; }
+.project-manage-empty { padding:30px; text-align:center; border:1px solid var(--border); }
+.project-manager-footnote { margin-top:22px; font-size:.72rem !important; }
+@media(max-width:600px) {
+ .gallery-sample-notice { display:block; padding:20px; }
+ .gallery-sample-notice a { display:inline-block; margin-top:14px; }
+ .project-admin-dialog { width:calc(100% - 24px); max-height:94dvh; }
+ .project-admin-header { padding:22px; }
+ .project-admin-body { padding:22px; }
+ .project-admin-header h2 { font-size:2rem; }
+ .project-admin-body h3 { font-size:1.7rem; }
+ .project-manager-intro { flex-wrap:wrap; gap:10px; }
+ .project-upload-zone { padding:18px; }
+ .project-manage-heading { display:block; }
+ .project-manage-heading p { margin-top:8px; }
+ .project-manage-grid, .project-pending-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .managed-photo > img { height:135px; }
+}
+.project-photo-option { margin:0 0 40px; break-inside:avoid; }
+.project-photo-option .project-photograph { margin-bottom:20px; }
+.project-photo-option h2 { font:500 1.8rem/1.2 var(--font-heading); margin-bottom:12px; }
+.project-photo-option p { font-size:.82rem; color:var(--text-gray); line-height:1.8; margin-bottom:12px; }
+.project-photo-option figcaption > a { font-size:.72rem; color:var(--bronze); border-bottom:1px solid var(--border); padding-bottom:4px; }
+.photo-ideas-heading .gallery-cover-grid { grid-template-columns:1fr; }
+.photo-ideas-heading [hidden], .gallery-closing[hidden] { display:none; }

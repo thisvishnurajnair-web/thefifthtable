@@ -1,7 +1,7 @@
 import initialPosts from '../data/blog-posts.js';
 
 const API = '/api/blog';
-const localPreview = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
+const localPreview = ['localhost', '127.0.0.1'].includes(location.hostname);
 let publicPosts = initialPosts.filter(post => post.published);
 let managedPosts = [];
 let lastFocused;
@@ -16,7 +16,6 @@ function message(id, text, error = false) {
 }
 
 async function api(action, payload = {}) {
-  if (localPreview) throw new Error('This is a local preview. Blog administration becomes available after hosting is connected.');
   const readOnly = ['listPublished', 'adminStatus'].includes(action);
   const response = await fetch(API + (readOnly ? '?action=' + action : ''), {
     method: readOnly ? 'GET' : 'POST',
@@ -232,7 +231,6 @@ function displayPublicPosts() {
 
 async function renderPublicPosts() {
   displayPublicPosts();
-  if (localPreview) return;
   try {
     publicPosts = (await api('listPublished')).posts;
     displayPublicPosts();
@@ -243,3 +241,11 @@ async function renderPublicPosts() {
 
 clearEditor();
 renderPublicPosts();
+
+if (localPreview) {
+  const notice = document.createElement('p');
+  notice.textContent = 'Local preview · Changes stay on this computer. Blog test edits reset when the preview server restarts.';
+  notice.style.cssText = 'font-size:.75rem;margin-bottom:1rem;color:var(--text-gray)';
+  document.querySelector('.admin-body').prepend(notice);
+}
+if (location.hash === '#admin') $('admin-trigger-btn').click();

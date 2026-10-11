@@ -49,6 +49,18 @@ function sessionCookie(value, age = MAX_AGE) {
   return `${COOKIE}=${value}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=${age}`;
 }
 
+// Blog posts and project photographs share the same owner account and session.
+export async function authenticateAdmin(request, store, now = () => Date.now()) {
+  const token = getCookie(request);
+  if (!/^[a-f0-9]{64}$/.test(token)) return null;
+  const [session, admin] = await Promise.all([
+    store.get('sessions/' + digest(token), { type: 'json' }),
+    store.get('admin', { type: 'json' })
+  ]);
+  if (!session || !admin || session.expires <= now() || session.version !== admin.version) return null;
+  return admin;
+}
+
 export function createBlogHandler({ store, setupKey = '', initialPosts = [], now = () => Date.now() }) {
   const read = key => store.get(key, { type: 'json' });
   const response = (body, status = 200, cookie) => new Response(JSON.stringify(body), {
@@ -61,13 +73,7 @@ export function createBlogHandler({ store, setupKey = '', initialPosts = [], now
     }
   });
 
-  async function auth(request) {
-    const token = getCookie(request);
-    if (!/^[a-f0-9]{64}$/.test(token)) return null;
-    const [session, admin] = await Promise.all([read('sessions/' + digest(token)), read('admin')]);
-    if (!session || !admin || session.expires <= now() || session.version !== admin.version) return null;
-    return admin;
-  }
+  const auth = request => authenticateAdmin(request, store, now);
 
   async function startSession(admin) {
     const token = secret();

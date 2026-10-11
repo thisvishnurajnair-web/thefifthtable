@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initFilterBar();
   initEnquiryForm();
+  initEnquiryContext();
   initScrollAnimations();
   initCarousels();
   initProductLinks();
@@ -39,10 +40,33 @@ function initMobileMenu() {
   const navLinks = document.getElementById('nav-links');
   if (!toggle || !navLinks) return;
 
+  const syncMenuState = () => {
+    const isOpen = navLinks.classList.contains('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  };
+  const closeMenu = () => {
+    navLinks.classList.remove('open');
+    toggle.classList.remove('open');
+    document.body.style.overflow = '';
+    syncMenuState();
+  };
+  document.addEventListener('keydown', event => {
+    if (!navLinks.classList.contains('open')) return;
+    if (event.key === 'Escape') { closeMenu(); toggle.focus(); }
+    if (event.key === 'Tab' && window.innerWidth <= 768) {
+      const targets = [toggle, ...navLinks.querySelectorAll('a, button')].filter(el => el.getClientRects().length);
+      const first = targets[0], last = targets[targets.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
   toggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    syncMenuState();
   });
 
   // Mobile: tap on top-level Equipment item to toggle its dropdown
@@ -73,6 +97,7 @@ function initMobileMenu() {
       navLinks.classList.remove('open');
       toggle.classList.remove('open');
       document.body.style.overflow = '';
+      syncMenuState();
     });
   });
 
@@ -82,6 +107,7 @@ function initMobileMenu() {
       navLinks.classList.remove('open');
       toggle.classList.remove('open');
       document.body.style.overflow = '';
+      syncMenuState();
     }
   });
 }
@@ -213,7 +239,7 @@ function initScrollAnimations() {
     '.product-card, .product-detail-card, .category-card, .why-card'
   );
 
-  if (!animateEls.length) return;
+  if (!animateEls.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   // Add initial state
   animateEls.forEach(el => {
@@ -307,3 +333,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Keep the selected service, project or equipment in the enquiry.
+function initEnquiryContext() {
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    const target = new URL(link.href);
+    const current = location.pathname.split('/').pop() || 'index.html';
+    if (target.pathname.split('/').pop() === current && !target.hash) link.setAttribute('aria-current', 'page');
+  });
+  const form = document.getElementById('enquiry-form');
+  if (!form) return;
+  const query = new URLSearchParams(location.search);
+  const services = { consulting: 'hospitality-consulting', 'concept-menu': 'concept-menu', design: 'design-interiors', execution: 'turnkey-project', operations: 'operational-support', equipment: 'not-sure' };
+  const service = services[query.get('service')];
+  if (service) form.elements.product.value = service;
+  const project = query.get('project');
+  if (['cafe', 'restaurant', 'hotel'].includes(project)) {
+    form.elements.business.value = project;
+    form.elements.product.value = 'turnkey-project';
+  }
+  const equipment = {
+    'wmf-1500s': ['auto-high', 'WMF 1500 S+'],
+    'lm-linea-classic-s': ['semi-specialty', 'La Marzocco Linea Classic S'],
+    'mahlkonig-e65s': ['grinder', 'Mahlkönig E65S']
+  }[query.get('equipment')];
+  if (equipment) {
+    form.elements.product.value = equipment[0];
+    form.elements.message.value = 'Equipment of interest: ' + equipment[1];
+  }
+}

@@ -1539,3 +1539,12 @@ ul {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Text-only identity and equipment categories. */
+.text-wordmark { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 600; letter-spacing: -.035em; white-space: nowrap; }
+.site-header .text-wordmark { color: var(--text-dark); }
+.site-footer .text-wordmark { color: var(--white); }
+.category-card { display: flex; flex-direction: column; justify-content: center; min-height: 140px; padding: 28px 18px; }
+.category-card h3 { margin-bottom: 8px; }
+.category-card p { line-height: 1.6; }
+@media (max-width: 480px) { .text-wordmark { font-size: 1.2rem; } .category-card { min-height: 130px; padding: 22px 14px; } }

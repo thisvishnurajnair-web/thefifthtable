@@ -1,10 +1,15 @@
 # The Fifth Table: blog and enquiries
 
-The public site is static. Blog posts and admin access use this site's Netlify Functions and site-wide Netlify Blobs store, `thefifthtable-blog`. Enquiries use this site's Netlify Forms. Neither feature depends on another website's account, database or Google Apps Script.
+The public site is static. Blog posts and admin access use this site's Netlify Functions and site-wide Netlify Blobs store, `thefifthtable-blog`. Project photos use a separate store, `thefifthtable-projects`, with the same admin account and session. Enquiries use this site's Netlify Forms. These features are independent of the SNS Coffee website.
 
 ## Local review
 
-Serve the repository with an HTTP server and open `blogs.html`. Published articles bundled in `data/blog-posts.js` render locally. Blog administration and enquiry submission show a clear preview notice until hosting is connected; the preview never claims to publish or submit data.
+Run `npm run dev` and open `http://localhost:4173/`. The loopback-only preview runs the same blog and project API handlers against isolated local stores. Enquiry submission remains disabled.
+
+- Gallery appearance: `http://localhost:4173/projects.html?preview=gallery`. Clearly labelled sample photography demonstrates the layout without adding fake projects to the real gallery.
+- Photo manager: `http://localhost:4173/projects.html#admin`. Choose **Open local photo manager** to test upload and deletion. This development-only session endpoint exists only in `scripts/preview.mjs`; it is not part of the deployed Functions.
+- Local photos persist in `.local-preview-data/projects`, which is ignored by Git and excluded from the website build. They are not automatically copied to the live site. Local blog edits are held in memory for the preview session.
+- The sample view does not modify the real gallery. Use **View your gallery** to see actual uploads. The local gallery now contains 13 owner-supplied photographs from Downloads. Three introductory stock photographs are labelled as hospitality inspiration: the original cover, the selected quiet café corner and the selected sunlit rattan scene. Each opens in the photo viewer. Four stock options can be compared at `projects.html?preview=ideas`; options 02 and 03 are the selected additions.
 
 Run `npm ci`, `npm test` and `npm run build` with Node 22.12 or later. The build output is `dist`. Netlify builds the API separately from `netlify/functions`; these server files, tests, dependencies and setup documentation are not copied into the public output.
 
@@ -27,6 +32,16 @@ Both tests and builds first bundle the pinned, current HTML sanitizer and its pa
 5. On another device, open **Admin**, then sign in with the same blog password. Drafts, published posts, editing and deletion all use the shared store. No passwords or drafts are kept in browser localStorage.
 
 Sessions use secure, HTTP-only cookies and expire after eight hours. Password changes sign out other sessions. The API rate-limits repeated sign-in attempts, checks request origins, and sanitizes rich text before saving it. The blog account label is `thisvishnurajnair@gmail.com`; this is a separate website admin login, not Google single sign-on.
+
+## Project photo administration
+
+Open `projects.html` and choose **Admin · Manage photos**, or use **Manage project photos** in Blog Admin. Sign in with the existing blog password. No additional setup key, account, or password is needed when blog administration is already configured.
+
+Choose up to 12 JPG, PNG or WebP files at a time, review the thumbnails, and select **Upload photos**. Input files can be up to 20 MB; the browser resizes to at most 2400 pixels on the longest edge and encodes a JPEG of at most 2 MB before upload. Original filenames and image metadata are not saved. The server validates the format, dimensions, request origin and admin session, then persists the photo and gallery index in the site-wide project store. Concurrent updates use conditional writes.
+
+Photos appear without names or captions in a two-column gallery, or a single column on mobile. Visitors can enlarge images and browse with arrows. The four newest also appear on the homepage. The admin can delete a photo after confirming in the manager; it disappears from both gallery listings and cannot be fetched through the image endpoint afterward. The public gallery refreshes on page load; the admin sees changes immediately.
+
+Deploy the new `projects` Function with the static pages to activate live uploads. Uploaded live photos persist across subsequent deployments; no rebuild is needed to add or remove photographs. Back up the `thefifthtable-projects` store before removing a Netlify project. The old static `data/project-photos.json` manifest is no longer the source for the gallery.
 
 ## Content and backups
 

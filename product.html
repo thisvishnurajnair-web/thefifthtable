@@ -14,8 +14,8 @@
   <meta property="og:image" content="https://thefifthtable.in/images/brand-wordmark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=site-refresh-4" />
   <style>
     .product-page-hero {
       padding: 7rem 0 2.5rem;
@@ -125,59 +125,21 @@
       .product-page-body .features-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <link rel="stylesheet" href="css/hospitality.css" />
 </head>
 <body>
   <!-- ===== NAVIGATION ===== -->
   <header class="site-header" id="site-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/brand-wordmark.svg" alt="The Fifth Table" class="logo-img" />
-      </a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-                  <ul class="nav-links" id="nav-links">
-        <li class="nav-item has-dropdown">
-          <a href="products.html">Equipment <span class="chevron">&#9660;</span></a>
-          <ul class="dropdown">
-            <li><a href="category.html?id=coffee-machines">Coffee Machines</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=coffee-machines&amp;sub=small-capacity">Small Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=medium-capacity">Medium Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=high-capacity">High Capacity</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=economical">Economical</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=premium">Premium</a></li>
-                <li><a href="category.html?id=coffee-machines&amp;sub=specialty">Specialty</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=grinders">Grinders</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=grinders&amp;sub=economical">Economical</a></li>
-                <li><a href="category.html?id=grinders&amp;sub=premium">Premium</a></li>
-                <li><a href="category.html?id=grinders&amp;sub=industrial">Industrial</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=barista-accessories">Espresso Accessories</a></li>
-            <li><a href="category.html?id=blenders">Blenders</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=blenders&amp;sub=open">Open Blenders</a></li>
-                <li><a href="category.html?id=blenders&amp;sub=silent">Sound Enclosed</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=coffee-brewers">Coffee Brewers</a>
-              <ul class="sub-dropdown">
-                <li><a href="category.html?id=coffee-brewers&amp;sub=manual">Manual Brewers</a></li>
-                <li><a href="category.html?id=coffee-brewers&amp;sub=automatic">Automatic Brewers</a></li>
-              </ul>
-            </li>
-            <li><a href="category.html?id=roasters">Roasters</a></li>
-            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="about.html">About Us</a></li>
-        <li class="nav-item"><a href="blogs.html">Blogs</a></li>
-        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Get a Quote</a></li>
-        <li class="nav-item"><a href="about.html#about-contact">Contact Us</a></li>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo text-wordmark" aria-label="The Fifth Table — Home">The Fifth Table</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="solutions.html">Our Solutions</a></li>
+        <li class="nav-item"><a href="products.html">Equipment</a></li>
+        <li class="nav-item"><a href="projects.html">Projects</a></li>
+        <li class="nav-item"><a href="blogs.html">Insights</a></li>
+        <li class="nav-item"><a href="index.html#enquiry" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -210,54 +172,29 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/brand-wordmark-light.svg" alt="The Fifth Table" class="footer-logo-img" />
-          </a>
-          <p>Your trusted partner for premium coffee equipment from espresso machines and grinders to full kitchen setups.</p>
+          <a href="index.html" class="logo text-wordmark">The Fifth Table</a>
+          <p>Everything it takes to build a hospitality business.</p>
+          <p class="footer-promise">One partner. Every stage.</p>
         </div>
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="category.html?id=coffee-machines&amp;sub=automatic">Automatic Machines</a></li>
-            <li><a href="category.html?id=coffee-machines&amp;sub=semi-automatic">Semi-Automatic Machines</a></li>
-            <li><a href="category.html?id=grinders">Grinders</a></li>
-            <li><a href="category.html?id=barista-accessories">Barista Accessories</a></li>
-            <li><a href="category.html?id=blenders">Blenders</a></li>
-            <li><a href="category.html?id=roasters">Roasters</a></li>
-            <li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="index.html#enquiry">Get a Quote</a></li>
-            <li><a href="about.html#about-contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Brands We Carry</h4>
-          <ul>
-            <li><a href="product.html?id=budan-infinity">Budan</a></li>
-            <li><a href="product.html?id=wmf-1100s">WMF</a></li>
-            <li><a href="product.html?id=carimali-mya-ultra">Carimali</a></li>
-            <li><a href="product.html?id=rancilio-classe5">Rancilio</a></li>
-            <li><a href="product.html?id=lm-linea-pb">La Marzocco</a></li>
-            <li><a href="product.html?id=heycafe-buddy-doser">Hey Cafe</a></li>
-            <li><a href="product.html?id=mahlkonig-x54">Mahlkönig</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h4>Discover</h4><ul>
+          <li><a href="solutions.html">Our Solutions</a></li><li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About The Fifth Table</a></li><li><a href="blogs.html">Insights</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Equipment</h4><ul>
+          <li><a href="category.html?id=coffee-machines">Coffee Machines</a></li><li><a href="category.html?id=grinders">Grinders</a></li>
+          <li><a href="category.html?id=blenders">Blenders</a></li><li><a href="category.html?id=kitchen-equipment">Kitchen Equipment</a></li>
+          <li><a href="products.html">View All Equipment</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Start a conversation</h4><ul>
+          <li><a href="tel:+918424832663">+91 84248 32663</a></li>
+          <li><a href="mailto:thisvishnurajnair@gmail.com">thisvishnurajnair@gmail.com</a></li>
+          <li><a href="index.html#enquiry">Discuss Your Project</a></li>
+        </ul></div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-address">55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p>
-        <p>&copy; 2026 The Fifth Table. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918424832663" style="color:inherit;">+91 84248 32663</a> &nbsp;|&nbsp; <a href="mailto:thisvishnurajnair@gmail.com" style="color:inherit;">thisvishnurajnair@gmail.com</a></p>
-      </div>
+      <div class="footer-bottom"><p>55, 2nd Floor, Lane 2, Westend Marg, Saidulajab, near Saket Metro Station, New Delhi, Delhi 110030, India</p><p>&copy; 2026 The Fifth Table. All rights reserved.</p></div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=site-refresh-4"></script>
   <script>
     (async function () {
       const params = new URLSearchParams(window.location.search);
@@ -274,6 +211,9 @@
         const doc = parser.parseFromString(html, 'text/html');
         const card = doc.getElementById(id);
         if (!card || !card.classList.contains('product-detail-card')) {
+          document.getElementById('product-page-title').textContent = 'Product unavailable';
+          document.getElementById('breadcrumb-name').textContent = 'Product unavailable';
+          document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex, follow');
           contentEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#999;">Product not found. <a href="products.html">Browse all products</a></p>';
           return;
         }
