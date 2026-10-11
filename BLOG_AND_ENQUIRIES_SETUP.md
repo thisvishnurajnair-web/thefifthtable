@@ -8,7 +8,7 @@ Run `npm run dev` and open `http://localhost:4173/`. The loopback-only preview r
 
 - Gallery appearance: `http://localhost:4173/projects.html?preview=gallery`. Clearly labelled sample photography demonstrates the layout without adding fake projects to the real gallery.
 - Photo manager: `http://localhost:4173/projects.html#admin`. Choose **Open local photo manager** to test upload and deletion. This development-only session endpoint exists only in `scripts/preview.mjs`; it is not part of the deployed Functions.
-- Local photos persist in `.local-preview-data/projects`, which is ignored by Git and excluded from the website build. They are not automatically copied to the live site. Local blog edits are held in memory for the preview session.
+- Local photos persist in `.local-preview-data/projects`, which is ignored by Git and excluded from the website build. Later local edits are not synchronized to the live site. Local blog edits are held in memory for the preview session.
 - The sample view does not modify the real gallery. Use **View your gallery** to see actual uploads. The local gallery now contains 13 owner-supplied photographs from Downloads. Three introductory stock photographs are labelled as hospitality inspiration: the original cover, the selected quiet café corner and the selected sunlit rattan scene. Each opens in the photo viewer. Four stock options can be compared at `projects.html?preview=ideas`; options 02 and 03 are the selected additions.
 
 Run `npm ci`, `npm test` and `npm run build` with Node 22.12 or later. The build output is `dist`. Netlify builds the API separately from `netlify/functions`; these server files, tests, dependencies and setup documentation are not copied into the public output.
@@ -57,3 +57,7 @@ If the blog password is forgotten, the Netlify project owner can delete only the
 - Check the deployment logs for successful API rate-limit configuration.
 
 Reference: [Netlify Forms](https://docs.netlify.com/manage/forms/setup/), [Netlify Blobs](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [Function rate limits](https://docs.netlify.com/manage/security/secure-access-to-sites/rate-limiting/).
+
+## Approved initial project photo import
+
+`migration/project-photos` contains the 13 approved JPEGs and their gallery order, copied from the reviewed local gallery. It is included in the private project function package, not in the static public directory. On the first request, the project function imports the photos only if the live gallery index has never been created. It publishes the index after all images are stored. Existing galleries, including an empty gallery after admin deletions, are never replaced. The import can be retried safely after a temporary storage failure. Later uploads and deletions remain independent of this snapshot and survive redeployment.

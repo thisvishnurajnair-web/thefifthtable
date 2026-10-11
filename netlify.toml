@@ -9,6 +9,9 @@
 [functions]
   node_bundler = "esbuild"
 
+[functions."projects"]
+  included_files = ["migration/project-photos/**"]
+
 [[headers]]
   for = "/*"
   [headers.values]
