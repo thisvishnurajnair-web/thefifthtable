@@ -1,4 +1,4 @@
-import { renderPhotos } from './projects.js?v=project-inspiration-3';
+import { renderPhotos } from './projects.js?v=horizontal-review-1';
 
 const $ = id => document.getElementById(id);
 const dialog = $('project-admin-dialog');

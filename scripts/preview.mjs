@@ -7,6 +7,7 @@ import { createBlogHandler } from '../netlify/lib/blog-api.mjs';
 import { createProjectsHandler, MAX_PHOTO_BYTES } from '../netlify/lib/projects-api.mjs';
 import { createPreviewStore } from './preview-store.mjs';
 import initialPosts from '../data/blog-posts.js';
+import { createProjectInitializer } from '../server/seed-projects.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const port = Number(process.env.PREVIEW_PORT || 4173);
@@ -15,6 +16,11 @@ const setupKey = randomBytes(32).toString('hex');
 const previewPassword = randomBytes(32).toString('hex');
 const adminStore = createPreviewStore();
 const photoStore = createPreviewStore(path.join(root, '.local-preview-data/projects'));
+const initialPhotos = JSON.parse(await readFile(path.join(root, 'migration/project-photos/manifest.json'), 'utf8'));
+await createProjectInitializer({
+  photos: initialPhotos,
+  readPhoto: id => readFile(path.join(root, 'migration/project-photos', id + '.jpg'))
+})(photoStore);
 const blog = createBlogHandler({ store: adminStore, setupKey, initialPosts });
 const projects = createProjectsHandler({ store: photoStore, adminStore });
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });

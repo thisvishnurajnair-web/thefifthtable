@@ -151,13 +151,13 @@ section[id], article[id], form[id] { scroll-margin-top: 100px; }
 .project-brief { background: var(--frost); }
 .brief-list { margin-left: 24px; }
 .brief-list li { padding: 18px 0 18px 10px; border-bottom: 1px solid var(--border); font-size: .9rem; color: var(--text-gray); }
-.gallery-heading { padding-bottom: 35px; }
+.interior-heading.gallery-heading { padding: 132px 0 28px; }
 .gallery-heading h1 { margin-bottom: 0; }
-.gallery-section { padding-top: 40px; }
-.project-gallery { columns: 2; column-gap: 24px; }
-.project-photograph { display: block; break-inside: avoid; margin-bottom: 24px; overflow: hidden; background: var(--frost); cursor: zoom-in; }
-.project-photograph img { display: block; width: 100%; height: auto; transition: transform .4s ease; }
-.project-photograph:hover img { transform: scale(1.02); }
+.editorial-section.gallery-section { padding-top: 32px; }
+.project-gallery { display: flex; align-items: center; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--border) transparent; padding: 5px 4px 12px; }
+.project-photograph { display: block; flex: 0 0 auto; width: min(calc(var(--photo-ratio, 1.333) * clamp(280px, 35vw, 440px)), 88%); min-width: 0; margin: 0; overflow: hidden; cursor: zoom-in; scroll-snap-align: start; scroll-snap-stop: always; }
+.project-photograph img { display: block; width: 100%; height: auto; }
+
 .project-photograph:focus-visible { outline: 2px solid var(--bronze); outline-offset: 5px; }
 .gallery-empty { padding: 60px 24px; text-align: center; border: 1px solid var(--border); color: var(--text-gray); font-size: .9rem; }
 .gallery-empty[hidden] { display: none; }
@@ -168,8 +168,9 @@ section[id], article[id], form[id] { scroll-margin-top: 100px; }
 .photo-viewer-navigation { padding: 12px 0 0; }
 .photo-viewer-navigation[hidden] { display: none; }
 .project-photo-dialog button { background: none; border: 0; padding: 8px; cursor: pointer; font: inherit; color: var(--espresso); }
-@media (prefers-reduced-motion: reduce) { .project-photograph img { transition: none; } }
-@media (max-width: 600px) { .project-gallery { columns: 1; } }
+.project-photo-option { flex: 0 0 46%; min-width: 0; }
+.project-photo-option .project-photograph { width: 100%; }
+@media (max-width: 600px) { .project-gallery { gap: 14px; } .project-photograph { width: min(calc(var(--photo-ratio, 1.333) * 300px), 88%); } }
 
 @media (max-width: 1024px) {
   .nav-item > a { padding: 10px; font-size: .75rem; }
@@ -246,16 +247,7 @@ section[id], article[id], form[id] { scroll-margin-top: 100px; }
 }
 
 /* Project introduction and closing invitation. */
-.gallery-cover-heading { padding-top:132px; padding-bottom:50px; }
-.gallery-cover-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,540px); gap:56px; align-items:center; }
-.gallery-cover-heading h1 { font-size:clamp(4.6rem,7vw,6.4rem); }
-.gallery-introduction { margin:25px 0 30px; font-size:1rem; line-height:1.85; color:var(--text-gray); }
-.gallery-cover { margin:0; }
-.gallery-cover-mosaic { display:grid; grid-template-columns:1.9fr 1fr; gap:16px; align-items:center; }
-.gallery-cover-details { display:grid; gap:16px; }
-.gallery-cover a { display:block; cursor:zoom-in; }
-.gallery-cover img { display:block; width:100%; height:auto; }
-.gallery-cover figcaption { color:var(--text-gray); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; margin-top:11px; }
+.gallery-introduction { margin: 20px 0 0; max-width: 540px; font-size: 1rem; line-height: 1.85; color: var(--text-gray); }
 #project-gallery { scroll-margin-top:110px; }
 .gallery-closing { padding:68px 0 74px; text-align:center; background:var(--frost); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
 .gallery-closing .section-eyebrow { margin-bottom:18px; }
@@ -267,20 +259,32 @@ section[id], article[id], form[id] { scroll-margin-top: 100px; }
 .home-gallery-closing p > span { display:block; font:400 .77rem/1.75 var(--font-body); color:var(--text-gray); margin-top:9px; }
 .gallery-closing + .project-admin-entry { padding-top:26px; }
 @media(max-width:760px) {
- .gallery-cover-heading { padding-top:120px; padding-bottom:38px; }
- .gallery-cover-grid { grid-template-columns:minmax(0,1fr) minmax(0,320px); gap:30px; }
- .gallery-cover-heading h1 { font-size:4.2rem; }
  .gallery-introduction { font-size:.85rem; }
  .gallery-introduction br { display:none; }
  .home-gallery-closing { display:block; }
  .home-gallery-closing .text-link { margin-top:22px; }
 }
 @media(max-width:600px) {
- .gallery-cover-grid { grid-template-columns:1fr; gap:34px; }
- .gallery-cover { width:100%; max-width:540px; }
- .gallery-cover-mosaic, .gallery-cover-details { gap:12px; }
- .gallery-cover-heading h1 { font-size:4rem; }
- .gallery-introduction { margin:18px 0 22px; }
+ .interior-heading.gallery-heading { padding-top: 112px; }
+ .gallery-introduction { margin: 18px 0 0; }
  .gallery-closing { padding:52px 0; }
  .gallery-closing p:not(.section-eyebrow) { font-size:.81rem; }
 }
+
+/* Shared navigation for the sideways photo and category collections. */
+.horizontal-rail { min-width: 0; }
+.horizontal-rail[hidden], .rail-controls[hidden] { display: none; }
+.rail-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 20px; }
+.rail-position { font: 500 .7rem/1.5 var(--font-body); font-variant-numeric: tabular-nums; letter-spacing: .08em; color: var(--text-gray); }
+.rail-buttons { display: flex; gap: 10px; }
+.rail-buttons button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; background: transparent; color: var(--text-dark); cursor: pointer; transition: background .2s, border-color .2s; }
+.rail-buttons button:hover:not(:disabled) { background: var(--ice); border-color: var(--bronze); }
+.rail-buttons button:disabled { opacity: .3; cursor: default; }
+.rail-buttons svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.rail-buttons button:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
+.horizontal-rail > [tabindex]:focus-visible { outline: 2px solid var(--bronze); outline-offset: 4px; }
+
+/* Equipment-specific line illustrations, with the site's own accent colour. */
+.product-image-wrap.equipment-illustration { height: 180px; background: var(--frost); color: var(--bronze); }
+.equipment-icon { width: 120px; height: 120px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-motion: reduce) { .rail-buttons button { transition: none; } }

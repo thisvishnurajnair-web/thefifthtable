@@ -1,132 +1,69 @@
-/* A typographic directory for the seven equipment collections. */
+/* A horizontal directory for the seven equipment collections. */
 .category-directory {
-  --directory-accent: var(--blue);
+  --directory-accent: var(--bronze);
   --directory-tint: var(--ice);
   display: grid;
-  grid-template-columns: minmax(200px, .8fr) minmax(0, 2fr);
-  gap: 64px;
+  gap: 32px;
+  min-width: 0;
   scroll-margin-top: 100px;
 }
-.category-directory-intro { padding-top: 15px; }
-.category-directory-eyebrow {
-  color: var(--directory-accent);
-  font: 500 .64rem/1.5 var(--font-body);
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.category-directory-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw, 2.9rem);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -.035em;
-  color: var(--text-dark);
-  margin: 0 0 20px;
-}
+.category-directory-eyebrow { color: var(--directory-accent); font: 500 .64rem/1.5 var(--font-body); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 16px; }
+.category-directory-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 3vw, 2.9rem); font-weight: 500; line-height: 1.08; letter-spacing: -.035em; color: var(--text-dark); margin: 0 0 20px; }
+.category-directory-title br { display: none; }
 .category-directory-title em { font-weight: 400; color: var(--directory-accent); }
-.category-directory-description {
-  max-width: 255px;
-  font-size: .81rem;
-  line-height: 1.85;
-  color: var(--text-gray);
-  margin-bottom: 28px;
-}
-.category-directory-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 28px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--directory-accent);
-  color: var(--directory-accent);
-  font-size: .75rem;
-  font-weight: 500;
-}
+.category-directory-description { max-width: 520px; font-size: .81rem; line-height: 1.85; color: var(--text-gray); margin-bottom: 20px; }
+.category-directory-all { display: inline-flex; align-items: center; gap: 28px; padding-bottom: 8px; border-bottom: 1px solid var(--directory-accent); color: var(--directory-accent); font-size: .75rem; font-weight: 500; }
 .category-directory-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 36px;
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  padding: 5px 4px 12px;
 }
 .category-directory-link {
+  flex: 0 0 calc((100% - 36px) / 3.25);
+  min-width: 0;
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) 18px;
-  gap: 12px;
-  align-items: center;
-  min-height: 122px;
-  padding: 24px 4px;
-  border-top: 1px solid var(--border);
+  grid-template-columns: 1fr 24px;
+  grid-template-rows: auto 1fr;
+  gap: 32px 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  background: var(--white);
   color: var(--text-dark);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   transition: background .2s ease, border-color .2s ease;
 }
-.category-directory-number {
-  align-self: start;
-  padding-top: 5px;
-  font-size: .61rem;
-  font-weight: 500;
-  letter-spacing: .04em;
-  font-variant-numeric: tabular-nums;
-  color: var(--directory-accent);
-  opacity: .75;
-}
-.category-directory-name {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  line-height: 1.17;
-  letter-spacing: -.025em;
-  font-weight: 500;
-  margin: 0 0 9px;
-  text-wrap: balance;
-}
-.category-directory-detail { font-size: .7rem; line-height: 1.6; color: var(--text-gray); }
-.category-directory-arrow {
-  align-self: start;
-  padding-top: 1px;
-  color: var(--directory-accent);
-  font: 400 1.05rem/1.4 var(--font-body);
-  transition: transform .2s ease;
-}
-.category-directory-link:last-child { grid-column: 1 / -1; border-bottom: 1px solid var(--border); min-height: 112px; }
-.category-directory-link:hover { border-top-color: var(--directory-accent); background: var(--directory-tint); }
+.category-directory-number { font: 500 .65rem/1.5 var(--font-body); letter-spacing: .04em; font-variant-numeric: tabular-nums; color: var(--directory-accent); }
+.category-directory-link > div { grid-row: 2; grid-column: 1 / -1; }
+.category-directory-name { font-family: var(--font-heading); font-size: 1.7rem; line-height: 1.17; letter-spacing: -.025em; font-weight: 500; margin: 0 0 12px; }
+.category-directory-detail { font-size: .72rem; line-height: 1.65; color: var(--text-gray); }
+.category-directory-arrow { grid-row: 1; grid-column: 2; justify-self: end; color: var(--directory-accent); font: 400 1.1rem/1.4 var(--font-body); transition: transform .2s ease; }
+.category-directory-link:hover { border-color: var(--directory-accent); background: var(--directory-tint); }
 .category-directory-link:hover .category-directory-arrow { transform: translate(3px, -3px); }
-.category-directory-link:focus-visible, .category-directory-all:focus-visible { outline: 2px solid var(--directory-accent); outline-offset: 5px; }
-.equipment-section .category-directory { margin-top: 64px; --directory-accent: var(--bronze); --directory-tint: #e9e3d8; }
-.equipment-section .category-directory-name { font-size: 1.72rem; }
+.category-directory-link:focus-visible, .category-directory-all:focus-visible { outline: 2px solid var(--directory-accent); outline-offset: 3px; }
+.equipment-section .category-directory { margin-top: 64px; }
 .categories-strip { background: var(--white); padding: 84px 0; }
+.catalogue-category-section { padding: 64px 0; background: var(--frost); border-bottom: 1px solid var(--border); }
 @media (max-width: 1000px) {
-  .category-directory { gap: 36px; grid-template-columns: minmax(180px, .65fr) minmax(0, 1.5fr); }
-  .category-directory-list { column-gap: 22px; }
-  .category-directory-link { gap: 8px; grid-template-columns: 20px minmax(0, 1fr) 16px; }
-  .category-directory-name { font-size: 1.17rem; }
-  .equipment-section .category-directory-name { font-size: 1.5rem; }
+  .category-directory-link { flex-basis: calc((100% - 18px) / 2.3); }
 }
 @media (max-width: 760px) {
-  .category-directory { grid-template-columns: 1fr; gap: 32px; }
-  .category-directory-intro { padding: 0; }
+  .category-directory { gap: 28px; }
   .category-directory-title { font-size: 2.5rem; }
-  .category-directory-title br { display: none; }
-  .category-directory-description { max-width: 460px; margin-bottom: 18px; }
   .category-directory-eyebrow { margin-bottom: 14px; }
-  .category-directory-list { column-gap: 28px; }
-  .category-directory-name { font-size: 1.3rem; }
-  .categories-strip { padding: 54px 0; }
   .equipment-section .category-directory { margin-top: 48px; }
+  .categories-strip, .catalogue-category-section { padding: 48px 0; }
 }
 @media (max-width: 520px) {
-  .category-directory-list { grid-template-columns: 1fr; }
-  .category-directory-link, .category-directory-link:last-child { min-height: 96px; padding: 20px 4px; gap: 16px; grid-template-columns: 24px minmax(0, 1fr) 20px; }
-  .category-directory-name { font-size: 1.22rem; margin-bottom: 6px; }
-  .equipment-section .category-directory-name { font-size: 1.65rem; }
-  .category-directory-detail { font-size: .72rem; }
-  .category-directory-number { padding-top: 3px; }
+  .category-directory-list { gap: 14px; }
+  .category-directory-link { flex-basis: 82%; min-height: 185px; padding: 22px; gap: 28px 16px; }
+  .category-directory-name { font-size: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .category-directory-link, .category-directory-arrow { transition: none; }
 }
-
-/* Use the same numbered directory on the full equipment catalogue. */
-.catalogue-category-section { padding:64px 0; background:var(--frost); border-bottom:1px solid var(--border); }
-.catalogue-directory { --directory-accent:var(--bronze); --directory-tint:var(--ice); }
-.catalogue-directory .category-directory-name { font-size:1.72rem; }
-@media(max-width:1000px) { .catalogue-directory .category-directory-name { font-size:1.5rem; } }
-@media(max-width:760px) { .catalogue-category-section { padding:48px 0; } }
-@media(max-width:520px) { .catalogue-directory .category-directory-name { font-size:1.65rem; } }

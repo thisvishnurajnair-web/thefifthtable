@@ -1,3 +1,5 @@
+import { enhanceRail } from './horizontal-rail.js?v=horizontal-review-1';
+
 const galleries = [...document.querySelectorAll('[data-project-gallery]')];
 const localHost = ['localhost', '127.0.0.1'].includes(location.hostname);
 const previewMode = localHost ? new URLSearchParams(location.search).get('preview') : null;
@@ -46,13 +48,6 @@ dialog.addEventListener('keydown', event => {
 });
 dialog.addEventListener('close', () => { document.body.style.overflow = ''; lastPhoto?.focus(); });
 
-const inspirationLinks = [...document.querySelectorAll('[data-inspiration-photo]')];
-const inspirationPhotos = inspirationLinks.map(link => ({ src:link.href, alt:link.querySelector('img').alt }));
-inspirationLinks.forEach((link, index) => link.addEventListener('click', event => {
-  event.preventDefault(); lastPhoto = link; viewPhoto(index, inspirationPhotos);
-  document.body.style.overflow = 'hidden'; dialog.showModal();
-}));
-
 async function loadPhotos() {
   if (sampleView) {
     const status = await fetch('/__preview/status').then(response => response.ok ? response.json() : null).catch(() => null);
@@ -74,6 +69,7 @@ export async function renderPhotos() {
       const link = document.createElement('a');
       link.href = photo.src;
       link.className = 'project-photograph';
+      if (photo.width > 0 && photo.height > 0) link.style.setProperty('--photo-ratio', photo.width / photo.height);
       link.setAttribute('aria-label', 'View project photograph ' + (index + 1));
       const image = document.createElement('img');
       image.src = photo.src;
@@ -95,20 +91,18 @@ export async function renderPhotos() {
         caption.append(title, note, source); item.append(link, caption); gallery.append(item);
       } else gallery.append(link);
     }
-    const empty = gallery.parentElement.querySelector('[data-gallery-empty]');
+    const empty = gallery.closest('section').querySelector('[data-gallery-empty]');
     if (empty) empty.hidden = gallery.childElementCount > 0;
+    enhanceRail(gallery, 'Project photographs');
   }
   const notice = document.getElementById('gallery-sample-notice');
   if (notice) {
     notice.hidden = !sampleView || !photos.some(photo => photo.src.startsWith('images/hospitality/'));
     if (ideaView && !notice.hidden) {
       notice.querySelector('strong').textContent = 'Four more photo options';
-      notice.querySelector('p').textContent = 'Stock photography for hospitality inspiration. Options 02 and 03 are now included in the Projects cover.';
+      notice.querySelector('p').textContent = 'Stock photography for hospitality inspiration only.';
       document.querySelector('.gallery-heading h1').textContent = 'Photo ideas.';
       document.querySelector('.gallery-introduction').textContent = 'Four photographs with the warmth, natural materials and greenery you liked.';
-      document.querySelector('.gallery-cover').hidden = true;
-      document.querySelector('.gallery-cover-heading').classList.add('photo-ideas-heading');
-      document.querySelector('.gallery-cover-heading .text-link').hidden = true;
       document.querySelector('.gallery-closing').hidden = true;
       document.title = 'Photography Options | The Fifth Table';
     }
