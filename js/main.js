@@ -201,6 +201,8 @@ function initEnquiryForm() {
 
     const data = new FormData(form);
     data.set('form-name', 'enquiry');
+    const pageNote = '\n\n[Enquiry page: ' + location.pathname + ']';
+    data.set('message', ((data.get('message') || '') + pageNote).trim());
 
     try {
       const response = await fetch('/', {
@@ -209,6 +211,7 @@ function initEnquiryForm() {
         body: new URLSearchParams(data).toString()
       });
       if (!response.ok) throw new Error('Enquiry submission failed.');
+      trackEnquirySuccess(form);
       showFormSuccess(form);
     } catch (err) {
       btn.textContent = originalText;
@@ -216,6 +219,15 @@ function initEnquiryForm() {
       alert('Something went wrong. Please try again or contact us directly.');
     }
   });
+}
+
+// Fires only after the enquiry request has succeeded. Pushes to dataLayer (for Google Tag Manager)
+// and dispatches a DOM event so analytics can count a conversion without counting clicks or failures.
+function trackEnquirySuccess(form) {
+  const detail = { page: location.pathname, business: form.elements.business ? form.elements.business.value : '', requirement: form.elements.product ? form.elements.product.value : '' };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'enquiry_submitted', ...detail });
+  document.dispatchEvent(new CustomEvent('enquiry:submitted', { detail }));
 }
 
 function showFormSuccess(form) {

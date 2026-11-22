@@ -1,0 +1,72 @@
+/* Landing pages, homepage pathways and quick-contact dock. Uses the site's own palette variables. */
+.landing-hero { padding: 130px 0 70px; background: var(--frost); border-bottom: 1px solid var(--border); }
+.landing-hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
+.landing-hero h1 { font-family: var(--font-heading); font-size: clamp(2.8rem,5.2vw,4.6rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.04; margin-bottom: 24px; }
+.landing-hero .hero-description { max-width: 600px; font-size: .95rem; line-height: 1.85; color: var(--text-gray); margin-bottom: 18px; }
+.landing-promise { font-size: .85rem; font-weight: 500; color: var(--text-dark); padding-left: 14px; border-left: 2px solid var(--bronze); margin-bottom: 28px; }
+.landing-contact-row, .hero-contact-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.landing-contact-row .btn, .hero-contact-row .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.landing-form { background: var(--white); border: 1px solid var(--border); padding: 30px; box-shadow: none; }
+.landing-form h2 { font-family: var(--font-heading); font-size: 1.9rem; font-weight: 500; line-height: 1.1; margin-bottom: 6px; }
+.landing-section { padding: 80px 0; }
+.landing-alt { background: var(--frost); }
+.landing-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.landing-split h2, .landing-section h2 { font-family: var(--font-heading); font-size: clamp(2.3rem,3.6vw,3.2rem); font-weight: 400; letter-spacing: -.03em; line-height: 1.08; }
+.landing-list { margin: 0; }
+.landing-gets { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
+.landing-gets article { background: var(--white); padding: 28px 26px; }
+.landing-gets span { font-size: .7rem; letter-spacing: .16em; color: var(--bronze); font-weight: 600; }
+.landing-gets h3 { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 500; margin: 10px 0 8px; line-height: 1.15; }
+.landing-gets p { font-size: .82rem; line-height: 1.7; color: var(--text-gray); }
+.landing-equipment-note { margin-top: 28px; }
+.landing-steps { list-style: none; display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 40px; counter-reset: none; }
+.landing-steps li { display: grid; gap: 14px; border-top: 1px solid var(--border); padding-top: 20px; }
+.landing-steps li > span { font-family: var(--font-heading); font-size: 2.4rem; line-height: 1; color: var(--bronze); }
+.landing-steps h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 500; margin-bottom: 6px; }
+.landing-steps p { font-size: .82rem; line-height: 1.7; color: var(--text-gray); }
+.landing-related { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; margin-top: 32px; border-top: 1px solid var(--border); }
+.landing-related a { display: flex; justify-content: space-between; align-items: center; padding: 20px 6px; border-bottom: 1px solid var(--border); font-family: var(--font-heading); font-size: 1.4rem; }
+.landing-related a:nth-child(odd) { margin-right: 28px; }
+.landing-related a:hover { color: var(--bronze); }
+.closing-invitation .btn + .text-link { margin-left: 24px; }
+
+/* Homepage: contact line under the hero buttons and "where are you starting" pathways */
+.hero-contact-row { margin-top: 22px; font-size: .82rem; color: var(--text-gray); gap: 18px; }
+.hero-contact-row a { font-weight: 500; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.hero-contact-row a:hover { color: var(--bronze); }
+.hero-equipment-link { margin-top: 18px; font-size: .8rem; color: var(--text-gray); }
+.hero-equipment-link a { font-weight: 500; border-bottom: 1px solid currentColor; }
+.pathway-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
+.pathway-card { background: var(--white); padding: 26px 22px 24px; display: flex; flex-direction: column; gap: 10px; min-height: 190px; transition: background .2s; }
+.pathway-card:hover { background: var(--frost); }
+.pathway-card h3 { font-family: var(--font-heading); font-size: 1.45rem; font-weight: 500; line-height: 1.15; }
+.pathway-card p { font-size: .8rem; line-height: 1.65; color: var(--text-gray); flex: 1; }
+.pathway-card .text-link { font-size: .76rem; }
+.outcomes-section .landing-gets { margin-top: 36px; }
+.solutions-pathway-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; }
+
+/* Quick contact bar: mobile only */
+.contact-dock { display: none; }
+@media (max-width: 1100px) { .pathway-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 900px) {
+  .landing-hero-grid, .landing-split { grid-template-columns: 1fr; gap: 36px; }
+  .landing-gets { grid-template-columns: repeat(2,1fr); }
+  .landing-steps { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .landing-hero { padding: 108px 0 48px; }
+  .landing-section { padding: 56px 0; }
+  .landing-form { padding: 24px 18px; }
+  .landing-gets, .landing-steps, .landing-related, .pathway-grid { grid-template-columns: 1fr; }
+  .landing-related a:nth-child(odd) { margin-right: 0; }
+  .closing-invitation .btn + .text-link { display: flex; margin: 22px auto 0; }
+  .contact-dock { display: grid; grid-template-columns: repeat(3,1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 1500; background: var(--text-dark); border-top: 1px solid rgba(255,255,255,.18); padding-bottom: env(safe-area-inset-bottom); }
+  .contact-dock a { color: var(--white); text-align: center; padding: 14px 6px; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .contact-dock a + a { border-left: 1px solid rgba(255,255,255,.18); }
+  body.landing-page, body.has-contact-dock { padding-bottom: 54px; }
+}
+
+/* Homepage hero: inherit the hero's own text colour (light on SNS blue, dark on Fifth Table ivory) */
+.hospitality-hero .landing-promise { color: inherit; border-left-color: currentColor; opacity: .92; font-size: .85rem; }
+.hospitality-hero .hero-contact-row, .hospitality-hero .hero-equipment-link { color: inherit; opacity: .9; }
+.hospitality-hero .hero-contact-row a:hover, .hospitality-hero .hero-equipment-link a:hover { color: inherit; opacity: .7; }

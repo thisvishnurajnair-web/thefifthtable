@@ -29,7 +29,7 @@ function loginRequest(origin, action, payload) {
 }
 await blog(loginRequest(`http://localhost:${port}`, 'setupAdmin', { setupKey, password: previewPassword }), 'local-setup');
 const types = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.png':'image/png', '.webp':'image/webp', '.svg':'image/svg+xml', '.txt':'text/plain', '.xml':'application/xml', '.ico':'image/x-icon', '.woff2':'font/woff2' };
-const pages = new Set(['index.html','about.html','solutions.html','projects.html','products.html','category.html','product.html','blogs.html','robots.txt','sitemap.xml']);
+const pages = new Set(['index.html','about.html','solutions.html','projects.html','products.html','category.html','product.html','blogs.html','cafe-setup-consulting.html','hospitality-consulting.html','turnkey-cafe-projects.html','menu-development-costing.html','restaurant-setup-consulting.html','office-coffee-solutions.html','robots.txt','sitemap.xml']);
 
 const server = http.createServer(async (incoming, outgoing) => {
   let response;
